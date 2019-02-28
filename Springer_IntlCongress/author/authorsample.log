@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.6)  19 FEB 2019 16:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.6)  27 FEB 2019 18:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Documents/Elsevier_Document/author/authorsample.tex
-(d:/Documents/Elsevier_Document/author/authorsample.tex
+**"d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.tex"
+(d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.tex
 LaTeX2e <2018-12-01>
-(d:/Documents/Elsevier_Document/author/svmult.cls
+(d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/svmult.cls
 Document Class: svmult 2018/01/11 v5.5 
 Springer Verlag global LaTeX document class for multi authored books
 Class Springer-SVMult Info: extra/valid Springer sub-package 
@@ -633,7 +633,13 @@ File: t1ntxtlf.fd 2015/01/17 v1.0 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 45.
- (d:/Documents/Elsevier_Document/author/authorsample.aux
+ (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.aux
+
+LaTeX Warning: Label `fig' multiply defined.
+
+
+LaTeX Warning: Label `fig' multiply defined.
+
 
 LaTeX Warning: Label `fig' multiply defined.
 
@@ -828,75 +834,85 @@ File: Images/ga_life_cycle.png Graphic file (type png)
 <use Images/ga_life_cycle.png>
 Package pdftex.def Info: Images/ga_life_cycle.png  used on input line 116.
 (pdftex.def)             Requested size: 256.0748pt x 109.30028pt.
- [3] [4 <d:/Documents/Elsevier_Document/author/Images/ga_life_cycle.png (PNG copy)>]
+ [3] [4 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/ga_life_cycle.png (PNG copy)>]
 <Images/list_pieces.png, id=20, 721.2546pt x 153.6942pt>
 File: Images/list_pieces.png Graphic file (type png)
 <use Images/list_pieces.png>
-Package pdftex.def Info: Images/list_pieces.png  used on input line 171.
+Package pdftex.def Info: Images/list_pieces.png  used on input line 172.
 (pdftex.def)             Requested size: 227.62204pt x 48.50304pt.
- [5 <d:/Documents/Elsevier_Document/author/Images/list_pieces.png>]
-<Images/simulation_bef_aft_example.png, id=26, 478.4274pt x 235.1184pt>
+ [5]
+<Images/simulation_bef_aft_example.png, id=25, 478.4274pt x 235.1184pt>
 File: Images/simulation_bef_aft_example.png Graphic file (type png)
 <use Images/simulation_bef_aft_example.png>
-Package pdftex.def Info: Images/simulation_bef_aft_example.png  used on input line 179.
+Package pdftex.def Info: Images/simulation_bef_aft_example.png  used on input line 180.
 (pdftex.def)             Requested size: 227.62204pt x 111.86176pt.
-<Images/bounding_box_calculation.png, id=27, 749.199pt x 275.1078pt>
+<Images/bounding_box_calculation.png, id=26, 749.199pt x 275.1078pt>
 File: Images/bounding_box_calculation.png Graphic file (type png)
 <use Images/bounding_box_calculation.png>
-Package pdftex.def Info: Images/bounding_box_calculation.png  used on input line 189.
+Package pdftex.def Info: Images/bounding_box_calculation.png  used on input line 190.
 (pdftex.def)             Requested size: 227.62204pt x 83.58241pt.
-<Images/chromosome_chain_example.png, id=28, 742.9356pt x 210.5466pt>
+<Images/chromosome_chain_example.png, id=27, 742.9356pt x 210.5466pt>
 File: Images/chromosome_chain_example.png Graphic file (type png)
 <use Images/chromosome_chain_example.png>
-Package pdftex.def Info: Images/chromosome_chain_example.png  used on input line 195.
+Package pdftex.def Info: Images/chromosome_chain_example.png  used on input line 196.
 (pdftex.def)             Requested size: 227.62204pt x 64.50735pt.
- [6 <d:/Documents/Elsevier_Document/author/Images/simulation_bef_aft_example.png>]
+ [6 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/list_pieces.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/simulation_bef_aft_example.png>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 213.
+(Font)              scaled to size 7.3pt on input line 214.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 213.
- [7 <d:/Documents/Elsevier_Document/author/Images/bounding_box_calculation.png> <d:/Documents/Elsevier_Document/author/Images/chromosome_chain_example.png>]
+(Font)              scaled to size 5.5pt on input line 214.
+ [7 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/bounding_box_calculation.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/chromosome_chain_example.png>]
 <Images/result_example.png, id=39, 726.5544pt x 294.3798pt>
 File: Images/result_example.png Graphic file (type png)
 <use Images/result_example.png>
-Package pdftex.def Info: Images/result_example.png  used on input line 235.
+Package pdftex.def Info: Images/result_example.png  used on input line 236.
 (pdftex.def)             Requested size: 227.62204pt x 92.22253pt.
- [8 <d:/Documents/Elsevier_Document/author/Images/result_example.png>]
-<Images/ruleofthirds_example.png, id=52, 548.7702pt x 387.3672pt>
+<Images/results_v1.png, id=40, 532.99126pt x 259.97125pt>
+File: Images/results_v1.png Graphic file (type png)
+<use Images/results_v1.png>
+Package pdftex.def Info: Images/results_v1.png  used on input line 244.
+(pdftex.def)             Requested size: 227.62204pt x 111.02382pt.
+ [8 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/result_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/results_v1.PNG (PNG copy)>]
+<Images/ruleofthirds_example.png, id=53, 548.7702pt x 387.3672pt>
 File: Images/ruleofthirds_example.png Graphic file (type png)
 <use Images/ruleofthirds_example.png>
-Package pdftex.def Info: Images/ruleofthirds_example.png  used on input line 245.
+Package pdftex.def Info: Images/ruleofthirds_example.png  used on input line 258.
 (pdftex.def)             Requested size: 227.62204pt x 160.67163pt.
-<Images/mask_distribution.png, id=53, 804.1242pt x 179.7114pt>
+<Images/mask_distribution.png, id=54, 804.1242pt x 179.7114pt>
 File: Images/mask_distribution.png Graphic file (type png)
 <use Images/mask_distribution.png>
-Package pdftex.def Info: Images/mask_distribution.png  used on input line 251.
+Package pdftex.def Info: Images/mask_distribution.png  used on input line 264.
 (pdftex.def)             Requested size: 227.62204pt x 50.87001pt.
- (d:/Documents/Elsevier_Document/author/authorsample.bbl [9 <d:/Documents/Elsevier_Document/author/Images/ruleofthirds_example.png> <d:/Documents/Elsevier_Document/author/Images/mask_distribution.png>]
+<Images/chromosome_thirds.png, id=55, 772.3254pt x 372.4314pt>
+File: Images/chromosome_thirds.png Graphic file (type png)
+<use Images/chromosome_thirds.png>
+Package pdftex.def Info: Images/chromosome_thirds.png  used on input line 270.
+(pdftex.def)             Requested size: 227.62204pt x 109.764pt.
+ [9] (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.bbl [10 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/ruleofthirds_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/mask_distribution.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/chromosome_thirds.png>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 8.5pt on input line 11.
 )
 \tf@thm=\write5
 \openout5 = `authorsample.thm'.
 
- [10] (d:/Documents/Elsevier_Document/author/authorsample.aux)
+ [11] (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7229 strings out of 492616
- 97630 string characters out of 6126092
- 180759 words of memory out of 5000000
- 10959 multiletter control sequences out of 15000+600000
+ 7239 strings out of 492616
+ 98486 string characters out of 6126092
+ 179761 words of memory out of 5000000
+ 10967 multiletter control sequences out of 15000+600000
  73706 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,16n,37p,936b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,16n,37p,983b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc} <c:/Users/salin/.texlive2018/texmf-var/fonts/pk/ljfour/public/ifsym/ifsym10.510pk><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/newtx/txsys.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on d:/Documents/Elsevier_Document/author/authorsample.pdf (10 pages, 1293802 bytes).
+Output written on "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.pdf" (11 pages, 1415665 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 112 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

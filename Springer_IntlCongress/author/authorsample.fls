@@ -1,11 +1,11 @@
-PWD d:/Documents/Elsevier_Document/author
+PWD d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author
 INPUT d:/Program Files/texlive/2018/texmf.cnf
 INPUT d:/Program Files/texlive/2018/texmf-dist/web2c/texmf.cnf
 INPUT d:/Program Files/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT d:/Documents/Elsevier_Document/author/authorsample.tex
-OUTPUT d:/Documents/Elsevier_Document/author/authorsample.log
-INPUT d:/Documents/Elsevier_Document/author/svmult.cls
-INPUT d:/Documents/Elsevier_Document/author/svmult.cls
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.tex
+OUTPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.log
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/svmult.cls
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/svmult.cls
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/base/size10.clo
@@ -88,13 +88,13 @@ INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/ifsym/ifsym.sty
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/ifsym/ifsym.sty
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
-OUTPUT d:/Documents/Elsevier_Document/author/authorsample.idx
+OUTPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.idx
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
-INPUT d:/Documents/Elsevier_Document/author/authorsample.aux
-INPUT d:/Documents/Elsevier_Document/author/authorsample.aux
-OUTPUT d:/Documents/Elsevier_Document/author/authorsample.aux
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.aux
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.aux
+OUTPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.aux
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/omlntxmi.fd
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/omlntxmi.fd
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/untxexa.fd
@@ -196,33 +196,36 @@ INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/ifsym/ifsym10.tf
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
-OUTPUT d:/Documents/Elsevier_Document/author/authorsample.pdf
+OUTPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.pdf
 INPUT d:/Program Files/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 INPUT d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm
-INPUT d:/Documents/Elsevier_Document/author/Images/ga_life_cycle.png
-INPUT d:/Documents/Elsevier_Document/author/Images/ga_life_cycle.png
-INPUT d:/Documents/Elsevier_Document/author/Images/ga_life_cycle.png
-INPUT d:/Documents/Elsevier_Document/author/Images/list_pieces.png
-INPUT d:/Documents/Elsevier_Document/author/Images/list_pieces.png
-INPUT d:/Documents/Elsevier_Document/author/Images/list_pieces.png
-INPUT d:/Documents/Elsevier_Document/author/Images/simulation_bef_aft_example.png
-INPUT d:/Documents/Elsevier_Document/author/Images/simulation_bef_aft_example.png
-INPUT d:/Documents/Elsevier_Document/author/Images/simulation_bef_aft_example.png
-INPUT d:/Documents/Elsevier_Document/author/Images/bounding_box_calculation.png
-INPUT d:/Documents/Elsevier_Document/author/Images/bounding_box_calculation.png
-INPUT d:/Documents/Elsevier_Document/author/Images/bounding_box_calculation.png
-INPUT d:/Documents/Elsevier_Document/author/Images/chromosome_chain_example.png
-INPUT d:/Documents/Elsevier_Document/author/Images/chromosome_chain_example.png
-INPUT d:/Documents/Elsevier_Document/author/Images/chromosome_chain_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/ga_life_cycle.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/ga_life_cycle.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/ga_life_cycle.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/list_pieces.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/list_pieces.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/list_pieces.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/simulation_bef_aft_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/simulation_bef_aft_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/simulation_bef_aft_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/bounding_box_calculation.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/bounding_box_calculation.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/bounding_box_calculation.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/chromosome_chain_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/chromosome_chain_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/chromosome_chain_example.png
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
-INPUT d:/Documents/Elsevier_Document/author/Images/result_example.png
-INPUT d:/Documents/Elsevier_Document/author/Images/result_example.png
-INPUT d:/Documents/Elsevier_Document/author/Images/result_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/result_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/result_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/result_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/results_v1.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/results_v1.PNG
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/results_v1.PNG
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/txmi.tfm
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/rntxmi.tfm
@@ -251,17 +254,20 @@ INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txexs.tfm
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxsy.vf
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
-INPUT d:/Documents/Elsevier_Document/author/Images/ruleofthirds_example.png
-INPUT d:/Documents/Elsevier_Document/author/Images/ruleofthirds_example.png
-INPUT d:/Documents/Elsevier_Document/author/Images/ruleofthirds_example.png
-INPUT d:/Documents/Elsevier_Document/author/Images/mask_distribution.png
-INPUT d:/Documents/Elsevier_Document/author/Images/mask_distribution.png
-INPUT d:/Documents/Elsevier_Document/author/Images/mask_distribution.png
-INPUT d:/Documents/Elsevier_Document/author/authorsample.bbl
-INPUT d:/Documents/Elsevier_Document/author/authorsample.bbl
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/ruleofthirds_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/ruleofthirds_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/ruleofthirds_example.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/mask_distribution.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/mask_distribution.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/mask_distribution.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/chromosome_thirds.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/chromosome_thirds.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/chromosome_thirds.png
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.bbl
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.bbl
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntx-Italic-tlf-t1.tfm
-OUTPUT d:/Documents/Elsevier_Document/author/authorsample.thm
-INPUT d:/Documents/Elsevier_Document/author/authorsample.aux
+OUTPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.thm
+INPUT d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.aux
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
 INPUT d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc
