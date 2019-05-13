@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.6)  27 FEB 2019 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.6)  15 MAR 2019 23:40
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **"d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.tex"
@@ -605,34 +605,145 @@ LaTeX Font Info:    Redeclaring math symbol \m@thbbch@rA on input line 1929.
 \ntx@imath=\count147
 \ntx@jmath=\count148
 LaTeX Info: Redefining \not on input line 2322.
-) (d:/Program Files/texlive/2018/texmf-dist/tex/latex/ifsym/ifsym.sty
-Package: ifsym 2000/04/18 I.Kloeckl
- (d:/Program Files/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
+) (d:/Program Files/texlive/2018/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
+ (d:/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+ (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+) (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+ (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))) (d:/Program Files/texlive/2018/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+ (d:/Program Files/texlive/2018/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2019/01/15
+ Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
+\FV@CodeLineNo=\count149
+\FV@InFile=\read1
+\FV@TabBox=\box58
+\c@FancyVerbLine=\count150
+\FV@StepNumber=\count151
+\FV@OutFile=\write4
+) (d:/Program Files/texlive/2018/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+) (d:/Program Files/texlive/2018/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count152
+\output=\toks45
+\linenoprevgraf=\count153
+\linenumbersep=\dimen157
+\linenumberwidth=\dimen158
+\c@linenumber=\count154
+\c@pagewiselinenumber=\count155
+\c@LN@truepage=\count156
+\c@internallinenumber=\count157
+\c@internallinenumbers=\count158
+\quotelinenumbersep=\dimen159
+\bframerule=\dimen160
+\bframesep=\dimen161
+\bframebox=\box59
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count159
+\c@FV@TrueTabCounter=\count160
+\FV@TabBox@Group=\box60
+\FV@TmpLength=\skip59
+\c@FV@HighlightLinesStart=\count161
+\c@FV@HighlightLinesStop=\count162
+\FV@LoopCount=\count163
+\FV@NCharsBox=\box61
+\FV@BreakIndent=\dimen162
+\FV@BreakIndentNChars=\count164
+\FV@BreakSymbolSepLeft=\dimen163
+\FV@BreakSymbolSepLeftNChars=\count165
+\FV@BreakSymbolSepRight=\dimen164
+\FV@BreakSymbolSepRightNChars=\count166
+\FV@BreakSymbolIndentLeft=\dimen165
+\FV@BreakSymbolIndentLeftNChars=\count167
+\FV@BreakSymbolIndentRight=\dimen166
+\FV@BreakSymbolIndentRightNChars=\count168
+\c@FancyVerbLineBreakLast=\count169
+\FV@LineBox=\box62
+\FV@LineIndentBox=\box63
+\FV@LineWidth=\dimen167
+) (d:/Program Files/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count149
-\calc@Bcount=\count150
-\calc@Adimen=\dimen157
-\calc@Bdimen=\dimen158
-\calc@Askip=\skip59
-\calc@Bskip=\skip60
+\calc@Acount=\count170
+\calc@Bcount=\count171
+\calc@Adimen=\dimen168
+\calc@Bdimen=\dimen169
+\calc@Askip=\skip60
+\calc@Bskip=\skip61
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count151
-\calc@Cskip=\skip61
+\calc@Ccount=\count172
+\calc@Cskip=\skip62
+) (d:/Program Files/texlive/2018/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 67.
+) (d:/Program Files/texlive/2018/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
+ (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
-\c@ifsymcnt=\count152
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/catchfile.sty
+Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
+)) (d:/Program Files/texlive/2018/texmf-dist/tex/generic/xstring/xstring.sty (d:/Program Files/texlive/2018/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count173
+\decimalpart=\count174
 )
-\@indexfile=\write4
-\openout4 = `authorsample.idx'.
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+) (d:/Program Files/texlive/2018/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count175
+\float@exts=\toks46
+\float@box=\box64
+\@float@everytoks=\toks47
+\@floatcapt=\box65
+)
+\minted@appexistsfile=\read2
+\minted@bgbox=\box66
+\minted@code=\write5
+\c@minted@FancyVerbLineTemp=\count176
+\c@minted@pygmentizecounter=\count177
+\@float@every@listing=\toks48
+\c@listing=\count178
+)
+runsystem(if not exist _minted-authorsample mkdir _minted-authorsample)...executed.
+
+ (d:/Program Files/texlive/2018/texmf-dist/tex/latex/ifsym/ifsym.sty
+Package: ifsym 2000/04/18 I.Kloeckl
+\c@ifsymcnt=\count179
+)
+\@indexfile=\write6
+\openout6 = `authorsample.idx'.
 
 
 Writing index file authorsample.idx
-LaTeX Font Info:    Try loading font information for T1+ntxtlf on input line 45.
+LaTeX Font Info:    Try loading font information for T1+ntxtlf on input line 46.
 (d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 File: t1ntxtlf.fd 2015/01/17 v1.0 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 45.
+(Font)              scaled to size 10.0pt on input line 46.
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > authorsample.aex <nul: /p x=^%~$PATH:i>> authorsample.aex)...executed.
+
+runsystem(del authorsample.aex)...executed.
+
  (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.aux
 
 LaTeX Warning: Label `fig' multiply defined.
@@ -664,87 +775,64 @@ LaTeX Warning: Label `fig' multiply defined.
 )
 \openout1 = `authorsample.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 45.
-LaTeX Font Info:    Try loading font information for OML+ntxmi on input line 45.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 46.
+LaTeX Font Info:    Try loading font information for OML+ntxmi on input line 46.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 45.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 46.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 46.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 45.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 46.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 45.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 46.
+LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 46.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for LMX+ntxexx on input line 45.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 46.
+LaTeX Font Info:    Try loading font information for LMX+ntxexx on input line 46.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    ... okay on input line 46.
  (d:/Program Files/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count153
-\scratchdimen=\dimen159
-\scratchbox=\box58
-\nofMPsegments=\count154
-\nofMParguments=\count155
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count156
-\MPscratchDim=\dimen160
-\MPnumerator=\count157
-\makeMPintoPDFobject=\count158
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count180
+\scratchdimen=\dimen170
+\scratchbox=\box67
+\nofMPsegments=\count181
+\nofMParguments=\count182
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count183
+\MPscratchDim=\dimen171
+\MPnumerator=\count184
+\makeMPintoPDFobject=\count185
+\everyMPtoPDFconversion=\toks50
 ) (d:/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) (d:/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+ (d:/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
  (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
- (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-))) (d:/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
- (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
- (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-))) (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
- (d:/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
+))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
@@ -752,167 +840,180 @@ Package grfext Info: Graphics extension search list:
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@mv@tabular=\count159
-\c@mv@boldtabular=\count160
+\c@mv@tabular=\count186
+\c@mv@boldtabular=\count187
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.0pt on input line 68.
+(Font)              scaled to size 14.0pt on input line 69.
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <14> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 68.
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.0pt on input line 68.
+(Font)              scaled to size 14.0pt on input line 69.
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <16> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 68.
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 16.0pt on input line 68.
-LaTeX Font Info:    Try loading font information for OT1+ntxtlf on input line 68.
+(Font)              scaled to size 16.0pt on input line 69.
+LaTeX Font Info:    Try loading font information for OT1+ntxtlf on input line 69.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2015/01/17 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 68.
+(Font)              scaled to size 10.0pt on input line 69.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 68.
+(Font)              scaled to size 7.3pt on input line 69.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 68.
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 68.
+(Font)              scaled to size 5.5pt on input line 69.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 69.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 68.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 69.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 68.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 69.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <10> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 68.
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 68.
+(Font)              scaled to size 10.0pt on input line 69.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.5pt on input line 68.
-LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 68.
+(Font)              scaled to size 8.5pt on input line 69.
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 69.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.5pt on input line 68.
+(Font)              scaled to size 8.5pt on input line 69.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.20496pt on input line 68.
+(Font)              scaled to size 6.20496pt on input line 69.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 4.67502pt on input line 68.
-LaTeX Font Info:    Try loading font information for U+ifsym on input line 68.
+(Font)              scaled to size 4.67502pt on input line 69.
+LaTeX Font Info:    Try loading font information for U+ifsym on input line 69.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/ifsym/uifsym.fd)
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <8.5> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 68.
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 8.5pt on input line 68.
+(Font)              scaled to size 8.5pt on input line 69.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 77.
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <12> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 76.
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 77.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 77.
  [1
 
 
 
 {d:/Program Files/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 11.0pt on input line 91.
+(Font)              scaled to size 11.0pt on input line 92.
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <11> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 91.
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 92.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 11.0pt on input line 91.
+(Font)              scaled to size 11.0pt on input line 92.
  [2]
-LaTeX Font Info:    Try loading font information for TS1+ntxtlf on input line 101.
+LaTeX Font Info:    Try loading font information for TS1+ntxtlf on input line 103.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 101.
+(Font)              scaled to size 10.0pt on input line 103.
 <Images/ga_life_cycle.png, id=12, 905.3825pt x 386.44376pt>
 File: Images/ga_life_cycle.png Graphic file (type png)
 <use Images/ga_life_cycle.png>
-Package pdftex.def Info: Images/ga_life_cycle.png  used on input line 116.
+Package pdftex.def Info: Images/ga_life_cycle.png  used on input line 118.
 (pdftex.def)             Requested size: 256.0748pt x 109.30028pt.
  [3] [4 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/ga_life_cycle.png (PNG copy)>]
 <Images/list_pieces.png, id=20, 721.2546pt x 153.6942pt>
 File: Images/list_pieces.png Graphic file (type png)
 <use Images/list_pieces.png>
-Package pdftex.def Info: Images/list_pieces.png  used on input line 172.
+Package pdftex.def Info: Images/list_pieces.png  used on input line 174.
 (pdftex.def)             Requested size: 227.62204pt x 48.50304pt.
  [5]
 <Images/simulation_bef_aft_example.png, id=25, 478.4274pt x 235.1184pt>
 File: Images/simulation_bef_aft_example.png Graphic file (type png)
 <use Images/simulation_bef_aft_example.png>
-Package pdftex.def Info: Images/simulation_bef_aft_example.png  used on input line 180.
+Package pdftex.def Info: Images/simulation_bef_aft_example.png  used on input line 182.
 (pdftex.def)             Requested size: 227.62204pt x 111.86176pt.
-<Images/bounding_box_calculation.png, id=26, 749.199pt x 275.1078pt>
+ [6 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/list_pieces.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/simulation_bef_aft_example.png>]
+<Images/bounding_box_calculation.png, id=31, 749.199pt x 275.1078pt>
 File: Images/bounding_box_calculation.png Graphic file (type png)
 <use Images/bounding_box_calculation.png>
-Package pdftex.def Info: Images/bounding_box_calculation.png  used on input line 190.
+Package pdftex.def Info: Images/bounding_box_calculation.png  used on input line 196.
 (pdftex.def)             Requested size: 227.62204pt x 83.58241pt.
-<Images/chromosome_chain_example.png, id=27, 742.9356pt x 210.5466pt>
+<Images/chromosome_chain_example.png, id=32, 742.9356pt x 210.5466pt>
 File: Images/chromosome_chain_example.png Graphic file (type png)
 <use Images/chromosome_chain_example.png>
-Package pdftex.def Info: Images/chromosome_chain_example.png  used on input line 196.
+Package pdftex.def Info: Images/chromosome_chain_example.png  used on input line 202.
 (pdftex.def)             Requested size: 227.62204pt x 64.50735pt.
- [6 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/list_pieces.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/simulation_bef_aft_example.png>]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 214.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 214.
  [7 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/bounding_box_calculation.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/chromosome_chain_example.png>]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.3pt on input line 220.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.5pt on input line 220.
 <Images/result_example.png, id=39, 726.5544pt x 294.3798pt>
 File: Images/result_example.png Graphic file (type png)
 <use Images/result_example.png>
-Package pdftex.def Info: Images/result_example.png  used on input line 236.
+Package pdftex.def Info: Images/result_example.png  used on input line 242.
 (pdftex.def)             Requested size: 227.62204pt x 92.22253pt.
-<Images/results_v1.png, id=40, 532.99126pt x 259.97125pt>
+ [8 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/result_example.png>]
+<Images/results_v1.png, id=52, 532.99126pt x 259.97125pt>
 File: Images/results_v1.png Graphic file (type png)
 <use Images/results_v1.png>
-Package pdftex.def Info: Images/results_v1.png  used on input line 244.
+Package pdftex.def Info: Images/results_v1.png  used on input line 250.
 (pdftex.def)             Requested size: 227.62204pt x 111.02382pt.
- [8 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/result_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/results_v1.PNG (PNG copy)>]
-<Images/ruleofthirds_example.png, id=53, 548.7702pt x 387.3672pt>
+ [9 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/results_v1.PNG (PNG copy)>]
+\openout4 = `authorsample.pyg'.
+
+ (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/_minted-authorsample/default-pyg-prefix.pygstyle) (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/_minted-authorsample/default.pygstyle) (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/_minted-authorsample/41C30F95D0D4E0F1D71143A2C8A621DF76AB02A1328F4C755ACA12AE11CA05D8.pygtex
+LaTeX Font Info:    Try loading font information for T1+ntxtt on input line 1.
+ (d:/Program Files/texlive/2018/texmf-dist/tex/latex/newtx/t1ntxtt.fd
+File: t1ntxtt.fd 2012/04/20 v3.1
+)
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 10.0pt on input line 1.
+)
+<Images/ruleofthirds_example.png, id=56, 548.7702pt x 387.3672pt>
 File: Images/ruleofthirds_example.png Graphic file (type png)
 <use Images/ruleofthirds_example.png>
-Package pdftex.def Info: Images/ruleofthirds_example.png  used on input line 258.
+Package pdftex.def Info: Images/ruleofthirds_example.png  used on input line 278.
 (pdftex.def)             Requested size: 227.62204pt x 160.67163pt.
-<Images/mask_distribution.png, id=54, 804.1242pt x 179.7114pt>
+<Images/mask_distribution.png, id=57, 804.1242pt x 179.7114pt>
 File: Images/mask_distribution.png Graphic file (type png)
 <use Images/mask_distribution.png>
-Package pdftex.def Info: Images/mask_distribution.png  used on input line 264.
+Package pdftex.def Info: Images/mask_distribution.png  used on input line 284.
 (pdftex.def)             Requested size: 227.62204pt x 50.87001pt.
-<Images/chromosome_thirds.png, id=55, 772.3254pt x 372.4314pt>
+<Images/chromosome_thirds.png, id=58, 772.3254pt x 372.4314pt>
 File: Images/chromosome_thirds.png Graphic file (type png)
 <use Images/chromosome_thirds.png>
-Package pdftex.def Info: Images/chromosome_thirds.png  used on input line 270.
+Package pdftex.def Info: Images/chromosome_thirds.png  used on input line 290.
 (pdftex.def)             Requested size: 227.62204pt x 109.764pt.
- [9] (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.bbl [10 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/ruleofthirds_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/mask_distribution.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/chromosome_thirds.png>]
+ [10 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/ruleofthirds_example.png>] (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.bbl
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 8.5pt on input line 11.
-)
-\tf@thm=\write5
-\openout5 = `authorsample.thm'.
+(Font)              scaled to size 8.5pt on input line 8.
+ [11 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/mask_distribution.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/Images/chromosome_thirds.png>])
+\tf@thm=\write7
+\openout7 = `authorsample.thm'.
 
- [11] (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.aux)
+ [12] (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
+runsystem(del authorsample.pyg)...executed.
+
  ) 
 Here is how much of TeX's memory you used:
- 7239 strings out of 492616
- 98486 string characters out of 6126092
- 179761 words of memory out of 5000000
- 10967 multiletter control sequences out of 15000+600000
- 73706 words of font info for 100 fonts, out of 8000000 for 9000
+ 9929 strings out of 492616
+ 157574 string characters out of 6126092
+ 279177 words of memory out of 5000000
+ 13596 multiletter control sequences out of 15000+600000
+ 74028 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,16n,37p,983b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc} <c:/Users/salin/.texlive2018/texmf-var/fonts/pk/ljfour/public/ifsym/ifsym10.510pk><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/newtx/txsys.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.pdf" (11 pages, 1415665 bytes).
+ 37i,16n,37p,983b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc} <c:/Users/salin/.texlive2018/texmf-var/fonts/pk/ljfour/public/ifsym/ifsym10.510pk><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/newtx/txsys.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/Springer_IntlCongress/author/authorsample.pdf" (12 pages, 1425329 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 119 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

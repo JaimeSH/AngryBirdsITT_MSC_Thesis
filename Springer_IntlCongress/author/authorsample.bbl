@@ -1,18 +1,55 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{RovioEntertainmentCorporation2009}
 {Rovio Entertainment Corporation}, ``{Angry Birds},'' 2009.
 
+\bibitem{Stephenson2018}
+M.~J.~B. Stephenson, J.~Renz, X.~Ge, L.~N. Ferreira, J.~Togelius, and P.~Zhang,
+  ``{The 2017 AIBIRDS Level Generation Competition},'' {\em IEEE Transactions
+  on Games}, pp.~1--1, 2018.
+
+\bibitem{Stephenson}
+M.~Stephenson, J.~Renz, L.~Ferreira, and J.~Togelius, ``{Competitions – IEEE
+  Conference on Computational Intelligence and Games, 14-17 August 2018,
+  Maastricht (The Netherlands)}.''
+
+\bibitem{togelius2016introduction}
+J.~Togelius, N.~Shaker, and M.~J. Nelson, ``Introduction,'' in {\em Procedural
+  Content Generation in Games: A Textbook and an Overview of Current Research}
+  (N.~Shaker, J.~Togelius, and M.~J. Nelson, eds.), pp.~1--15, Springer, 2016.
+
+\bibitem{TogeliusTaxonomy}
+J.~Togelius, G.~N. Yannakakis, K.~O. Stanley, and C.~Browne, ``{Search-Based
+  Procedural Content Generation: A Taxonomy and Survey},'' {\em IEEE
+  Transactions on Computational Intelligence and AI in Games}, vol.~3,
+  pp.~172--186, sep 2011.
+
+\bibitem{Smith2012}
+G.~Smith, A.~Othenin-Girard, J.~Whitehead, and N.~Wardrip-Fruin, ``{PCG-Based
+  Game Design: Creating Endless Web},'' tech. rep., 2012.
+
 \bibitem{Yannakakis2017}
 G.~N. Yannakakis and J.~Togelius, ``{Artificial Intelligence and Games (First
   Public Draft)},'' p.~359, 2017.
+
+\bibitem{Smith2014}
+G.~Smith, ``{Understanding procedural content generation},'' in {\em
+  Proceedings of the 32nd annual ACM conference on Human factors in computing
+  systems - CHI '14}, (New York, New York, USA), pp.~917--926, ACM Press, 2014.
+
+\bibitem{shaker2016procedural}
+N.~Shaker, J.~Togelius, and M.~J. Nelson, {\em Procedural Content Generation in
+  Games: A Textbook and an Overview of Current Research}.
+\newblock Springer, 2016.
 
 \bibitem{Holland1975}
 J.~H. Holland, ``{Adaptation in Natural and Artificial Systems},'' {\em Sgart
   Newsletter}, 1975.
 
 \bibitem{Standish2003}
-R.~K. Standish, ``{OPEN-ENDED ARTIFICIAL EVOLUTION},'' Tech. Rep.~2, 2003.
+R.~K. STANDISH, ``{OPEN-ENDED ARTIFICIAL EVOLUTION},'' {\em International
+  Journal of Computational Intelligence and Applications}, vol.~03,
+  pp.~167--175, jun 2003.
 
 \bibitem{Taylor2016}
 T.~Taylor, M.~Bedau, A.~Channon, D.~Ackley, W.~Banzhaf, G.~Beslon, E.~Dolson,
@@ -22,6 +59,11 @@ T.~Taylor, M.~Bedau, A.~Channon, D.~Ackley, W.~Banzhaf, G.~Beslon, E.~Dolson,
   and M.~Wiser, ``{Open-Ended Evolution: Perspectives from the OEE Workshop in
   York},'' {\em Artificial Life}, vol.~22, pp.~408--423, aug 2016.
 
+\bibitem{Taylor}
+T.~Taylor, ``{Evolutionary Innovations and Where to Find Them: Routes to
+  Open-Ended Evolution in Natural and Artificial Systems},'' {\em Artificial
+  Life}, vol.~25, jun 2018.
+
 \bibitem{Kaidan2015}
 M.~Kaidan, C.~Y. Chu, T.~Harada, and R.~Thawonmas, ``{Procedural generation of
   angry birds levels that adapt to the player's skills using genetic
@@ -30,14 +72,31 @@ M.~Kaidan, C.~Y. Chu, T.~Harada, and R.~Thawonmas, ``{Procedural generation of
 
 \bibitem{Renz}
 J.~Renz, X.~Ge, R.~Verma, and P.~Zhang, ``{Angry Birds as a Challenge for
-  Artificial Intelligence},'' tech. rep.
+  Artificial Intelligence},'' {\em Thirtieth AAAI Conference on Artificial
+  Intelligence}, mar 2016.
 
 \bibitem{Jiang2017}
 Y.~Jiang, T.~Harada, and R.~Thawonmas, {\em {Procedural generation of angry
   birds fun levels using pattern-struct and preset-model}}.
 \newblock IEEE Conference on Computational Intelligence and Games, 2017.
 
+\bibitem{togelius2016Representationsforsearch-basedmethods}
+J.~Togelius, N.~Shaker, and M.~J. Nelson, ``Representations for search-based
+  methods,'' in {\em Procedural Content Generation in Games: A Textbook and an
+  Overview of Current Research} (N.~Shaker, J.~Togelius, and M.~J. Nelson,
+  eds.), pp.~159--179, Springer, 2016.
+
+\bibitem{YannakakisContentGeneration}
+G.~N. Yannakakis and J.~Togelius, ``{Experience-Driven Procedural Content
+  Generation},'' {\em IEEE Transactions on Affective Computing}, vol.~2,
+  pp.~147--161, jul 2011.
+
+\bibitem{Shaker2010}
+N.~Shaker, G.~Yannakakis, and J.~Togelius, ``{Towards Automatic Personalized
+  Content Generation for Platform Games},'' {\em Sixth Artificial Intelligence
+  and Interactive Digital Entertainment Conference}, oct 2010.
+
 \bibitem{DarrenRowse}
-{Darren Rowse}, ``{Rule of Thirds in Photography}.''
+D.~Rowse, ``Rule of thirds,'' {\em Digital Photography School}, 2012.
 
 \end{thebibliography}

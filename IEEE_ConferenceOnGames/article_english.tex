@@ -15,19 +15,19 @@
 \title{Procedural generation of levels fot he angry birds videogame using evolutionary computation\\
 }
 
-\author{\IEEEauthorblockN{1\textsuperscript{st} Jaime Salinas-Hernández}
+\author{\IEEEauthorblockN{ Jaime Salinas-Hernández}
 \IEEEauthorblockA{\textit{Department of Computer Science} \\
 \textit{Tijuana Institute of Technology}\\
 Tijuana, México \\
 salinas.jaime1217@gmail.com}
 \and
-\IEEEauthorblockN{2\textsuperscript{nd} Mario Garcia-Valdez}
+\IEEEauthorblockN{ Mario Garcia-Valdez}
 \IEEEauthorblockA{\textit{Department of Computer Science} \\
 \textit{Tijuana Institute of Technology}\\
 Tijuana, México \\
 mariosky@gmail.com}
 \and
-\IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
+\IEEEauthorblockN{ Given Name Surname}
 \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
 \textit{name of organization (of Aff.)}\\
 City, Country \\
@@ -88,10 +88,10 @@ In other words a genetic algorithm is a method to solve optimization problems by
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=90mm]{Images/ga_life_cycle.png}}
 \caption{Life cycle of a genetic algorithm.}
-\label{fig}
+\label{algorithm_model}
 \end{figure}
 
-The main life cycle of a genetic algorithm shown of figure 1 is described as follows:
+The main life cycle of a genetic algorithm shown of figure \ref{algorithm_model} is described as follows:
 \begin{enumerate}
     \item Initialize a random n population of values suitable for the solution.
     \item Evaluate the fitness of each individual (solution) in the population.
@@ -127,7 +127,7 @@ Y. Jiang et al. \cite{Jiang2017} proposed the use of predefined letter style pat
 \section{Current approach}
 
 In this Section we describe the approach that was used for this project, 
-The game contains a total of 11 pieces as shown on figure 2 that cannot be modified, it is not possible to add more or modify the existing ones, with this in mind the purpose is to create bundles of this same pieces in different locations and angles in order to create structures that can be used as building blocks for more complex levels, in order to do this a sequence of events needs to be done as follows:
+The game contains a total of 11 pieces as shown on figure \ref{piece_list} that cannot be modified, it is not possible to add more or modify the existing ones, with this in mind the purpose is to create bundles of this same pieces in different locations and angles in order to create structures that can be used as building blocks for more complex levels, in order to do this a sequence of events needs to be done as follows:
 
 \begin{enumerate}
 \item Generate the first generation of the population
@@ -142,31 +142,37 @@ The game contains a total of 11 pieces as shown on figure 2 that cannot be modif
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=80mm]{Images/list_pieces.png}}
 \caption{List of pieces in the angry birds game.}
-\label{fig}
+\label{piece_list}
 \end{figure}
 
-The Since the algorithm has to generate more complex structures the remaining pieces of a member of the population have to be used has a starting point, this new additions to the piece pool are added to the population by the mutation operation, the objective in the first phase of the project is to generate structures that are capable of maintaining their own balance as shown on figure 3, since the objective of open-ended evolution for this project is to add new bundles to the pool of options the algorithm will first run a simulation with a group of pieces and after it the ones that were not destroyed by falling because of gravity will be saved and added to the pool of options.
+The rules for the competition specify that a configuration file must be used to generate the levels of the game in a limited amount of time, the infornmation on the configuration file is first the number of \textbf{\textit{diferent}} levels that must be generated, the second value is the diferent materials \textit{not allowed} to be used, for instance a group of generated levels must not have circles which composition material is ice or stone moreover it des not have to integrate a triangle piece with ice, stone or wood material so this combinations must be removed from the pool of options, the third configuration value is the \textit{number of pigs} that must be placed in a level, and finally the \textit{limit} of time that the system has to create the required amount of levels.
+
+After taking into account this restrictions the strcture of our current approach had to be changed, so this section will be divided in tow subsections, the first will explain the approach that was used and after that second will explain the modifications that had to be made in order to integrate the configuration files for the competition. 
+
+\subsection{Original approach}
+
+Since the algorithm has to generate more complex structures the remaining pieces of a member of the population have to be used has a starting point, this new additions to the piece pool are added to the population by the mutation operation, the objective in the first phase of the project is to generate structures that are capable of maintaining their own balance as shown on figure \ref{test_old}, since the objective of open-ended evolution for this project is to add new bundles to the pool of options the algorithm will first run a simulation with a group of pieces and after it the ones that were not destroyed by falling because of gravity will be saved and added to the pool of options.
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=80mm]{Images/simulation_bef_aft_example.png}}
 \caption{Structure at beginning and end of a simulation.}
-\label{fig}
+\label{test_old}
 \end{figure}
 
-In order to add a bundle of pieces as a new component first it has to be measured, an imaginary bounding box is defined by calculating the lengths of all the pieces, finding the borders of said pieces and find the points that could define a box around all of them, calculate the height and width then calculate the center point of said box and calculate the offsets from the center of the group to the center of each respective piece as shown on figure 4, this information is needed in order to add it as a new element so it can be used to place the pieces in their respective new positions when the files needed for the simulation are being created.
+In order to add a bundle of pieces as a new component first it has to be measured, an imaginary bounding box is defined by calculating the lengths of all the pieces, finding the borders of said pieces and find the points that could define a box around all of them, calculate the height and width then calculate the center point of said box and calculate the offsets from the center of the group to the center of each respective piece as shown on figure \ref{bounding_boc_calc}, this information is needed in order to add it as a new element so it can be used to place the pieces in their respective new positions when the files needed for the simulation are being created.
 
-The way to represent the elements of a member of the population is by using the id of each piece and the new added ones has a pointer to the respective data that needs to be obtained, this way and individual can be represented as shown on figure 5 where each chromosome represents a certain item in the pool of pieces, the numbers for this elements are assigned in a first come first served basis, the numbers are infinitely incremented and this same pieces can be repeated on each individual of the population
+The way to represent the elements of a member of the population is by using the id of each piece and the new added ones has a pointer to the respective data that needs to be obtained, this way and individual can be represented as shown on figure \ref{old_chrom} where each chromosome represents a certain item in the pool of pieces, the numbers for this elements are assigned in a first come first served basis, the numbers are infinitely incremented and this same pieces can be repeated on each individual of the population
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=80mm]{Images/bounding_box_calculation.png}}
-\caption{bounding box calculation.}
-\label{fig}
+\caption{Bounding box calculation.}
+\label{bounding_boc_calc}
 \end{figure}
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=80mm]{Images/chromosome_chain_example.png}}
 \caption{Chromosome chain of an individual.}
-\label{fig}
+\label{old_chrom}
 \end{figure}
 
 Once the pieces have been added and the individuals are ready to be evaluated a simulation on the game environment is scheduled by order in the population, all the individuals have a maximum of ten seconds to maintain balance or reach absolute stability, if absolute stability is reached it means one of two things, first the generated structure is completely stable or second, the tower fell to either side and the pieces were destroyed or stopped moving by gravitational pull, when either of this happens by more than two seconds the simulation ends regardless of time remaining and the next individual is simulated.
@@ -189,6 +195,7 @@ Second, after removing percentage according to the missing pieces an individual 
     \right. \\
     where: d=\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}    
     \end{aligned}
+    \label{error_xy}
 \end{equation}
 
 \begin{equation}
@@ -203,6 +210,7 @@ Second, after removing percentage according to the missing pieces an individual 
     \right. \\
     where: r= |rotation_0| - |rotation_f|   
     \end{aligned}
+    \label{error_angle}
 \end{equation}
 
 Finally, the total height of the remaining group of pieces is calculated by combining the bonding boxes of all pieces, then the individuals are ordered by the obtained percentage and then further ordered by the total height, this way the most balanced ones will have the best probability to be selected together for a crossover operation to create the next generation.
@@ -210,24 +218,112 @@ Finally, the total height of the remaining group of pieces is calculated by comb
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=80mm]{Images/result_example.png}}
 \caption{Result samples of current system.}
-\label{fig}
+\label{results_old}
 \end{figure}
 
-\section{Future work}
-Since there is a need to create complex structures than can cover a great section of the play map, a method to evaluate the distribution is needed, for this instance we propose using the rule of thirds \cite{DarrenRowse} which is a guideline used while creating imagen in which the purpose is to create aesthetical pleasant images where the focus point or the most important area is at the center of the image as shown on figure 7, using this rule different distribution groups or masks are created has shown on figure 8 in order to use them before the simulation of an individual takes place in order to distribute the pieces in a way that can cover more area and create more balanced levels instead of using a tower like distribution as shown on figure 9.
-Using this same distribution a new evaluation will be added in which according to how much of the area is filled a score will be given and this score will be used as a new sorting value at the moment of selecting individuals for the crossover operation, since as shown on figure 8 there is a possibility that a huge mask is given to an individual it can be possible that the amount of pieces will not be able to cover the full area given, so in order to prevent this kind of problems we also propose to give each mask a value that refers to the minimum amount of pieces and height required to fill the most of the mask then check the amount of pieces and height before simulation for a single individual and then randomize which mask of the ones that can be used will be assigned to that individual
+Since there is a need to create complex structures than can cover a great section of the play map, a method to evaluate the distribution is needed, for this instance we propose using the rule of thirds \cite{DarrenRowse} which is a guideline used while creating imagen in which the purpose is to create aesthetical pleasant images where the focus point or the most important area is at the center of the image as shown on figure \ref{rule_of_thirds}, using this rule different distribution groups or masks are created has shown on figure \ref{rule_of_thirds_applied} in order to use them before the simulation of an individual takes place in order to distribute the pieces in a way that can cover more area and create more balanced levels instead of using a tower like distribution as shown on figure \ref{results_old}.
 
 \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/ruleofthirds_example.png}}
     \caption{Rule of thirds example.}
-    \label{fig}
+    \label{rule_of_thirds}
 \end{figure}
 
 \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/mask_distribution.png}}
     \caption{Rule of thirds applied to an individual.}
-    \label{fig}
+    \label{rule_of_thirds_masks}
 \end{figure}
+
+Using this same distribution a new evaluation will be added in which according to how much of the area is filled a score will be given and this score will be used as a new sorting value at the moment of selecting individuals for the crossover operation, since as shown on figure \ref{rule_of_thirds_masks} there is a possibility that a huge mask is given to an individual it can be possible that the amount of pieces will not be able to cover the full area given, so in order to prevent this kind of problems we also proposed to give each mask a value that refers to the minimum amount of pieces and height required to fill the most of the mask then check the amount of pieces and height before simulation for a single individual and then randomize which mask of the ones that can be used will be assigned to that individual, this way the results shown on figure \ref{rule_of_thirds_result} are obtained, this however gave us a new problem because as shown in the image and the previous image as well the were instances in which a certain combination of pieces could be to big for the area and this pieces resulted in a level that had structural flaws from the beginning which cold provoke the entire structure and immeadiately nearby others to fall at the beginning of the simulation however it was able to 
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=80mm]{Images/chromosome_thirds.png}}
+    \caption{Rule of thirds applied to an individual.}
+    \label{rule_of_thirds_applied}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=80mm]{Images/result_example_thirds.png}}
+    \caption{Results obtained with rule of thirds.}
+    \label{rule_of_thirds_result}
+\end{figure}
+
+\subsection{New approach}
+
+The first differece that the new approach as is that the masks that are assigned to each individual are no longer pre-generated ones, this is because we decided that pre-generating them would not allow the generator to \textit{evolve} because the individuals would be limited to a certain number of possibles combinations which will in turn prevent diversity in the population, so in order to prevent this the modification to this section allows the individuals to generate a mask in which a number of columns is defines by default but the amount of pieces in each one is random, however the total of assigned pieces in all columns must be the same as the total pieces alloweed in each individual which is a number assigned at before beginning the system, an example of this can be seen in figure \ref{new_chrom} where the total of pieces in a individual is 18 and this pieces are distributed on all the columns available. This is further explained in this section.
+
+The competition also requires that a generator gives a set output a file is used to simulate the ruleset provided at a competition, this \textit{text file (parameters.txt)} provides the specifications that must be met in the competition, the parameters in the file are as follows:
+
+\begin{itemize}
+    \item Total requiered levels
+    \item Restrictions to pieces or piece-material combinations that cannot be placed or used in the levels, in this case if the file specifies that a \textit{CIRCLE} made out of \textit{ICE} cannotplaced the system must be able to verify that said combination is not used.
+    \item Total number of pigs, this value can be a single value or a range of values that represent how many pigs must be placed on a level.
+    \item The amount of time in which the system must give an output.
+\end{itemize}
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=80mm]{Images/chromosome_chain_new_model.png}}
+\caption{New chromosome chain.}
+\label{new_chrom}
+\end{figure}
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=80mm]{Images/new_model.png}}
+\caption{New system diagram based on the parameter file and the new chromosome representation.}
+\label{new_model}
+\end{figure}
+
+Using this as a base a new system diagram is proposed as shown of figure \ref{new_model} in which the file with parameters is integrated with the input data  the system requires, the way the individuals of the population are further presresented and the way the simulation phase is taken, the method to representate the individuals is proposed by dividing the individual on three layers represented as follows:
+
+\begin{itemize}
+    \item Element layer: also known as pieces layer, this layer represent the elements assigned to a particular individual by an array of numbers from 0 to infinite where each number represents a reference to the class of a piece in the selection pool including the ones generated by the OOE algorithm, the representetion of this is was shown in figure \ref{old_chrom}.
+    \item  Mask layer: this layer is represented by a 7 digit array in which the value assigned in each column represents the amount of pieces from the element layer that will be assigned to said column, a representation of this is shown on figure \ref{mask_layer}.
+    \item Enemy layer: also known as pig layer, this layer is represented by two elments a single numeric value representing the total amount of pigs assigned to the level and an array of locations for the placement of this same pigs, a representation of it is shown on figure \ref{enemy_layer}. 
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=80mm]{Images/mask_layer.png}}
+    \caption{Mask array with column and fenotype representation.}
+    \label{mask_layer}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=80mm]{Images/enemy_layer.png}}
+    \caption{Amount of pigs in a level, their location relative to the mask layer (green) and fenotype representation.}
+    \label{enemy_layer}
+\end{figure}
+
+In order to select the parents of the next generation the parents are ordered by their fitness, then the system can choose between 2 options for the selection, tournament selection or roulette selection:
+
+\begin{itemize}
+    \item Tournament selection: in order to select the parent by this method the system checks the amount of crossovers assigned, then calculates the ammount of parent required to compete in pairs, then by doing a descendent selection the slots for the tournament are filled and the winners are calculated in each group.
+    \item Roulette selection: this method of selection was first decided to be used directly by giving a proportional amount of chances to be selected according to the fitness of a individual, however since one of the objectives is to obtain variety of levels the roulette must first be ranked in order to ensure that low fitness individuals can be selected as parents.
+\end{itemize}
+
+As for the crossover operations the system currently uses two types, single point crossover and double point crossover, however this crossover operation is not only applied to the piece array of an individual, but it is also applied to the mask of said individual, this way the mask can ensure that some pieces of some childs in the population are now placed in the level, this can bring the possibility that a mask that uses less pieces that it normally as can obtain a better fitness than one that uses all of them. An example of this two crossover thypes cna be seen in figure \ref{crossover} in which the mask of an individual is combined with another and the resulting mask for the childs have different amount of pieces to be placed.
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=80mm]{Images/crossover.png}}
+    \caption{Single point crossover(up) and double point crossover(bottom) aplied to an individual mask.}
+    \label{crossover}
+\end{figure}
+
+The mutation operations of the generator work with the pieces layer of an individual, the four types of mutations used are:
+
+\begin{itemize}
+    \item Add or remove elements from the piece list
+    \item Change the piece that is being used in a point of the list
+    \item Change the material a piece is made offsets
+    \item Change the x and y coordinates of a piece
+\end{itemize}
+
+This mutations do not have to be used all at once on a single individual but depending on the probabilities they can happen all at once, since most of the pieces on a individual are mostly the same type of material then at least the material mutation can occurr on all or most of the individuals to ensure that all levels will not have all the pieces with the same material which could render a level \textit{"boring"} by the fitness function.
+
+
+
+\section{Future work}
+
 
 \section{Conclusions}
 

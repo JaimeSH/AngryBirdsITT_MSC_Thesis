@@ -25,6 +25,7 @@
 
 \usepackage{newtxtext}       % 
 \usepackage{newtxmath}       % selects Times Roman as basic font
+\usepackage{minted}
 
 \usepackage{xcolor}
 \usepackage[misc]{ifsym}
@@ -67,7 +68,7 @@
 \titlerunning{Procedural generation of levels for the angry birds videogame ...}
 \maketitle
  
-\abstract{This project consisted in the generation of an evolutionary computation-based system capable of generate and evolve the structures of which one level of the Angry Birds game is composed, these structures are evaluated according to the stability of the structure as well as for the complexity of said structure.
+\abstract{This paper consisted in the generation of an evolutionary computation-based system capable of generate and evolve the structures of which one level of the Angry Birds game is composed, these structures are evaluated according to the stability of the structure as well as for the complexity of said structure.
 For this a level generation system was designed based on the data obtained from the game, said data consist in the number and type of pieces that appear and the applied gravity of the game, the individuals of the group are evaluated by a simulation of the generated level and then checking how the structures are affected by the gravity of the game.
 The evolutionary computation system as the main objective of generating structures based on the existent pieces of the game and evolving said pieces by combining them in a process that simulates the rules of the Open-Ended Evolution algorithm in which the evolution of this compounds is not inclined towards a numeric objective rather than to extend the diversity from which the pieces may be selected for a level.}
 
@@ -75,24 +76,25 @@ The evolutionary computation system as the main objective of generating structur
 
 \section{Introduction}
 \label{sec:1}
-Procedural content generation is an interesting subject on the entertainment area, primarily in the video game industry because of the easiness and quickness provided to generate content for different video game projects, in this project a evolutionary computation-based system is proposed to generate complex content for videogames based on an evolutionary algorithm and open-ended- evolution.
+Procedural content generation is an interesting subject on the entertainment area, primarily in the video game industry because of the easiness and quickness provided to generate content for different video game projects, in this paper a evolutionary computation-based system is proposed to generate complex content for videogames based on an evolutionary algorithm and open-ended- evolution.
 
-For this project a procedural generation content system is proposed for the game angry birds, angry birds is a game developed by Rovio Entertainment in which the objective is to destroy structures placed on the map as well as eliminating green pig-like entities in order to obtain the highest score possible, the game mechanics is to use a slingshot to shoot a certain number of birds with different abilities to destroy the structures and the objectives. \cite{RovioEntertainmentCorporation2009}
+For this paper a procedural generation content system is proposed for the game angry birds, angry birds is a game developed by Rovio Entertainment in which the objective is to destroy structures placed on the map as well as eliminating green pig-like entities in order to obtain the highest score possible, the game mechanics is to use a slingshot to shoot a certain number of birds with different abilities to destroy the structures and the objectives. \cite{RovioEntertainmentCorporation2009}
 
  
-While it is possible to create an evolutionary agent to play the levels and obtain the best score the main objective of this project is to generate the levels can ca be played by the agents or physical players, the levels themselves need to be complex in the sense that interesting structures can be created but it has to be possible to complete in some way.
+While it is possible to create an evolutionary agent to play the levels and obtain the best score the main objective of this paper is to generate the levels that can be played by the agents or physical players, the levels themselves need to be complex in the sense that interesting structures can be created but it has to be possible to complete in some way \cite{Stephenson2018,Stephenson}.
  
-In Section 2, a background of the subjects used on this project will be presented, this subjects, while not all being used on by different authors on their works provide a great help on the development of the proposed system, Section 3, contains a quick overview of some aspects used by different authors in order to tackle this problem, their design and basic functionality, in Section 4 the description of the current state of the project is explained, from the basis of the development to the different methods that have been used to progress on the different sections of the project, in Section 5 we explain the future work of the project, where we are in the development phase and how the future implementations are to further improve the project and finally, in Section 6 we present our conclusions.
+In Section 2, a background of the subjects used on this paper will be presented, this subjects, while not all being used on by different authors on their works provide a great help on the development of the proposed system, Section 3, contains a quick overview of some aspects used by different authors in order to tackle this problem, their design and basic functionality, in Section 4 the description of the current state of the generated system is explained, from the basis of the development to the different methods that have been used to progress on the different sections of the system, in Section 5 we explain the future work of the paper, where we are in the development phase and how the future implementations are to further improve the paper as well as the conclusions that we reached.
  
 \section{Background}
 \label{sec:3}
-In this Section we provide a quick overview of the literature about the areas that provide the basis to the development of the current project, this section is divided in three parts, the first one gives us an explanation of what procedural content generation entails, the second one provides an explanation on genetic algorithms and how can they be used to solve optimization problems, and finally, the third one provides us with an overview of Open-Ended Evolution and what it means to have an Open-Ended Evolutionary algorithm.
+In this Section we provide a quick overview of the literature about the areas that provide the basis to the development of the current paper, this section is divided in three parts, the first one gives us an explanation of what procedural content generation entails, the second one provides an explanation on genetic algorithms and how can they be used to solve optimization problems, and finally, the third one provides us with an overview of Open-Ended Evolution and what it means to have an Open-Ended Evolutionary algorithm.
 
 \subsection{Procedural content generation}
 
 Procedural content generation (PCG) denotes the way to automatically generate content by algorithms instead of generating the same content by manual means such as with different personnel.
 
-In the videogame industry many developers use a PCG style software that produces raw images and designs used by other personnel to improve it and use it in order to reduce the development cycles, and the productions cost. 
+In the videogame industry many developers use a PCG style software that produces raw images and designs used by other personnel to improve it and use it in order to reduce the development cycles, and the productions cost. \cite{togelius2016introduction}
+Nowadays there are game developer of AAA games that use software to auto generate some elements of the enviroment such as vegetation of terrain layout specialy for open-world games, this in turn cuts a great amount of development time for said games \cite{TogeliusTaxonomy,Smith2012}.
 PCG as six focus areas listed below
 
 PCG as six focus areas listed as follows:
@@ -103,7 +105,7 @@ PCG as six focus areas listed as follows:
     \item Visuals: This area is focused on creating or improving visual representations of objects on games such as giving raw designs of players faces of improving the images of other graphics.
     \item Narrative: This aspect is focused on the generation of readable and coherent stories or plotlines of games.
     \item Gameplay: This aspect uses agents to test and evaluate the mechanic on which a game is based by trying to play as a human would in order to improve said mechanics.
-    \item Game Design: This aspect is focused on generating the rulesets and mechanics of a new game. \cite{Yannakakis2017}
+    \item Game Design: This aspect is focused on generating the rulesets and mechanics of a new game. \cite{Yannakakis2017,Smith2014,shaker2016procedural}
 \end{itemize}
 
 \subsection{Genetic algorithm}
@@ -138,9 +140,9 @@ The main life cycle of a genetic algorithm shown of figure 1 is described as fol
 
 Open-ended evolution (OEE) is a variant of genetic evolution algorithm in which the objective differs from the regular genetic algorithm one, in this case the final objective is not to reach a final state of the evolution but to continue evolving and creating new types of entities more complex on each new generation, these same entities have the possibility to evolve not only inside the frame of their type but create entirely new groups. \cite{Standish2003}
 
-Another explanation provided by T. Taylor et al. \cite{Taylor2016} defines OEE has a system capable of creating novelty beyond a point where nothing changes on the current group of interest rather than just converging to a stable or quasi-stable state.
+Another explanation provided by T. Taylor et al. \cite{Taylor2016, Taylor} defines OEE has a system capable of creating novelty beyond a point where nothing changes on the current group of interest rather than just converging to a stable or quasi-stable state.
 
-For this project OEE is defined simply has a process of genetic evolution that encapsulates a group of similar processes and that is able to increase their number by the more complex the entities become.
+For this paper OEE is defined simply has a process of genetic evolution that encapsulates a group of similar processes and that is able to increase their number by the more complex the entities become.
 
 \section{Overview of existing work}
 
@@ -154,7 +156,7 @@ Y. Jiang et al. \cite{Jiang2017} proposed the use of predefined letter style pat
 
 \section{Current approach}
 
-In this Section we describe the approach that was used for the development of this project, first presenting a quick overview of the integration of a genetic algorithm with the combination of pieces, the way the open-ended segment of the project handled the creation of new compounds for the pool of pieces and then an explanation on the way the individuals are evaluated.
+In this Section we describe the approach that was used for the development of this paper, first presenting a quick overview of the integration of a genetic algorithm with the combination of pieces, the way the open-ended segment of the system handled the creation of new compounds for the pool of pieces and then an explanation on the way the individuals are evaluated.
 
 The game contains a total of 11 pieces as shown on figure 2 that cannot be modified, it is not possible to add more or modify the existing ones, with this in mind the purpose is to create bundles of this same pieces in different locations and angles in order to create structures that can be used as building blocks for more complex levels, in order to do this a sequence of events needs to be done as follows:
 
@@ -174,7 +176,7 @@ The game contains a total of 11 pieces as shown on figure 2 that cannot be modif
 \label{fig}
 \end{figure}
 
-The Since the algorithm has to generate more complex structures the remaining pieces of a member of the population have to be used has a starting point, this new additions to the piece pool are added to the population by the mutation operation, the objective in the first phase of the project is to generate structures that are capable of maintaining their own balance as shown on figure 3, since the objective of open-ended evolution for this project is to add new bundles to the pool of options the algorithm will first run a simulation with a group of pieces and after it the ones that were not destroyed by falling because of gravity will be saved and added to the pool of options.
+Since the algorithm has to generate more complex structures the remaining pieces of a member of the population have to be used has a starting point, this new additions to the piece pool are added to the population by the mutation operation, the objective in the first phase of the system is to generate structures that are capable of maintaining their own balance as shown on figure 3, since the objective of open-ended evolution for this system is to add new bundles to the pool of options the algorithm will first run a simulation with a group of pieces and after it the ones that were not destroyed by falling because of gravity will be saved and added to the pool of options.
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=80mm]{Images/simulation_bef_aft_example.png}}
@@ -184,7 +186,11 @@ The Since the algorithm has to generate more complex structures the remaining pi
 
 In order to add a bundle of pieces as a new component first it has to be measured, an imaginary bounding box is defined by calculating the lengths of all the pieces, finding the borders of said pieces and find the points that could define a box around all of them, calculate the height and width then calculate the center point of said box and calculate the offsets from the center of the group to the center of each respective piece as shown on figure 4, this information is needed in order to add it as a new element so it can be used to place the pieces in their respective new positions when the files needed for the simulation are being created.
 
-The way to represent the elements of a member of the population is by using the id of each piece and the new added ones has a pointer to the respective data that needs to be obtained, this way and individual can be represented as shown on figure 5 where each chromosome represents a certain item in the pool of pieces, the numbers for this elements are assigned in a first come first served basis, the numbers are infinitely incremented and this same pieces can be repeated on each individual of the population.
+In case one or more of this pieces is rotated or needs to be rotated we defined a function that first obtains the data of a each piece in the group, finds the 4 edges of it and then if the piece needs a rotation different than 0 degrees a function to rotate the figure is called, the function returns a list of points that represent the borders of the rotated piece, after this the other pieces are processed the same way and with the points we calculate the entire bounding box as well as the center of the group that will be added.
+
+
+
+In order to create a level generation algorithm there has to be a way to represent the level structure in a a way that the genetic algorithm is able to interpret it and at the same time be able to be interpreted by the game itself \cite{togelius2016Representationsforsearch-basedmethods}, so in this case the way to represent the elements of a member of the population is by using the id of each piece and the new added ones has a pointer to the respective data that needs to be obtained, this way and individual can be represented as shown on figure 5 where each chromosome represents a certain item in the pool of pieces, the numbers for this elements are assigned in a first come first served basis, the numbers are infinitely incremented and this same pieces can be repeated on each individual of the population. 
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=80mm]{Images/bounding_box_calculation.png}}
@@ -200,7 +206,7 @@ The way to represent the elements of a member of the population is by using the 
 
 Once the pieces have been added and the individuals are ready to be evaluated a simulation on the game environment is scheduled by order in the population, all the individuals have a maximum of ten seconds to maintain balance or reach absolute stability, if absolute stability is reached it means one of two things, first the generated structure is completely stable or second, the tower fell to either side and the pieces were destroyed or stopped moving by gravitational pull, when either of this happens by more than two seconds the simulation ends regardless of time remaining and the next individual is simulated.
 
-The evaluation process for this project is still in the development stages, however in order to check that the evolution is working has it should a criteria has been temporarily made as follows, each individual in the population has 100 points so before the simulation starts each of them are viable candidates to be an elite member of the population regardless relative height or complexity, then the remaining of the process is separated in three phases has follows.
+The evaluation process for this paper is still in the development stages, according to another work by Yannakakis et al. \cite{YannakakisContentGeneration} there are various ways to evaluate the generated content, one example of this a an adaptive generation to optimize the player experience \cite{Shaker2010}, however in order to check that the evolution in this current system is working has it should a criteria has been temporarily made as follows, each individual in the population has 100 points so before the simulation starts each of them are viable candidates to be an elite member of the population regardless relative height or complexity, then the remaining of the process is separated in three phases has follows.
 
 First, after each of the individual simulations are over the evaluation process takes place, in this phase the resulting level is checked for pieces, each one of them is counted and then the resulting number is compared to that of the initial quantity of pieces that were originally put in before the simulation in order to calculate the first element of the evaluation process, each piece represents a certain percentage of 100\% so the missing pieces are subtracted from the total.
 
@@ -247,10 +253,24 @@ Using the proposed approach a modification to the generation of individuals was 
     \end{figure}
 
 
-With this in consideration the results as shown in figure 6 and subsequently figure 7 where able to be obtained, however since the objective of the project is to construct more complex structures the obtained results will be used as a base for the further development of the project with the implementation of the concepts presented in the future work section.
+With this in consideration the results as shown in figure 6 and subsequently figure 7 where able to be obtained, however since them objective of the generated system is to construct more complex structures the obtained results will be used as a base for the further development of the system with the implementation of the concepts presented in the future work section.
 
-\section{Future work}
+\section{Conclusions and future work}
+
+The use of artificial intelligence in videogames is a common thing almost since before the first generation of videogames on 1972 as simply entities that would follow a set group of actions but as the generation kept advancing the need for more intelligent entities appeared, as of this generation some videogames use AI as ways to improve the interaction between man and game, but also using it in order to facilitate the way videogames are created, so for this system the focus of using evolutionary algorithms as great interest, as a starting point a rather simple game can be used as a workbench of the work but it also helps us define how much more can be done when all the required objects are obtained, improve on the same system and find ways for it to be used on different other games.
+
 Since there is a need to create complex structures than can cover a great section of the play map, a method to evaluate the distribution is needed, for this instance we propose using the rule of thirds \cite{DarrenRowse} which is a guideline used while creating imagen in which the purpose is to create aesthetical pleasant images where the focus point or the most important area is at the center of the image as shown on figure 8, using this rule different distribution groups or masks are created has shown on figure 9 in order to use them before the simulation of an individual takes place in order to distribute the pieces in a way that can cover more area and create more balanced levels instead of using a tower like distribution as shown on figure 10.
+
+Using this same distributions as a base, the masks that will be used on the individuals to balance the content in the level will be defined the example below where a value of 1 represents an area of the level that needs to have pieces and 0 represents sections were no piece will be added.
+
+\begin{minted}{Python}
+    type_castle = [[0,0,0,1,0,0,0],
+                   [1,0,1,1,1,0,1],
+                   [1,1,1,1,1,1,1]]
+    type_house = [[0,0,1,1,0,0,0],
+                  [0,1,1,1,1,0,0],
+                  [0,1,1,1,1,0,0]]
+\end{minted}
 
 Using this same distribution a new evaluation will be added in which according to how much of the area is filled a score will be given and this score will be used as a new sorting value at the moment of selecting individuals for the crossover operation, since as shown on figure 8 there is a possibility that a huge mask is given to an individual it can be possible that the amount of pieces will not be able to cover the full area given, so in order to prevent this kind of problems we also propose to give each mask a value that refers to the minimum amount of pieces and height required to fill the most of the mask then check the amount of pieces and height before simulation for a single individual and then randomize which mask of the ones that can be used will be assigned to that individual.
 
@@ -274,9 +294,6 @@ Using this same distribution a new evaluation will be added in which according t
 
 Another proposed method for the evolution of the individuals is to use a mutation operation that is capable of adding or removing pieces from an individual, this way the diversity of the population will be greater on future generations, also by using the same mutation idea a change on the mask assigned to a particular individual can be modified as well, in the case a mask is either too small or too big for an individual because of the orientation of the pieces a precaution has been created, in case the mask is too small for the number of pieces after filling the mask areas the code will take the remaining pieces and begin placing them as if the mask was repeated, and in the case the number of pieces is too small the system will simply return the pieces that were able to be fitted in and continue with the process as usual.
 
-\section{Conclusions}
-
-The use of artificial intelligence in videogames is a common thing almost since before the first generation of videogames on 1972 as simply entities that would follow a set group of actions but as the generation kept advancing the need for more intelligent entities appeared, as of this generation some videogames use AI as ways to improve the interaction between man and game, but also using it in order to facilitate the way videogames are created, so for this project the focus of using evolutionary algorithms as great interest, as a starting point a rather simple game can be used as a workbench of the work but it also helps us define how much more can be done when all the required objects are obtained, improve on the same system and find ways for it to be used on different other games.
 
 \bibliographystyle{ieeetr}
 \bibliography{article_references}
