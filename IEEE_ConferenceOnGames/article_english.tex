@@ -1,7 +1,7 @@
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
-\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\usepackage[style=ieee,backend=biber,style=numeric,sorting=none]{biblatex}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
@@ -51,9 +51,9 @@ genetic algorithm, procedural generated content, open-ended evolution, evolution
 \section{Introduction}
 Procedural content generation is an interesting subject on the entertainment area, primarily in the video game industry because of the easines and quickness provided to generate content for diferent video game projects, in this project a evolutionary computation-based system is proposed to generate complex content for videogames based on an evolutionary algorithm and open-ended- evolution.
 
-For this project a procedural generation content system is proposed for the game angly birds, angry birds is a game developed by Rovio Entrtainment in which the objective is to destroy structures placed on the map as well as eliminating green pig-like entities in order to obtain the highest score possible, the game mechanics is to use a slingshot to shoot a certain number of birds with different abilities to destroy the structures and the objectives. \cite{RovioEntertainmentCorporation2009}
+For this project a procedural generation content system is proposed for the game angry birds, angry birds is a game developed by Rovio Entrtainment in which the objective is to destroy structures placed on the map as well as eliminating green pig-like entities in order to obtain the highest score possible, the game uses a gravity and collition system that allows the structures to fall and be destroyed by means of damage as well as the use of three diferent construction materials \textit{ice}, \textit{wood} and \textit{stone} each one with different resistances ranging from fragile, normal and sturdy in that order, the game mechanic is to use a slingshot to shoot a certain number of birds with different abilities to destroy the structures and the objectives, it is possible to obtain a high score by doing the most destruction as possible with the least birds as you can. \cite{RovioEntertainmentCorporation2009}
 
-While it is possible to create a evolutionary agent to play the levels and obtain the best score the main objective of this project is to generate the levels can ca be played by the agents or physical players, the levels themselves need to be complex in the sense that interesting structures can be created but it has to be possible to complete in some way.
+While it is possible to create a evolutionary agent to play the levels and obtain the best score the main objective of this project is to generate the levels that can be played by naive agents or physical players, the levels themselves need to be complex in the sense that interesting structures can be created but it has to be possible to complete in some way \cite{Stephenson,Stephenson2018}.
 
 In Section 2, a background of the subjects used on this project will be presented, this subjects, while not all being used on by different authors on their works provide a great help on the development of the proposed system, Section 3, contains a quick overview of some aspects used by different authors in order to tackle this problem, their design and basic functionality, in Section 4 the description of the current state of the project is explained, from the basis of the development to the diferent menthods that have been used to progress on the different sections of the project, in Section 5 we explain the future work of the project, where we are in the development phase and how the future implementations are to further improve the project and finally, in Section 6 we present our conclusions
  
@@ -77,7 +77,7 @@ PCG as six focus areas listed as follows:
     \item Visuals: This area is focused on creating or improving visual representations of objects on games such as giving raw designs of players faces of improving the images of other graphics.
     \item Narrative: This aspect is focused on the generation of readable and coherent stories or plotlines of games.
     \item Gameplay: This aspect uses agents to test and evaluate the mechanic on which a game is based by trying to play as a human would in order to improve said mechanics.
-    \item Game Design: This aspect is focused on generating the rulesets and mechanics of a new game. \cite{Yannakakis2017}
+    \item Game Design: This aspect is focused on generating the rulesets and mechanics of a new game. \cite{Yannakakis2017,Smith2014,shaker2016procedural}
 \end{itemize}
 
 \subsection{Genetic algorithm}
@@ -110,7 +110,7 @@ The main life cycle of a genetic algorithm shown of figure \ref{algorithm_model}
 \subsection{Open-Ended Evolution}\label{AA}
 Open-ended evolution (OEE) is a variant of genetic evolution algorithm in which the objective differs from the regular genetic algorithm one, in this case the final objective is not to reach a final state of the evolution but to continue evolving and creating new types of entities more complex on each new generation, these same entities have the possibility to evolve not only inside the frame of their type but create entirely new groups. \cite{Standish2003}
 
-Another explanation provided by T. Taylor et al. \cite{Taylor2016} defines OEE has a system capable of creating novelty beyond a point where nothing changes on the current group of interest rather than just converging to a stable or quasi-stable state.
+Another explanation provided by T. Taylor et al. \cite{Taylor2016,Taylor} defines OEE has a system capable of creating novelty beyond a point where nothing changes on the current group of interest rather than just converging to a stable or quasi-stable state.
 
 For this project OEE is defined simply has a process of genetic evolution that encapsulates a group of similar processes and that is able to increase their number by the more complex the entities become.
 
@@ -341,12 +341,30 @@ Since this group of mutations further ensures diversity in the populations a dif
     \label{shannon_entropy}
 \end{equation}
 
+Using all this configurations the system is capable of creating levels, some of them playable as shown in figure \ref{result_1} however the levels that can be generated are far from optimized to be played on, this is an issue that must be changed in future instances but the generator itself is able to be used as a base for a more complex one, and as shown in the future work section this issues can be solved by different means.
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=80mm]{Images/Result_n2.png}}
+    \caption{Example of resulting level with current system.}
+    \label{result_1}
+\end{figure}
+
 \section{Future work}
 
+The system as been able to generate levels that fulfill the requirements provided by the parameters file, however a way to evaluate that the levels generated are indeed \textit{"fun"}
+ or \textit{"interesting"} is still needed, at this point we have two was to evaluate the results:
+ \begin{itemize}
+    \item User survey, in case a survey is used as an evaluation tool then first the system has to generate the levels and a group of people must participate by playing the levels and answering a set of questions afterwards, the questions themselves must try to capture the feeling of a person towards the game like questioning if a level was too easy or too dificult to solve, if the generated structures look interesting or if the level required them to strategize how to use the provided birds to solve the level, the survey must be applied to a equal quantity of people of three diferent game skill levels,\textit{"non video game players"}, \textit{"casual video game players"} and \textit{"avid video game players"}, this way we can evaluate a level or the entire system by knowing if all skill levels did not enjoyed a level because it was too simple or easy.
+    \item By using a naive agent, if a naive agent is used to play the levels we can obtain data of how the agent solves the levels placed before them, and the way to evaluate if the level is or not \textit{"interesting"} will be by checking how easily the aggent is able to solve a level, the point here is to have a level that cannot be solved by a single movement but to have one that a human player has to think a while to solve tryingto place the difficulty of a level just at the middle point between easy and hard difficulty levels.
+\end{itemize}
+
+Other aspects that the system need to improve is in the processing time required, since the current way to calculate the fitness and create the next generations of a population the system requires the system to execute simulations of the levels on every generation that passes therefore increasing the time it takes to complete an entire cycle of execution, so in order to change this we require to create a way to evaluate a level using only the information of the pieces, locations and pigs locations and using this data to predict the way a level will behave when placed in a real simulation environment therefore drastically reducing execution times.
+
+Finally a different method to evaluate the individuals must be created, this is because the current evaluation method allows us to generate playable levels, this levels are far from ideal in the way that they only use a certain range of items present in the game therefore reducing the potential of a level, we expect to make the current fitness function work the most eficient that it can but another possible solution is found a good combination of formulas to generate the fitness function.
 
 \section{Conclusions}
 
-The use of artificial intelligence in videogames is a common thing almost since before the first generation of videogames on 1972 as simply entities that would follow a set group of actions but as the generation kept advancing the need for more intelligent entities appeared, as of this generation some videogames use AI as ways to improve the interaction between man and game, but also using it in order to facilitate the way videogames are created, so for this project the focus of using evolutionary algorithms as great interest, as a starting point a rather simple game can be used as a workbench of the work but it also helps us define how much more can be done when all the required objects are obtained, improve on the same system and find ways for it to be used on different other games
+The use of artificial intelligence in videogames is a common thing almost since before the first generation of videogames on 1972 as simply entities that would follow a set group of actions but as the generation kept advancing the need for more intelligent entities appeared, as of this generation some videogames use AI as ways to improve the interaction between man and game, but also using it in order to facilitate the way videogames are created, so for this project the focus of using evolutionary algorithms as great interest, as a starting point a rather simple game can be used as a workbench of the work but it also helps us define how much more can be done when all the required objects are obtained, improve on the same system and find ways for it to be used on different other games.
 
 \printbibliography
 \newrefcontext[sorting=ydnt]
