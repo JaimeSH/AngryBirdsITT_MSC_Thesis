@@ -219,7 +219,7 @@ follows:
 % There is also Novelty Search - MG
 % Also it sounds like a copy-paste from Wikipedia please check and reference
 % accordingly - MG
- 
+
 \subsection{Open-Ended Evolution}\label{AA} 
 Open-ended evolution (OEE) is a variant of genetic evolution algorithm in which
 the objective differs from the regular genetic algorithm one, in this case the
@@ -267,6 +267,11 @@ angles in order to create structures that can be used as building blocks for
 more complex levels, in order to do this a sequence of events needs to be done
 as follows:
 
+% Pleas explain in more detail this Composites in a section.  
+
+% Please use the name Composite instead of Bundle, composition is well known in
+% object oriented design.
+
 \begin{enumerate}
 \item Generate the first generation of the population
 \item Run a Simulation
@@ -284,8 +289,11 @@ angle of the pieces, create a bundle and add it to the pool
 \label{fig}
 \end{figure}
 
-The Since the algorithm has to generate more complex structures the remaining
+% This sentence needs more work -MG
+Since the algorithm has to generate more complex structures the remaining
 pieces of a member of the population have to be used has a starting point, this
+% we don't use member of the populations, use proposed solution, candidate solution
+% or individual of the population. - MG  
 new additions to the piece pool are added to the population by the mutation
 operation, the objective in the first phase of the project is to generate
 structures that are capable of maintaining their own balance as shown on figure
@@ -294,11 +302,19 @@ bundles to the pool of options the algorithm will first run a simulation with a
 group of pieces and after it the ones that were not destroyed by falling because
 of gravity will be saved and added to the pool of options.
 
+% New pieces are added by mutation? 
+% Please give more details to all this - MG
+
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=80mm]{Images/simulation_bef_aft_example.png}}
 \caption{Structure at beginning and end of a simulation.}
 \label{fig}
 \end{figure}
+
+% Here it's explained better, maybe this paragraph should be moved to
+% an earlier point - MG
+
+% Needs a few touches - MG
 
 In order to add a bundle of pieces as a new component first it has to be
 measured, an imaginary bounding box is defined by calculating the lengths of all
