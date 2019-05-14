@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber article_english"] 1557859493 "article_english.bcf" "article_english.bbl" "article_english" 1557860478
+["biber article_english"] 1557859493 "article_english.bcf" "article_english.bbl" "article_english" 1557860817
   "References/article_references.bib" 1557793764 20532 7b7d22eb677fbacfa6124cbd534d7e9d ""
-  "article_english.bcf" 1557860478 92105 15962a36f70abdd2de1fd71340f959fe ""
+  "article_english.bcf" 1557860817 92105 15962a36f70abdd2de1fd71340f959fe ""
   (generated)
-  "article_english.blg"
   "article_english.bbl"
-["pdflatex"] 1557860476 "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.tex" "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.pdf" "article_english" 1557860478
+  "article_english.blg"
+["pdflatex"] 1557860814 "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.tex" "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.pdf" "article_english" 1557860817
   "Images/Result_n2.PNG" 1557797575 37713 b078ec44f2642ef166c9fbf3a64f3754 ""
   "Images/Result_n2.png" 1557797575 37713 b078ec44f2642ef166c9fbf3a64f3754 ""
   "Images/bounding_box_calculation.png" 1557720511 323273 c425cc8bec92544495dd1fc47a0b9aa0 ""
@@ -22,12 +22,12 @@
   "Images/result_example_thirds.png" 1557180976 523209 1ab546fd0f13829c366469804cbe006d ""
   "Images/ruleofthirds_example.png" 1549497643 833718 e94ffa87d07a592a54e34523a4b8425a ""
   "Images/simulation_bef_aft_example.png" 1557720744 181909 d87572ff150104503c6ab0735c40b4ee ""
-  "article_english.aux" 1557860478 6533 669d36c4010b2f5a26ad6db0f80c4218 ""
+  "article_english.aux" 1557860817 6533 669d36c4010b2f5a26ad6db0f80c4218 ""
   "article_english.bbl" 1557859497 27264 d6d8203e361f2cfe3aa92f4fc43de822 "biber article_english"
-  "article_english.run.xml" 1557860478 2401 f6fcef632acc7c5620b7cb791dac441b ""
-  "article_english.tex" 1557860475 38210 bbdf62713fc7fc3f78b7a94f5e68fb55 ""
-  "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.aux" 1557860478 6533 669d36c4010b2f5a26ad6db0f80c4218 ""
-  "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.tex" 1557860475 38210 bbdf62713fc7fc3f78b7a94f5e68fb55 ""
+  "article_english.run.xml" 1557860817 2401 f6fcef632acc7c5620b7cb791dac441b ""
+  "article_english.tex" 1557860814 38209 c2d86578d6ef01a0397f42026462ef8d ""
+  "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.aux" 1557860817 6533 669d36c4010b2f5a26ad6db0f80c4218 ""
+  "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.tex" 1557860814 38209 c2d86578d6ef01a0397f42026462ef8d ""
   "d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1549477120 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "d:/Program Files/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1549477617 3332 103109f5612ad95229751940c61aada0 ""
   "d:/Program Files/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1549479643 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -118,10 +118,10 @@
   "d:/Program Files/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1549480214 4229913 19440e14991d4929851bf9f3e529093c ""
   "d:/Program Files/texlive/2018/texmf.cnf" 1549480060 673 4ae7b2f49cee444c5343a45b5d0f169c ""
   (generated)
+  "article_english.run.xml"
+  "article_english.log"
   "article_english.aux"
   "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.log"
-  "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.pdf"
-  "article_english.log"
-  "article_english.run.xml"
   "article_english.bcf"
   "article_english.pdf"
+  "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.pdf"
