@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.6)  14 MAY 2019 12:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.6)  14 MAY 2019 12:51
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -748,26 +748,37 @@ File: Images/crossover.png Graphic file (type png)
 Package pdftex.def Info: Images/crossover.png  used on input line 604.
 (pdftex.def)             Requested size: 227.62204pt x 195.98083pt.
  [5 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/chromosome_chain_new_model.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/new_model.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/mask_layer.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/enemy_layer.png>]
-<Images/Result_n2.png, id=57, 313.9228pt x 115.93312pt>
+<Images/layer12_combine.png, id=57, 667.40617pt x 473.87779pt>
+File: Images/layer12_combine.png Graphic file (type png)
+<use Images/layer12_combine.png>
+Package pdftex.def Info: Images/layer12_combine.png  used on input line 683.
+(pdftex.def)             Requested size: 227.62204pt x 161.61523pt.
+<Images/layer123_combine.png, id=58, 776.0537pt x 541.78249pt>
+File: Images/layer123_combine.png Graphic file (type png)
+<use Images/layer123_combine.png>
+Package pdftex.def Info: Images/layer123_combine.png  used on input line 689.
+(pdftex.def)             Requested size: 227.62204pt x 158.90681pt.
+<Images/Result_n2.png, id=59, 313.9228pt x 115.93312pt>
 File: Images/Result_n2.png Graphic file (type png)
 <use Images/Result_n2.png>
-Package pdftex.def Info: Images/Result_n2.png  used on input line 675.
+Package pdftex.def Info: Images/Result_n2.png  used on input line 702.
 (pdftex.def)             Requested size: 227.62204pt x 84.06085pt.
- [6 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/crossover.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/Result_n2.PNG>]
-Underfull \hbox (badness 1953) in paragraph at lines 728--728
+ [6 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/crossover.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/layer12_combine.png>]
+Underfull \hbox (badness 1953) in paragraph at lines 755--755
 \OT1/ptm/m/it/10 Com-pu-ta-tional In-tel-li-gence and Ap-pli-ca-tions \OT1/ptm/m/n/10 03.02
  []
 
 
-Underfull \hbox (badness 4144) in paragraph at lines 728--728
+Underfull \hbox (badness 4144) in paragraph at lines 755--755
 \OT1/ptm/m/n/10 10 . 1142 / S1469026803000914$. \OT1/ptm/m/sc/10 url\OT1/ptm/m/n/10 : $http : / /
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 728--728
+Underfull \hbox (badness 1466) in paragraph at lines 755--755
 \OT1/ptm/m/n/10 www . worldscienti^^Lc . com / doi / abs / 10 . 1142 /
  []
 
+[7 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/layer123_combine.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/Result_n2.PNG>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -779,24 +790,26 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7] (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.aux)
+[8
+
+] (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.aux)
 Package logreq Info: Writing requests to 'article_english.run.xml'.
 \openout1 = `article_english.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11010 strings out of 492616
- 192223 string characters out of 6126092
- 611586 words of memory out of 5000000
- 14797 multiletter control sequences out of 15000+600000
+ 11022 strings out of 492616
+ 192547 string characters out of 6126092
+ 611604 words of memory out of 5000000
+ 14807 multiletter control sequences out of 15000+600000
  35802 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,17n,45p,2022b,1361s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.pdf" (7 pages, 3502468 bytes).
+Output written on "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.pdf" (8 pages, 3860866 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

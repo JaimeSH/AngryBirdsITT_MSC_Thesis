@@ -127,7 +127,7 @@ raw images and designs used by other personnel to improve it and use it in order
 to reduce the development cycles, and the productions cost. 
 PCG as various focus areas that resolve around a video game, however in this paper 
 the main focus is the \textit{Level design} area which as the objective to design 
-the different areas of a game in wich a player can interact with, since in the 
+the different areas of a game in which a player can interact with, since in the 
 angry birds video game a level is represented by a scene then the system will 
 have to create the entities (birds and pigs) and objects (pieces) in it in order 
 to create a playable level.
@@ -663,6 +663,33 @@ new evaluation formulas as follows:
     \end{aligned}
     \label{shannon_entropy}
 \end{equation}
+
+Finally figure \ref{layer12_combine} and figure \ref{layer123_combine} represent 
+the way all the layers of an individual al combined to create a level after all 
+the selection, combination and mutation operations, first in figure \ref{layer12_combine}
+the composites layer is obtained from an individual, by a background process the 
+width and height of all composites are obtained, then using the mask from the same 
+individual the composites are placed in the order they are in their respective list 
+(left to right in the level) in case a mask is not able to accommodate all the 
+composites the remaining ones are not placed nor taken into account on the evaluation 
+process, in the opposite case that there are not enough composites to fill a mask 
+then the remaining areas are not taken into account as well, then in figure \ref{layer123_combine} 
+the previous combination of layers is evaluated by cheking which placed composites 
+can hold a pig in the center or on the top of it, then the pigs are placed in the 
+same oreder the composites are placed (left to right) in the locations where one 
+is able to be placed.
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=80mm]{Images/layer12_combine.png}}
+    \caption{Combination of composites layer and mask layer.}
+    \label{layer12_combine}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=80mm]{Images/layer123_combine.png}}
+    \caption{Combination of figure \ref{layer12_combine} layers with pig layer.}
+    \label{layer123_combine}
+\end{figure}
 
 Using all this configurations the system is capable of creating levels, some of
 them playable as shown in figure \ref{result_1} however the levels that can be
