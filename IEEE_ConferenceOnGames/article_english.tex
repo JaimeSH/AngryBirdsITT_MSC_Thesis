@@ -13,7 +13,7 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Procedural generation of levels fot he angry birds videogame using
+\title{Procedural generation of levels for the angry birds videogame using
 evolutionary computation\\
 }
 
@@ -40,7 +40,7 @@ email address}}
 % We do not say this project, is more like: In this paoer an evolutionary ... 
 % is presented or In this paper we present a .... (in third or first person plural) - MG   
 This project consisted in the generation of an evolutionary computation-based
-system capable of generate and evolve the structures of which one level of the
+system capable to generate and evolve the structures of which one level of the
 Angry Birds game is composed, these structures are evaluated according to the
 stability of the structure as well as for the complexity of said structure.
 % This is not true any more. Also the evaluation of the level is not the most
@@ -53,7 +53,7 @@ simulation of the generated level and then checking how the structures are
 affected by the gravity of the game.  % This is not what the systems does any more
 % It seems like you are describing Laura's work - M 
 
-The evolutionary computation system as the main objective of generating
+The evolutionary computation system has the main objective of generating
 structures based on the existent pieces of the game and evolving said pieces by
 combining them in a process that simulates the rules of the Open-Ended Evolution
 algorithm in which the evolution of this compounds is not inclined towards a
@@ -68,12 +68,12 @@ be selected for a level.
 
 \begin{IEEEkeywords}
 genetic algorithm, procedural generated content, open-ended evolution,
-evolutionary computa
+evolutionary computation
 \end{IEEEkeywords}
 
 \section{Introduction}
 Procedural content generation is an interesting subject on the entertainment
-industry, primarily in the video game development because of the easines and
+industry, primarily in the video game development because of the easiness and
 quickness provided to generate content for different video game projects [ref] .
 In this paper an evolutionary content generation system is proposed to generate
 levels for the popular Angry Birds video game
@@ -82,7 +82,7 @@ open-ended evolution.
 
 
 For this project a procedural generation content system is proposed for the game
-angry birds, angry birds is a game developed by Rovio Entrtainment in which the
+angry birds, angry birds is a game developed by Rovio Entertainment in which the
 objective is to destroy structures placed on the map as well as eliminating
 green pig-like entities in order to obtain the highest score possible, the game
 uses a gravity and collition system that allows the structures to fall and be
@@ -130,9 +130,7 @@ such as with different personnel.
 In the videogame industry many developers use a PCG style software that produces
 raw images and designs used by other personnel to improve it and use it in order
 to reduce the development cycles, and the productions cost. PCG as six focus
-areas listed below
-
-PCG as six focus areas listed as follows:
+areas listed below:
 % Jaime, you must add references to EVERY THING READ alsewhere : 
 % We do not proposed this list, please add a reference. - MG   
 
@@ -142,8 +140,8 @@ PCG as six focus areas listed as follows:
     \item Audio: This aspect is focused on designing soundtracks that are able
     to react to a player specific action.
     \item Visuals: This area is focused on creating or improving visual
-    representations of objects on games such as giving raw designs of players
-    faces of improving the images of other graphics.
+    representations of objects on games, such as giving raw designs of players
+    faces or improving the images of other graphics.
     \item Narrative: This aspect is focused on the generation of readable and
     coherent stories or plotlines of games.
     \item Gameplay: This aspect uses agents to test and evaluate the mechanic on
@@ -165,9 +163,9 @@ In other words a genetic algorithm is a method to solve optimization problems by
 creating a population that will represent a possible solution and repeatedly
 doing genetic operations as selection, crossover and mutation on each member of
 the population in order to generate children for the next
-generation that would be closer to the best solution of the problem than their
-parents, the cycles in this method where the operations are made are called
-generations and by moving over this the population “evolves” o in other words,
+generation that would be closer to the best solution of the problem, 
+the cycles in this method where the operations are made are called
+generations and by moving over this the population “evolves” or in other words,
 they get closer to the best possible solution  to a specific problem.
 
 \begin{figure}[htbp]
@@ -179,7 +177,7 @@ they get closer to the best possible solution  to a specific problem.
 % Maybe this is well known, again our implementation is what we need to describe 
 % JJ, what you think?  
     
-The main life cycle of a genetic algorithm shown of figure \ref{algorithm_model}
+The main life cycle of a genetic algorithm shown on figure \ref{algorithm_model}
 is described as follows:
 \begin{enumerate}
     \item Initialize a random n population of values suitable for the solution.
@@ -212,8 +210,8 @@ nothing changes on the current group of interest rather than just converging to
 a stable or quasi-stable state.
 
 For this project OEE is defined simply has a process of genetic evolution that
-encapsulates a group of similar processes and that is able to increase their
-number by the more complex the entities become.
+encapsulates a group of similar processes and that is able to increase complexity
+ of the original entities.
 
 % I tried to mix the two sections together while expanding the first part of 
 % the introduction JS
@@ -293,14 +291,16 @@ Intelligence and Games are based on, it explains some of the solving methods
 proposed by previous competitors.
 
 Y. Jiang et al. \cite{Jiang2017} proposed the use of predefined letter style
-patterns and combined the to create a small pool of word used to be combined in
+patterns and combined to create a small pool of words and letters used to be combined in
 order to create levels with text on them, the participants would play the game
-and after that they would be asked if they liked the layout of the levels
+and after that they would be asked if they liked the layout of the levels.
 
 \section{Approach}
 
-In this Section we describe the first approach that was used for this project, the
-game contains a total of 11 pieces as shown on figure \ref{piece_list} that
+In this Section we describe the approaches that were used for this project, first 
+explaining some information of how techniques like OOE were implemented with the paper.
+
+The game contains a total of 11 pieces as shown on figure \ref{piece_list} that
 cannot be modified, it is not possible to add more or modify the existing ones,
 with this in mind the purpose is to create composites of this same pieces in
 different locations and angles in order to create structures that can be used as
@@ -314,7 +314,7 @@ of one element will be created for each piece, after this in order to add a
 composite of pieces as a new component first a group of existing composites is 
 selected and placed in a imaginary enviroment then as a unique group they are 
 measured, an imaginary bounding box is defined by calculating the lengths of all
-the pieces, finding the borders of said pieces and then find the points that could
+the pieces, finding the borders of said pieces and then finding the points that could
 define a box around all of them, then use this defined box to calculate the 
 height and width of the new composite and then calculate from 
 the center point of said box the offsets from the center of the
@@ -339,15 +339,15 @@ events needs to be done as follows:
 %                                                                           \|/
 
 \begin{enumerate}
-\item Gnerate composited to add to the pool of options
-\item Generate the first generation of the population
-\item Run a Simulation
-\item Evaluate each member of the population
+\item Gnerate composited to add to the pool of options.
+\item Generate the first generation of the population.
+\item Run a Simulation.
+\item Evaluate each member of the population.
 \item If a member of the population has remaining pieces obtain the location and
-angle of the pieces, create a composite and add it to the pool
-\item Select the parents for the next generation
-\item Do the crossover and mutation operations
-\item Repeat the cycle
+angle of the pieces, create a composite and add it to the pool.
+\item Select the parents for the next generation.
+\item Do the crossover and mutation operations.
+\item Repeat the cycle.
 \end{enumerate}
 
 \begin{figure}[htbp]
@@ -362,20 +362,20 @@ The Angry Birds level generation track is a competition where the objective is
 to generate levels that are \textit{fun} and \textit{enjoyable} however they 
 also have to be challenging but imposible however the rules for the competition 
 specify that a configuration file must be used to
-generate the levels of the game in a limited amount of time, the infornmation on
+generate the levels of the game in a limited amount of time, the information on
 the configuration file is first the number of \textbf{\textit{different}} levels
 that must be generated, the second value is the different materials \textit{not
 allowed} to be used, for instance a group of generated levels must not have
-circles which composition material is ice or stone moreover it des not have to
+circles which composition material is ice or stone moreover it does not have to
 integrate a triangle piece with ice, stone or wood material so this combinations
 must be removed from the pool of options, the third configuration value is the
 \textit{number of pigs} that must be placed in a level, and finally the
 \textit{limit} of time that the system has to create the required amount of
 levels.
 
-After taking into account this restrictions the strcture of our current approach
-had to be changed, so this section will be divided in tow subsections, the first
-will explain the approach that was used and after that second will explain the
+After taking into account this restrictions the structure of our current approach
+had to be changed, so this section will be divided in two subsections, the first
+will explain the approach that was used and after that the second will explain the
 modifications that had to be made in order to integrate the configuration files
 for the competition. 
 
@@ -409,8 +409,8 @@ id of each piece and the new added ones has a pointer to the respective data
 that needs to be obtained, this way and individual can be represented as shown
 on figure \ref{old_chrom} where each chromosome represents a certain item in the
 pool of pieces, the numbers for this elements are assigned in a first come first
-served basis, the numbers are infinitely incremented and this same pieces can be
-repeated on each individual of the population
+served basis, the numbers are infinitely incremented and the same pieces can be
+repeated on each individual of the population.
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=80mm]{Images/bounding_box_calculation.png}}
@@ -437,7 +437,7 @@ The evaluation process for this project is still in the development stages,
 however in order to check that the evolution is working has it should a criteria
 has been temporarily made as follows, each individual in the population has 100
 points so before the simulation starts each of them are viable candidates to be
-a elite member of the population regardless relative height or complexity, then
+an elite member of the population regardless relative height or complexity, then
 the remaining of the process is separated in three phases has follows.
 
 First, after each of the individual simulations are over the evaluation process
@@ -453,8 +453,8 @@ remaining pieces are checked for their positions in comparison to the original
 ones before the simulation, using the formula 1 each piece within the individual
 is evaluated according to the center point of the piece, if the piece moved more
 than a certain threshold half the percentage for one piece is removed from the
-remaining percentage, after this using the formula 2 the position of the piece
-is further checked this time by the difference in angle from the original one,
+remaining percentage, after this using formula 2 the position of the piece
+is further checked, this time by the difference in angle from the original one,
 in case the difference of angles is more than a certain threshold half a piece
 value is further removed from the total.
 
@@ -479,7 +479,7 @@ value is further removed from the total.
         \begin{IEEEeqnarraybox}[][c]{l?s}
             \IEEEstrut
             0 & if $ -5 \le r \le 5 $, \\
-            \frac{100}{lenght\_pieces} * 0.5 & if $ r < 5 or r > 5 $.
+            \frac{100}{lenght\_pieces} * 0.5 & if $ r < 5 \: or \: r > 5 $.
             \IEEEstrut
         \end{IEEEeqnarraybox}
     \right. \\
@@ -503,12 +503,12 @@ for a crossover operation to create the next generation.
 Since there is a need to create complex structures than can cover a great
 section of the play map, a method to evaluate the distribution is needed, for
 this instance we propose using the rule of thirds \cite{DarrenRowse} which is a
-guideline used while creating imagen in which the purpose is to create
+guideline used while creating images, the purpose is to create
 aesthetical pleasant images where the focus point or the most important area is
 at the center of the image as shown on figure \ref{rule_of_thirds}, using this
 rule different distribution groups or masks are created has shown on figure
-\ref{rule_of_thirds_applied} in order to use them before the simulation of an
-individual takes place in order to distribute the pieces in a way that can cover
+\ref{rule_of_thirds_masks} in order to use them before the simulation of an
+individual by placing the pieces in order to distribute them in a way that can cover
 more area and create more balanced levels instead of using a tower like
 distribution as shown on figure \ref{results_old}.
 
@@ -520,7 +520,7 @@ distribution as shown on figure \ref{results_old}.
 
 \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/mask_distribution.png}}
-    \caption{Rule of thirds applied to an individual.}
+    \caption{Masks created using the rule of thirds.}
     \label{rule_of_thirds_masks}
 \end{figure}
 
@@ -530,17 +530,19 @@ used as a new sorting value at the moment of selecting individuals for the
 crossover operation, since as shown on figure \ref{rule_of_thirds_masks} there
 is a possibility that a huge mask is given to an individual it can be possible
 that the amount of pieces will not be able to cover the full area given, so in
-order to prevent this kind of problems we also proposed to give each mask a
+order to prevent this kind of problem we also proposed to give each mask a
 value that refers to the minimum amount of pieces and height required to fill
-the most of the mask then check the amount of pieces and height before
+the most of the mask, then check the amount of pieces and height before
 simulation for a single individual and then randomize which mask of the ones
 that can be used will be assigned to that individual, this way the results shown
 on figure \ref{rule_of_thirds_result} are obtained, this however gave us a new
-problem because as shown in the image and the previous image as well the were
+problem because as shown in the figure and on figure \ref{rule_of_thirds_applied} as well, the were
 instances in which a certain combination of pieces could be to big for the area
 and this pieces resulted in a level that had structural flaws from the beginning
 which cold provoke the entire structure and immeadiately nearby others to fall
-at the beginning of the simulation however it was able to 
+at the beginning of the simulation however this allowed us to realize that predefined 
+composites could provide problems to the generated structures therefore this approach 
+was not the best for this problem.
 
 \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/chromosome_thirds.png}}
@@ -556,7 +558,7 @@ at the beginning of the simulation however it was able to
 
 \subsection{New approach}
 
-The first differece that the new approach as is that the masks that are assigned
+The first differece that the new approach has is that the masks that are assigned
 to each individual are no longer pre-generated ones, this is because we decided
 that pre-generating them would not allow the generator to \textit{evolve}
 because the individuals would be limited to a certain number of possibles
@@ -564,22 +566,23 @@ combinations which will in turn prevent diversity in the population, so in order
 to prevent this the modification to this section allows the individuals to
 generate a mask in which a number of columns is defines by default but the
 amount of pieces in each one is random, however the total of assigned pieces in
-all columns must be the same as the total pieces alloweed in each individual
-which is a number assigned at before beginning the system, an example of this
+all columns must be the same as the total pieces allowed in each individual
+which is a number assigned before beginning the system, an example of this
 can be seen in figure \ref{new_chrom} where the total of pieces in a individual
 is 18 and this pieces are distributed on all the columns available. This is
 further explained in this section.
 
-The competition also requires that a generator gives a set output a file is used
-to simulate the ruleset provided at a competition, this \textit{text file
+The competition also requires that a generator follows a certain ruleset this is 
+emulated by providing a file to the system to simulate the ruleset provided at the 
+competition, this \textit{text file
 (parameters.txt)} provides the specifications that must be met in the
 competition, the parameters in the file are as follows:
 
 \begin{itemize}
-    \item Total required levels
+    \item Total required levels.
     \item Restrictions to pieces or piece-material combinations that cannot be
     placed or used in the levels, in this case if the file specifies that a
-    \textit{CIRCLE} made out of \textit{ICE} cannotplaced the system must be
+    \textit{CIRCLE} made out of \textit{ICE} cannot be placed, so the system must be
     able to verify that said combination is not used.
     \item Total number of pigs, this value can be a single value or a range of
     values that represent how many pigs must be placed on a level.
@@ -606,9 +609,9 @@ representate the individuals is proposed by dividing the individual on three
 layers represented as follows:
 
 \begin{itemize}
-    \item Element layer: also known as pieces layer, this layer represent the
+    \item Element layer: also known as pieces layer, this layer represents the
     elements assigned to a particular individual by an array of numbers from 0
-    to infinite where each number represents a reference to the class of a piece
+    to infinite, where each number represents a reference to the class of a piece
     in the selection pool including the ones generated by the OOE algorithm, the
     representetion of this is was shown in figure \ref{old_chrom}.
     \item  Mask layer: this layer is represented by a 7 digit array in which the
@@ -616,7 +619,7 @@ layers represented as follows:
     element layer that will be assigned to said column, a representation of this
     is shown on figure \ref{mask_layer}.
     \item Enemy layer: also known as pig layer, this layer is represented by two
-    elments a single numeric value representing the total amount of pigs
+    elements a single numeric value representing the total amount of pigs
     assigned to the level and an array of locations for the placement of this
     same pigs, a representation of it is shown on figure \ref{enemy_layer}. 
 \end{itemize}
@@ -657,7 +660,7 @@ the mask of said individual, this way the mask can ensure that some pieces of
 some childs in the population are now placed in the level, this can bring the
 possibility that a mask that uses less pieces that it normally as can obtain a
 better fitness than one that uses all of them. An example of this two crossover
-thypes cna be seen in figure \ref{crossover} in which the mask of an individual
+types can be seen in figure \ref{crossover} in which the mask of an individual
 is combined with another and the resulting mask for the childs have different
 amount of pieces to be placed.
 
@@ -694,11 +697,11 @@ new evaluation formulas as follows:
 \begin{itemize}
     \item Hamming distance: a simle explanation for the \textit{Hamming
     distance} is that it is a calculation applied to a pair of strings where the
-    obecive is to find the minimum required number of substitutions required in
+    objective is to find the minimum required number of substitutions required in
     order to convert a string exactly the same as the other, its formula is
     shown in equation \ref{hamming_distance}, since the formula itself locates
-    the minimum required number of substitutions then we compare the individual
-    with the rest of the population trying to found the maximum number of
+    the minimum number of substitutions then we compare the individual
+    with the rest of the population trying to find the maximum number of
     substitutions required efectively using the formula to give a better fitness
     to those individuals that are different from the group.
     \item Shannon entropy: the shannon entropy is used on information theory to
