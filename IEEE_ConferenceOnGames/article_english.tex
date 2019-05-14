@@ -68,47 +68,45 @@ evolutionary computation
 
 \section{Introduction}
 Procedural content generation is an interesting subject on the entertainment
-industry, primarily in the video game development because of the easiness and
-quickness provided to generate content for different video game projects [ref] .
+industry, primarily in video game development because of the savings in 
+time and human resources when generating content for different video game projects.
 In this paper an evolutionary content generation system is proposed to generate
-levels for the popular Angry Birds video game
-\cite{RovioEntertainmentCorporation2009}, taking inspiration in concepts of
-open-ended evolution.
-
-
-For this project a procedural generation content system is proposed for the game
-angry birds, angry birds is a game developed by Rovio Entertainment in which the
-objective is to destroy structures placed on the map as well as eliminating
+levels for the popular Angry Birds video game \cite{RovioEntertainmentCorporation2009},
+taking inspiration in concepts of open-ended evolution. Angry birds is a game 
+developed by Rovio Entertainment in which the objective is to destroy structures
+placed on the map as well as eliminating
 green pig-like entities in order to obtain the highest score possible, the game
 uses a gravity and collition system that allows the structures to fall and be
 destroyed by means of damage as well as the use of three different construction
-materials \textit{ice}, \textit{wood} and \textit{stone} each one with different
-resistances ranging from fragile, normal and sturdy in that order, the game
+materials \textit{ice}, \textit{wood} and \textit{stone} each one with a different
+resistance, ranging from fragile, normal and sturdy in that order. The game
 mechanic is to use a slingshot to shoot a certain number of birds with different
-abilities to destroy the structures and the objectives, it is possible to obtain
-a high score by doing the most destruction as possible with the least birds as
-you can. \cite{RovioEntertainmentCorporation2009}
+abilities, to destroy both the structures and the objectives. A high score 
+is achived by doing the most destruction with the least birds possible 
+\cite{RovioEntertainmentCorporation2009}.
 
-While it is possible to create a evolutionary agent to play the levels and
-obtain the best score the main objective of this project is to generate the
-levels that can be played by naive agents or physical players, the levels
+%While it is possible to create an evolutionary agent to play the levels and
+%obtain the best score 
+The main objective of this project is to generate levels that can be played
+by naïve or inteligent agents as well as physical players. The levels
 themselves need to be complex in the sense that interesting structures can be
-created but it has to be possible to complete in some way
+created, but at the same time, it is possible to complete in some way
 \cite{Stephenson,Stephenson2018}.
 
 % What is the problem?
-Procedural content generation provides a peculir case of study because of the way
-content has to be made for a each particular type of game, in this particular case 
-the restrictions that the game and the competition track have provide an interesting 
-challenge for a evolutionary algorithm because we have to tanke into account the 
-different pieces that can be used, their interactions with one another because of 
-gravity and the possible effects the trajectory of a shot from a player can affect 
-all of this.
-
+Procedural content generation provides a peculiar case of study because of the way
+% Is there a reference? - MG
+content has to be made for a each particular type of game. In this use case 
+we have those restrictions dictated by the game, and also 
+those imposed by a competition track \cite{Renz}.% Reference the paper of the competition  have provide an interesting 
+The challenge for the participating algorithms is to be flexible on the  
+pieces that can be used and the runing time of the algorithm, as they are determined at runtime. 
+%their interactions with one another because of 
+%gravity and the possible effects the trajectory of a shot from a player can affect 
+%all of this.
 % How we solve it? (summary)   
-In order to tackle this case of study we proposed to use a genetic algorithm capable 
-of creating content, more specifically levels for the angry birds video game in which
-the generated levels satisfy the objectives of being \textit{interesting} and 
+In order to tackle this case study, we proposed the use a genetic algorithm capable 
+of creating game levels having the objective of being both \textit{interesting} and 
 \textit{playable}.
 
 % What is learned?
@@ -120,37 +118,37 @@ the generated levels satisfy the objectives of being \textit{interesting} and
 % En este trabajo se generan estructuras con mayor diversidad y por lo tanto 
 % resultan ser interesantes.
 
-As mentioned above in this paper we use procedural content generation (PCG) 
-which denotes the way to automatically generate
-content by algorithms instead of generating the same content by manual means
-such as with different personnel.
+% Not important - MG
+%As mentioned above in this paper we use procedural content generation (PCG) 
+%which denotes the way to automatically generate
+%content by algorithms instead of generating the same content by manual means
+%such as with different personnel.
 
-In the videogame industry many developers use a PCG style software that produces
-raw images and designs used by other personnel to improve it and use it in order
-to reduce the development cycles, and the productions cost. 
-PCG as various focus areas that resolve around a video game, however in this paper 
-the main focus is the \textit{Level design} area which as the objective to design 
-the different areas of a game in which a player can interact with, since in the 
-angry birds video game a level is represented by a scene then the system will 
-have to create the entities (birds and pigs) and objects (pieces) in it in order 
-to create a playable level.
+%In the videogame industry many developers use a PCG style software that produces
+%raw images and designs used by other personnel to improve it and use it in order
+%to reduce the development cycles, and the productions cost. 
+%PCG as various focus areas that resolve around a video game, however in this paper 
+%the main focus is the \textit{Level design} area which as the objective to design 
+%the different areas of a game in which a player can interact with, since in the 
+%angry birds video game a level is represented by a scene then the system will 
+%have to create the entities (birds and pigs) and objects (pieces) in it in order 
+%to create a playable level.
 
-And finally we use our own interpretation of an Open-ended evolution (OEE) 
-algorithm which is a variant of genetic evolution algorithm where
-the objective differs from the regular genetic algorithm one, in this case the
-final objective is not to reach a final state of the evolution but to continue
-evolving and creating new types of entities more complex on each new generation,
-these same entities have the possibility to evolve not only inside the frame of
-their type but create entirely new groups. \cite{Standish2003}
-
-Another explanation provided by T. Taylor et al. \cite{Taylor2016,Taylor}
-defines OEE has a system capable of creating novelty beyond a point where
+We propose a basic Open-Ended Evolution (OEE) algorithm, a variant of genetic evolution algorithm where
+the objective differs from that of a regular genetic algorithm,  in this case the
+final objective is not to reach a final state of the evolution (an optimal solution) but to continue
+evolving and creating new types of entities, perhaps more complex on each new generation.
+Solutuion entities have the possibility to evolve not only inside the frame of
+their type, but  they can create entirely new groups \cite{Standish2003}. T. Taylor et al. \cite{Taylor2016,Taylor}
+defines OEE as a system capable of creating novelty beyond a point where
 nothing changes on the current group of interest rather than just converging to
 a stable or quasi-stable state.
 
-For this project OEE is defined simply has a process of genetic evolution that
-encapsulates a group of similar processes and that is able to increase complexity
- of the original entities.
+For this project, OEE is defined simply as a genetic evolution process with
+different clasess of objects, with compositional and taxonomic relationships between them.
+Objects of each class can evolve in parallel or as in this case, independenly of each other.   
+The idea is based on the object oriented model, in which complex behavior can be model 
+using these principles.
 
 % I tried to mix the two sections together while expanding the first part of 
 % the introduction JS
@@ -165,6 +163,7 @@ encapsulates a group of similar processes and that is able to increase complexit
 Section 2, contains a quick overview of some aspects used by different authors
 in order to tackle this problem, their design and basic functionality, in
 Section 3 the description of the current state of the project is explained, from
+%% The following sentence is not clear.
 the basis of the development, modification to the original proposed method as 
 well as different approaches that were taken to solve the problem.
 % to the different methods that have been used to
