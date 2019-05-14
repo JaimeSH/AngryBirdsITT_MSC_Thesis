@@ -166,7 +166,9 @@ PCG as six focus areas listed as follows:
     \item Gameplay: This aspect uses agents to test and evaluate the mechanic on
     which a game is based by trying to play as a human would in order to improve
     said mechanics.
-    \item Game Design: This aspect is focused on generating the rulesets and mechanics of a new game. \cite{Yannakakis2017,Smith2014,shaker2016procedural}
+    \item Game Design: This aspect is focused on generating the rulesets and 
+    mechanics of a new game. \cite{Yannakakis2017,Smith2014,shaker2016procedural}
+    % The references are in this last item of the list JS
 \end{itemize}
 
 \subsection{Genetic algorithm}
@@ -190,6 +192,7 @@ they get closer to the best possible solution  to a specific problem.
 \caption{Life cycle of a genetic algorithm.}
 \label{algorithm_model}
 \end{figure}
+
 % Maybe this is well known, again our implementation is what we need to describe 
 % JJ, what you think?  
 
@@ -257,28 +260,51 @@ patterns and combined the to create a small pool of word used to be combined in
 order to create levels with text on them, the participants would play the game
 and after that they would be asked if they liked the layout of the levels
 
-\section{Current approach}
+\section{Approach}
 
-In this Section we describe the approach that was used for this project, The
+In this Section we describe the first approach that was used for this project, the
 game contains a total of 11 pieces as shown on figure \ref{piece_list} that
 cannot be modified, it is not possible to add more or modify the existing ones,
-with this in mind the purpose is to create bundles of this same pieces in
+with this in mind the purpose is to create composites of this same pieces in
 different locations and angles in order to create structures that can be used as
-building blocks for more complex levels, in order to do this a sequence of
+building blocks for more complex levels. 
+
+Since there is no way to \textit{add} a composite to the pool of pieces of the 
+game then a way to combine both groups is needed, in order to do this first the 
+original 11 pieces of the game will be converted into composites, since the easiest
+way to read the data to create composites is by using lists then a \textit{composite} 
+of one element will be created for each piece, after this in order to add a 
+composite of pieces as a new component first a group of existing composites is 
+selected and placed in a imaginary enviroment then as a unique group they are 
+measured, an imaginary bounding box is defined by calculating the lengths of all
+the pieces, finding the borders of said pieces and then find the points that could
+define a box around all of them, then use this defined box to calculate the 
+height and width of the new composite and then calculate from 
+the center point of said box the offsets from the center of the
+group to the center of each respective piece as shown on figure
+\ref{bounding_boc_calc}, this information is needed in order to add it as a new
+composite so it can be used to place the pieces in their respective new positions
+when the files needed for the simulation are being created.
+
+So using the composite generator the order of this sequence of
 events needs to be done as follows:
 
 % Pleas explain in more detail this Composites in a section.  
+% Here it's explained better, maybe this paragraph should be moved to
+% an earlier point - MG
 
+% Needs a few touches - MG
 % Please use the name Composite instead of Bundle, composition is well known in
 % object oriented design.
 
 
 \begin{enumerate}
+\item Gnerate composited to add to the pool of options
 \item Generate the first generation of the population
 \item Run a Simulation
 \item Evaluate each member of the population
 \item If a member of the population has remaining pieces obtain the location and
-angle of the pieces, create a bundle and add it to the pool
+angle of the pieces, create a composite and add it to the pool
 \item Select the parents for the next generation
 \item Do the crossover and mutation operations
 \item Repeat the cycle
@@ -292,7 +318,10 @@ angle of the pieces, create a bundle and add it to the pool
 
 % Explain a bit about the competition, from the introduction
 
-The rules for the competition specify that a configuration file must be used to
+The Angry Birds level generation track is a competition where the objective is 
+to generate levels that are \textit{fun} and \textit{enjoyable} however they 
+also have to be challenging but imposible however the rules for the competition 
+specify that a configuration file must be used to
 generate the levels of the game in a limited amount of time, the infornmation on
 the configuration file is first the number of \textbf{\textit{diferent}} levels
 that must be generated, the second value is the diferent materials \textit{not
@@ -321,7 +350,7 @@ additions to the piece pool are added to the population by the mutation
 operation, the objective in the first phase of the project is to generate
 structures that are capable of maintaining their own balance as shown on figure
 \ref{test_old}, since the objective of open-ended evolution for this project is
-to add new bundles to the pool of options the algorithm will first run a
+to add new composites to the pool of options the algorithm will first run a
 simulation with a group of pieces and after it the ones that were not destroyed
 by falling because of gravity will be saved and added to the pool of options.
 
@@ -334,19 +363,6 @@ by falling because of gravity will be saved and added to the pool of options.
 \caption{Structure at beginning and end of a simulation.}
 \label{test_old}
 \end{figure}
-% Here it's explained better, maybe this paragraph should be moved to
-% an earlier point - MG
-
-% Needs a few touches - MG
-In order to add a bundle of pieces as a new component first it has to be
-measured, an imaginary bounding box is defined by calculating the lengths of all
-the pieces, finding the borders of said pieces and find the points that could
-define a box around all of them, calculate the height and width then calculate
-the center point of said box and calculate the offsets from the center of the
-group to the center of each respective piece as shown on figure
-\ref{bounding_boc_calc}, this information is needed in order to add it as a new
-element so it can be used to place the pieces in their respective new positions
-when the files needed for the simulation are being created.
 
 The way to represent the elements of a member of the population is by using the
 id of each piece and the new added ones has a pointer to the respective data
@@ -682,7 +698,7 @@ can be solved by different means.
     \label{result_1}
 \end{figure}
 
-\section{Future work}
+\section{Conclusions and future work}
 
 The system as been able to generate levels that fulfill the requirements
  provided by the parameters file, however a way to evaluate that the levels
@@ -728,20 +744,6 @@ items present in the game therefore reducing the potential of a level, we expect
 to make the current fitness function work the most eficient that it can but
 another possible solution is found a good combination of formulas to generate
 the fitness function.
-
-\section{Conclusions}
-
-The use of artificial intelligence in videogames is a common thing almost since
-before the first generation of videogames on 1972 as simply entities that would
-follow a set group of actions but as the generation kept advancing the need for
-more intelligent entities appeared, as of this generation some videogames use AI
-as ways to improve the interaction between man and game, but also using it in
-order to facilitate the way videogames are created, so for this project the
-focus of using evolutionary algorithms as great interest, as a starting point a
-rather simple game can be used as a workbench of the work but it also helps us
-define how much more can be done when all the required objects are obtained,
-improve on the same system and find ways for it to be used on different other
-games.
 
 \printbibliography
 \newrefcontext[sorting=ydnt]

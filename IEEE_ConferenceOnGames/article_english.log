@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.6)  13 MAY 2019 18:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.6)  13 MAY 2019 23:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -606,24 +606,24 @@ File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
  (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.aux)
 \openout1 = `article_english.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 14.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    ... okay on input line 14.
 
 -- Lines per column: 56 (exact).
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -634,8 +634,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'article_english.bbl' found.
 (d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.bbl)
-Package biblatex Info: Reference section=0 on input line 13.
-Package biblatex Info: Reference segment=0 on input line 13.
+Package biblatex Info: Reference section=0 on input line 14.
+Package biblatex Info: Reference segment=0 on input line 14.
  (d:/Program Files/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count302
@@ -663,11 +663,11 @@ Package grfext Info: Graphics extension search list:
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 75.
+LaTeX Font Info:    Try loading font information for U+msa on input line 157.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 75.
+LaTeX Font Info:    Try loading font information for U+msb on input line 157.
  (d:/Program Files/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{d:/Program Files/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
@@ -677,100 +677,100 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <Images/ga_life_cycle.png, id=10, 905.3825pt x 386.44376pt>
 File: Images/ga_life_cycle.png Graphic file (type png)
 <use Images/ga_life_cycle.png>
-Package pdftex.def Info: Images/ga_life_cycle.png  used on input line 89.
+Package pdftex.def Info: Images/ga_life_cycle.png  used on input line 191.
 (pdftex.def)             Requested size: 256.0748pt x 109.30028pt.
  [2 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/ga_life_cycle.png (PNG copy)>]
 <Images/list_pieces.png, id=15, 720.75987pt x 153.75563pt>
 File: Images/list_pieces.png Graphic file (type png)
 <use Images/list_pieces.png>
-Package pdftex.def Info: Images/list_pieces.png  used on input line 143.
+Package pdftex.def Info: Images/list_pieces.png  used on input line 314.
 (pdftex.def)             Requested size: 227.62204pt x 48.55762pt.
 <Images/simulation_bef_aft_example.png, id=17, 518.9859pt x 235.24127pt>
 File: Images/simulation_bef_aft_example.png Graphic file (type png)
 <use Images/simulation_bef_aft_example.png>
-Package pdftex.def Info: Images/simulation_bef_aft_example.png  used on input line 157.
+Package pdftex.def Info: Images/simulation_bef_aft_example.png  used on input line 362.
 (pdftex.def)             Requested size: 227.62204pt x 103.17264pt.
 <Images/bounding_box_calculation.png, id=18, 748.89182pt x 262.40315pt>
 File: Images/bounding_box_calculation.png Graphic file (type png)
 <use Images/bounding_box_calculation.png>
-Package pdftex.def Info: Images/bounding_box_calculation.png  used on input line 167.
+Package pdftex.def Info: Images/bounding_box_calculation.png  used on input line 376.
 (pdftex.def)             Requested size: 227.62204pt x 79.75456pt.
 <Images/chromosome_chain_example.png, id=19, 743.07141pt x 210.01953pt>
 File: Images/chromosome_chain_example.png Graphic file (type png)
 <use Images/chromosome_chain_example.png>
-Package pdftex.def Info: Images/chromosome_chain_example.png  used on input line 173.
+Package pdftex.def Info: Images/chromosome_chain_example.png  used on input line 382.
 (pdftex.def)             Requested size: 227.62204pt x 64.33305pt.
- [3 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/list_pieces.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/simulation_bef_aft_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/bounding_box_calculation.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/chromosome_chain_example.png>]
-<Images/result_example.png, id=27, 726.5544pt x 294.3798pt>
+ [3 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/list_pieces.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/simulation_bef_aft_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/bounding_box_calculation.png>]
+<Images/result_example.png, id=26, 726.5544pt x 294.3798pt>
 File: Images/result_example.png Graphic file (type png)
 <use Images/result_example.png>
-Package pdftex.def Info: Images/result_example.png  used on input line 219.
+Package pdftex.def Info: Images/result_example.png  used on input line 458.
 (pdftex.def)             Requested size: 227.62204pt x 92.22253pt.
-<Images/ruleofthirds_example.png, id=28, 548.7702pt x 387.3672pt>
+<Images/ruleofthirds_example.png, id=27, 548.7702pt x 387.3672pt>
 File: Images/ruleofthirds_example.png Graphic file (type png)
 <use Images/ruleofthirds_example.png>
-Package pdftex.def Info: Images/ruleofthirds_example.png  used on input line 227.
+Package pdftex.def Info: Images/ruleofthirds_example.png  used on input line 476.
 (pdftex.def)             Requested size: 227.62204pt x 160.67163pt.
-<Images/mask_distribution.png, id=29, 804.1242pt x 179.7114pt>
+<Images/mask_distribution.png, id=28, 804.1242pt x 179.7114pt>
 File: Images/mask_distribution.png Graphic file (type png)
 <use Images/mask_distribution.png>
-Package pdftex.def Info: Images/mask_distribution.png  used on input line 233.
+Package pdftex.def Info: Images/mask_distribution.png  used on input line 482.
 (pdftex.def)             Requested size: 227.62204pt x 50.87001pt.
- [4 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/result_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/ruleofthirds_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/mask_distribution.png>]
+ [4 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/chromosome_chain_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/result_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/ruleofthirds_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/mask_distribution.png>]
 <Images/chromosome_thirds.png, id=42, 776.0537pt x 372.02074pt>
 File: Images/chromosome_thirds.png Graphic file (type png)
 <use Images/chromosome_thirds.png>
-Package pdftex.def Info: Images/chromosome_thirds.png  used on input line 241.
+Package pdftex.def Info: Images/chromosome_thirds.png  used on input line 506.
 (pdftex.def)             Requested size: 227.62204pt x 109.11507pt.
 <Images/result_example_thirds.png, id=43, 828.43732pt x 267.2535pt>
 File: Images/result_example_thirds.png Graphic file (type png)
 <use Images/result_example_thirds.png>
-Package pdftex.def Info: Images/result_example_thirds.png  used on input line 247.
+Package pdftex.def Info: Images/result_example_thirds.png  used on input line 512.
 (pdftex.def)             Requested size: 227.62204pt x 73.43172pt.
 <Images/chromosome_chain_new_model.png, id=44, 775.2162pt x 154.176pt>
 File: Images/chromosome_chain_new_model.png Graphic file (type png)
 <use Images/chromosome_chain_new_model.png>
-Package pdftex.def Info: Images/chromosome_chain_new_model.png  used on input line 266.
+Package pdftex.def Info: Images/chromosome_chain_new_model.png  used on input line 550.
 (pdftex.def)             Requested size: 227.62204pt x 45.26979pt.
 <Images/new_model.png, id=45, 897.31209pt x 400.15268pt>
 File: Images/new_model.png Graphic file (type png)
 <use Images/new_model.png>
-Package pdftex.def Info: Images/new_model.png  used on input line 272.
+Package pdftex.def Info: Images/new_model.png  used on input line 556.
 (pdftex.def)             Requested size: 227.62204pt x 101.50331pt.
-<Images/mask_layer.png, id=46, 883.1394pt x 273.6624pt>
+ [5 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/chromosome_thirds.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/result_example_thirds.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/chromosome_chain_new_model.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/new_model.png>]
+<Images/mask_layer.png, id=53, 883.1394pt x 273.6624pt>
 File: Images/mask_layer.png Graphic file (type png)
 <use Images/mask_layer.png>
-Package pdftex.def Info: Images/mask_layer.png  used on input line 286.
+Package pdftex.def Info: Images/mask_layer.png  used on input line 585.
 (pdftex.def)             Requested size: 227.62204pt x 70.53252pt.
-<Images/enemy_layer.png, id=47, 864.3298pt x 271.13376pt>
+<Images/enemy_layer.png, id=54, 864.3298pt x 271.13376pt>
 File: Images/enemy_layer.png Graphic file (type png)
 <use Images/enemy_layer.png>
-Package pdftex.def Info: Images/enemy_layer.png  used on input line 292.
+Package pdftex.def Info: Images/enemy_layer.png  used on input line 591.
 (pdftex.def)             Requested size: 227.62204pt x 71.40327pt.
- [5 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/chromosome_thirds.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/result_example_thirds.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/chromosome_chain_new_model.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/new_model.png>]
 <Images/crossover.png, id=55, 596.59128pt x 513.65054pt>
 File: Images/crossover.png Graphic file (type png)
 <use Images/crossover.png>
-Package pdftex.def Info: Images/crossover.png  used on input line 307.
+Package pdftex.def Info: Images/crossover.png  used on input line 625.
 (pdftex.def)             Requested size: 227.62204pt x 195.98083pt.
  [6 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/mask_layer.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/enemy_layer.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/crossover.png>]
 <Images/Result_n2.png, id=62, 313.9228pt x 115.93312pt>
 File: Images/Result_n2.png Graphic file (type png)
 <use Images/Result_n2.png>
-Package pdftex.def Info: Images/Result_n2.png  used on input line 347.
+Package pdftex.def Info: Images/Result_n2.png  used on input line 696.
 (pdftex.def)             Requested size: 227.62204pt x 84.06085pt.
  [7 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/Result_n2.PNG>]
-Underfull \hbox (badness 1953) in paragraph at lines 370--370
+Underfull \hbox (badness 1953) in paragraph at lines 749--749
 \OT1/ptm/m/it/10 Com-pu-ta-tional In-tel-li-gence and Ap-pli-ca-tions \OT1/ptm/m/n/10 03.02
  []
 
 
-Underfull \hbox (badness 4144) in paragraph at lines 370--370
+Underfull \hbox (badness 4144) in paragraph at lines 749--749
 \OT1/ptm/m/n/10 10 . 1142 / S1469026803000914$. \OT1/ptm/m/sc/10 url\OT1/ptm/m/n/10 : $http : / /
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 370--370
+Underfull \hbox (badness 1466) in paragraph at lines 749--749
 \OT1/ptm/m/n/10 www . worldscienti^^Lc . com / doi / abs / 10 . 1142 /
  []
 
@@ -795,13 +795,13 @@ Package logreq Info: Writing requests to 'article_english.run.xml'.
 Here is how much of TeX's memory you used:
  11029 strings out of 492616
  192844 string characters out of 6126092
- 611805 words of memory out of 5000000
+ 611839 words of memory out of 5000000
  14815 multiletter control sequences out of 15000+600000
  35802 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,17n,45p,2022b,1438s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/Program Files/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.pdf" (8 pages, 3531473 bytes).
+Output written on "d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/article_english.pdf" (8 pages, 3531547 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
