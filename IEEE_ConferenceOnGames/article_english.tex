@@ -39,26 +39,21 @@ email address}}
 \begin{abstract}
 % We do not say this project, is more like: In this paoer an evolutionary ... 
 % is presented or In this paper we present a .... (in third or first person plural) - MG   
-This project consisted in the generation of an evolutionary computation-based
-system capable to generate and evolve the structures of which one level of the
-Angry Birds game is composed, these structures are evaluated according to the
-stability of the structure as well as for the complexity of said structure.
-% This is not true any more. Also the evaluation of the level is not the most
-% important aspect - MG 
-
-For this a level generation system was designed based on the data obtained from
-the game, said data consist in the number and type of pieces that appear and the
-applied gravity of the game, the individuals of the group are evaluated by a
-simulation of the generated level and then checking how the structures are
-affected by the gravity of the game.  % This is not what the systems does any more
-% It seems like you are describing Laura's work - M 
-
-The evolutionary computation system has the main objective of generating
-structures based on the existent pieces of the game and evolving said pieces by
-combining them in a process that simulates the rules of the Open-Ended Evolution
-algorithm in which the evolution of this compounds is not inclined towards a
-numeric objective rather than to extend the diversity from which the pieces may
-be selected for a level.
+In this paper an evolutionary computation-based system is proposed to generate 
+levels for the angry birds video game, the levels themselves are composed of a 
+set of birds that the player can use, a set amount of pigs that must be destroyed 
+in order to progress to the next level and a given number of pieces that conform 
+structures that may or may not protect the pigs from the player, this level 
+generation system can create composites of pieces in order to create structures 
+that can be used in the game this is based on our own interpretation of a open-ended 
+evolutionary algorithm in which the evolution of the elements is not guided towards 
+a single objective but rather is free to evolve and generate novelty or diversity 
+in this case diversity of structures which the system can later select composites 
+from in order to decide what will confomr a level, this data is saved in groups that represent a population 
+that can evolve by an evolutionary algorithm in order to create more complex levels.
+ This elements of a population are then evaluated by how complex they become and how 
+ different they are from the rest of the group in order to create a variety of possible 
+ levels to be played. 
 
 % The abstract is not only for stating what whas done, it is also for 
 % telling readers, why they should care, what's novel, how good it is, how you tested.
@@ -129,72 +124,13 @@ such as with different personnel.
 
 In the videogame industry many developers use a PCG style software that produces
 raw images and designs used by other personnel to improve it and use it in order
-to reduce the development cycles, and the productions cost. PCG as six focus
-areas listed below:
-% Jaime, you must add references to EVERY THING READ alsewhere : 
-% We do not proposed this list, please add a reference. - MG   
-
-\begin{itemize}
-    \item Level Design: This aspect involves only the design of specific
-    sections of a game, primarily those in which the player is able to interact.
-    \item Audio: This aspect is focused on designing soundtracks that are able
-    to react to a player specific action.
-    \item Visuals: This area is focused on creating or improving visual
-    representations of objects on games, such as giving raw designs of players
-    faces or improving the images of other graphics.
-    \item Narrative: This aspect is focused on the generation of readable and
-    coherent stories or plotlines of games.
-    \item Gameplay: This aspect uses agents to test and evaluate the mechanic on
-    which a game is based by trying to play as a human would in order to improve
-    said mechanics.
-    \item Game Design: This aspect is focused on generating the rulesets and 
-    mechanics of a new game. \cite{Yannakakis2017,Smith2014,shaker2016procedural}
-    % The references are in this last item of the list JS
-\end{itemize}
-
-Furthermore we use genetic algorithms which is a method developed by 
-John Holland on 1975 \cite{Holland1975} the genetic
-algorithm (GA) is an optimization and search technique based on the principles
-of genetic and natural selection, it allows a population composed of many
-individuals, which by themselves represent a possible solution to the problem,
-to evolve under specific selection rules in order to obtain the maximum fitness.
-
-In other words a genetic algorithm is a method to solve optimization problems by
-creating a population that will represent a possible solution and repeatedly
-doing genetic operations as selection, crossover and mutation on each member of
-the population in order to generate children for the next
-generation that would be closer to the best solution of the problem, 
-the cycles in this method where the operations are made are called
-generations and by moving over this the population “evolves” or in other words,
-they get closer to the best possible solution  to a specific problem.
-
-\begin{figure}[htbp]
-    \centerline{\includegraphics[width=90mm]{Images/ga_life_cycle.png}}
-    \caption{Life cycle of a genetic algorithm.}
-    \label{algorithm_model}
-\end{figure}
-    
-% Maybe this is well known, again our implementation is what we need to describe 
-% JJ, what you think?  
-    
-The main life cycle of a genetic algorithm shown on figure \ref{algorithm_model}
-is described as follows:
-\begin{enumerate}
-    \item Initialize a random n population of values suitable for the solution.
-    \item Evaluate the fitness of each individual (solution) in the population.
-    \item Check if the stopping criteria has been met.
-    \item If not.
-    \begin{enumerate}
-        \item Introduce new individuals to the population by crossover
-        operations.
-        \item Mutate a random value of the new individuals.
-        \item Select new cross over individuals according to their fitness for
-        the next generation.
-    \end{enumerate}
-    \item Loop from step 2 until an end condition is satisfied.
-    \item Select the best individual of the population as the solution for the
-    problem
-\end{enumerate}
+to reduce the development cycles, and the productions cost. 
+PCG as various focus areas that resolve around a video game, however in this paper 
+the main focus is the \textit{Level design} area which as the objective to design 
+the different areas of a game in wich a player can interact with, since in the 
+angry birds video game a level is represented by a scene then the system will 
+have to create the entities (birds and pigs) and objects (pieces) in it in order 
+to create a playable level.
 
 And finally we use our own interpretation of an Open-ended evolution (OEE) 
 algorithm which is a variant of genetic evolution algorithm where

@@ -150,154 +150,6 @@
       \verb https://ieeexplore.ieee.org/document/8410472/
       \endverb
     \endentry
-    \entry{Yannakakis2017}{article}{}
-      \name{author}{2}{}{%
-        {{hash=cf368727b2920ced839da42cbd3e69a0}{%
-           family={Yannakakis},
-           familyi={Y\bibinitperiod},
-           given={Georgios\bibnamedelima N},
-           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=cbd110b21df9b90cd72ce148aa04de7f}{%
-           family={Togelius},
-           familyi={T\bibinitperiod},
-           given={Julian},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{5066bbe41ac1e3f2fb13030c92091d34}
-      \strng{fullhash}{5066bbe41ac1e3f2fb13030c92091d34}
-      \strng{bibnamehash}{5066bbe41ac1e3f2fb13030c92091d34}
-      \strng{authorbibnamehash}{5066bbe41ac1e3f2fb13030c92091d34}
-      \strng{authornamehash}{5066bbe41ac1e3f2fb13030c92091d34}
-      \strng{authorfullhash}{5066bbe41ac1e3f2fb13030c92091d34}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-3-319-63518-7}
-      \field{title}{{Artificial Intelligence and Games (First Public Draft)}}
-      \field{year}{2017}
-      \field{pages}{359}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1007/978-3-319-63519-4
-      \endverb
-      \verb{file}
-      \verb :D$\backslash$:/Documents/Tesis - Procedually Generated content in Videogames/References/Artificial Intelligence and Games.pdf:pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://gameaibook.org/book.pdf
-      \endverb
-      \verb{url}
-      \verb http://gameaibook.org/book.pdf
-      \endverb
-      \keyw{Artificial Intelligence,Videogames,Procedually G}
-    \endentry
-    \entry{Smith2014}{inproceedings}{}
-      \name{author}{1}{}{%
-        {{hash=998352e6f3012aee6faf14d1682c883c}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={Gillian},
-           giveni={G\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {New York, New York, USA}%
-      }
-      \list{publisher}{1}{%
-        {ACM Press}%
-      }
-      \strng{namehash}{998352e6f3012aee6faf14d1682c883c}
-      \strng{fullhash}{998352e6f3012aee6faf14d1682c883c}
-      \strng{bibnamehash}{998352e6f3012aee6faf14d1682c883c}
-      \strng{authorbibnamehash}{998352e6f3012aee6faf14d1682c883c}
-      \strng{authornamehash}{998352e6f3012aee6faf14d1682c883c}
-      \strng{authorfullhash}{998352e6f3012aee6faf14d1682c883c}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 32nd annual ACM conference on Human factors in computing systems - CHI '14}
-      \field{isbn}{9781450324731}
-      \field{title}{{Understanding procedural content generation}}
-      \field{year}{2014}
-      \field{pages}{917\bibrangedash 926}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.1145/2556288.2557341
-      \endverb
-      \verb{urlraw}
-      \verb http://dl.acm.org/citation.cfm?doid=2556288.2557341
-      \endverb
-      \verb{url}
-      \verb http://dl.acm.org/citation.cfm?doid=2556288.2557341
-      \endverb
-    \endentry
-    \entry{shaker2016procedural}{book}{}
-      \name{author}{3}{}{%
-        {{hash=ae1fe57aa4583addaa565aa16bfea22b}{%
-           family={Shaker},
-           familyi={S\bibinitperiod},
-           given={Noor},
-           giveni={N\bibinitperiod}}}%
-        {{hash=cbd110b21df9b90cd72ce148aa04de7f}{%
-           family={Togelius},
-           familyi={T\bibinitperiod},
-           given={Julian},
-           giveni={J\bibinitperiod}}}%
-        {{hash=f0a3a62cf62a96f28c7fba0e3e16283b}{%
-           family={Nelson},
-           familyi={N\bibinitperiod},
-           given={Mark\bibnamedelima J.},
-           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{f94d337436520f5209d3360e69b11bc0}
-      \strng{fullhash}{f94d337436520f5209d3360e69b11bc0}
-      \strng{bibnamehash}{f94d337436520f5209d3360e69b11bc0}
-      \strng{authorbibnamehash}{f94d337436520f5209d3360e69b11bc0}
-      \strng{authornamehash}{f94d337436520f5209d3360e69b11bc0}
-      \strng{authorfullhash}{f94d337436520f5209d3360e69b11bc0}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Procedural Content Generation in Games: A Textbook and an Overview of Current Research}
-      \field{year}{2016}
-    \endentry
-    \entry{Holland1975}{article}{}
-      \name{author}{1}{}{%
-        {{hash=d489561d244344393eb26a974d85d1ba}{%
-           family={Holland},
-           familyi={H\bibinitperiod},
-           given={John\bibnamedelima H.},
-           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-      }
-      \strng{namehash}{d489561d244344393eb26a974d85d1ba}
-      \strng{fullhash}{d489561d244344393eb26a974d85d1ba}
-      \strng{bibnamehash}{d489561d244344393eb26a974d85d1ba}
-      \strng{authorbibnamehash}{d489561d244344393eb26a974d85d1ba}
-      \strng{authornamehash}{d489561d244344393eb26a974d85d1ba}
-      \strng{authorfullhash}{d489561d244344393eb26a974d85d1ba}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{To assess the effects of pharmacists giving advice to meet patients' needs after starting a new medicine for a chronic condition.}
-      \field{eprinttype}{arXiv}
-      \field{isbn}{1109600690266}
-      \field{issn}{0928-1231}
-      \field{journaltitle}{Sgart Newsletter}
-      \field{title}{{Adaptation in Natural and Artificial Systems}}
-      \field{year}{1975}
-      \verb{doi}
-      \verb 10.1007/s11096-006-9026-6
-      \endverb
-      \verb{eprint}
-      \verb 0262082136
-      \endverb
-    \endentry
     \entry{Standish2003}{article}{}
       \name{author}{1}{}{%
         {{hash=f520ba8c026aff8a529113dbfa027a67}{%
@@ -312,8 +164,8 @@
       \strng{authorbibnamehash}{f520ba8c026aff8a529113dbfa027a67}
       \strng{authornamehash}{f520ba8c026aff8a529113dbfa027a67}
       \strng{authorfullhash}{f520ba8c026aff8a529113dbfa027a67}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Of all the issues discussed at Alife VII: Looking Forward, Looking Backward, the issue of whether it was possible to create an artificial life system that exhibits open-ended evolution of novelty is by far the biggest. Of the 14 open problems settled on as a result of debate at the conference, some 6 are directly, or indirectly related to this issue. Most people equate open-ended evolution with complexity growth, although a priori these seem to be different things. In this paper I report on experiments to measure the complexity of Tierran organisms, and show the results for a size-neutral run of Tierra. In this run, no increase in organismal complexity was observed, although organism size did increase through the run. This result is discussed, offering some signposts on path to solving the issue of open ended evolution.}
@@ -474,8 +326,8 @@
       \strng{authorbibnamehash}{294389f751b214a429881485a1353d24}
       \strng{authornamehash}{294389f751b214a429881485a1353d24}
       \strng{authorfullhash}{24f01b43600ff35cdf45e5de6ba41bb3}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1064-5462}
@@ -511,8 +363,8 @@
       \strng{authorbibnamehash}{0faa6aa80a531b6f0f1eea06e585ccfd}
       \strng{authornamehash}{0faa6aa80a531b6f0f1eea06e585ccfd}
       \strng{authorfullhash}{0faa6aa80a531b6f0f1eea06e585ccfd}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper presents a high-level conceptual framework to help orient the discussion and implementation of open-endedness in evolutionary systems. Drawing upon earlier work by Banzhaf et al., three different kinds of open-endedness are identified: exploratory, expansive, and transformational. These are characterised in terms of their relationship to the search space of phenotypic behaviours. A formalism is introduced to describe three key processes required for an evolutionary process: the generation of a phenotype from a genetic description, the evaluation of that phenotype, and the reproduction with variation of individuals according to their evaluation. The distinction is made between intrinsic and extrinsic implementations of these processes. A discussion then investigates how various interactions between these processes, and their modes of implementation, can lead to open-endedness. However, an important contribution of the paper is the demonstration that these considerations relate to exploratory open-endedness only. Conditions for the implementation of the more interesting kinds of open-endedness - expansive and transformational - are also discussed, emphasizing factors such as multiple domains of behaviour, transdomain bridges, and non-additive compositional systems. These factors relate not to the generic evolutionary properties of individuals and populations, but rather to the nature of the building blocks out of which individual organisms are constructed, and the laws and properties of the environment in which they exist. The paper ends with suggestions of how the framework can be used to categorise and compare the open-ended evolutionary potential of different systems, how it might guide the design of systems with greater capacity for open-ended evolution, and how it might be further improved.}
@@ -562,8 +414,8 @@
       \strng{authorbibnamehash}{815723f20d1ab72fbf6572b23977202f}
       \strng{authornamehash}{815723f20d1ab72fbf6572b23977202f}
       \strng{authorfullhash}{e7ebd9519460b31ff06ce65bfa3e2a5e}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2015 IEEE 4th Global Conference on Consumer Electronics (GCCE)}
@@ -612,8 +464,8 @@
       \strng{authorbibnamehash}{448ab1ae833c6423611968ed5b551f5e}
       \strng{authornamehash}{448ab1ae833c6423611968ed5b551f5e}
       \strng{authorfullhash}{a7ca4e70e5eeee08ab8569e924fe14d6}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The Angry Birds AI Competition (aibirds.org) has been held annually since 2012 in conjunction with some of the major AI conferences, most recently with IJCAI 2015. The goal of the competition is to build AI agents that can play new Angry Birds levels as good as or better than the best human players. Successful agents should be able to quickly analyze new levels and to predict physical consequences of possible actions in order to select actions that solve a given level with a high score. Agents have no access to the game internal physics, but only receive screenshots of the live game. In this paper we describe why this problem is a challenge for AI, and why it is an important step towards building AI that can successfully interact with the real world. We also summarise some highlights of past competitions, including a new competition track we introduced recently.}
@@ -659,8 +511,8 @@
       \strng{authorbibnamehash}{65b50dd1fbdd4668d2a8bb4f293cb4c8}
       \strng{authornamehash}{65b50dd1fbdd4668d2a8bb4f293cb4c8}
       \strng{authorfullhash}{65b50dd1fbdd4668d2a8bb4f293cb4c8}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In this paper, we describe our design of a generator for automatically generating fun levels in the famous game Angry Birds and its clone games. In particular, we aim at generation of character-sequence levels. In order to generate fun levels, we propose a pattern-struct approach and a preset-model approach. The pattern-struct approach generates each time different appearance for one of the alphabetical letters, numeral numbers, or some symbols. The preset-model approach is used for increasing the legibility and diversity, where models are built in advance for some capital letters and numbers. Our level generator, called Funny Quotes, was the winner of the Fun Track of the CIG 2016 Level Generation Competition held in 2016 IEEE Conference on Computational Intelligence and Games. After raising issues residing in Funny Quotes through user-evaluation results in terms of legibility of characters in generated levels and of playability of those levels, we propose and evaluate new mechanisms for ensuring the disparity in difficulty among easy, normal, and hard levels for the 2017 competition.}
@@ -697,8 +549,8 @@
       \strng{authorbibnamehash}{180d0c83b9ba66df1488dab0a60aaf73}
       \strng{authornamehash}{180d0c83b9ba66df1488dab0a60aaf73}
       \strng{authorfullhash}{180d0c83b9ba66df1488dab0a60aaf73}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Digital Photography School}

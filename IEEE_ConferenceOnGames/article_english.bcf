@@ -1999,17 +1999,13 @@
     <bcf:citekey order="2">RovioEntertainmentCorporation2009</bcf:citekey>
     <bcf:citekey order="3">Stephenson</bcf:citekey>
     <bcf:citekey order="3">Stephenson2018</bcf:citekey>
-    <bcf:citekey order="4">Yannakakis2017</bcf:citekey>
-    <bcf:citekey order="4">Smith2014</bcf:citekey>
-    <bcf:citekey order="4">shaker2016procedural</bcf:citekey>
-    <bcf:citekey order="5">Holland1975</bcf:citekey>
-    <bcf:citekey order="6">Standish2003</bcf:citekey>
-    <bcf:citekey order="7">Taylor2016</bcf:citekey>
-    <bcf:citekey order="7">Taylor</bcf:citekey>
-    <bcf:citekey order="8">Kaidan2015</bcf:citekey>
-    <bcf:citekey order="9">Renz</bcf:citekey>
-    <bcf:citekey order="10">Jiang2017</bcf:citekey>
-    <bcf:citekey order="11">DarrenRowse</bcf:citekey>
+    <bcf:citekey order="4">Standish2003</bcf:citekey>
+    <bcf:citekey order="5">Taylor2016</bcf:citekey>
+    <bcf:citekey order="5">Taylor</bcf:citekey>
+    <bcf:citekey order="6">Kaidan2015</bcf:citekey>
+    <bcf:citekey order="7">Renz</bcf:citekey>
+    <bcf:citekey order="8">Jiang2017</bcf:citekey>
+    <bcf:citekey order="9">DarrenRowse</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
