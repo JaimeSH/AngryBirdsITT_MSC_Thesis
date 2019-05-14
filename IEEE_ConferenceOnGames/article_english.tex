@@ -73,10 +73,13 @@ evolutionary computa
 
 \section{Introduction}
 Procedural content generation is an interesting subject on the entertainment
-area, primarily in the video game industry because of the easines and quickness
-provided to generate content for diferent video game projects, in this project a
-evolutionary computation-based system is proposed to generate complex content
-for videogames based on an evolutionary algorithm and open-ended- evolution.
+industry, primarily in the video game development because of the easines and
+quickness provided to generate content for diferent video game projects [ref] .
+In this paper an evolutionary content generation system is proposed to generate
+levels for the popular Angry Birds video game
+\cite{RovioEntertainmentCorporation2009}, taking inspiration in concepts of
+open-ended evolution.
+
 
 For this project a procedural generation content system is proposed for the game
 angry birds, angry birds is a game developed by Rovio Entrtainment in which the
@@ -98,14 +101,23 @@ themselves need to be complex in the sense that interesting structures can be
 created but it has to be possible to complete in some way
 \cite{Stephenson,Stephenson2018}.
 
+% What is the problem?
+% How we solve it? (summary)   
+% What is learned?
+
 In Section 2, a background of the subjects used on this project will be
 presented, this subjects, while not all being used on by different authors on
 their works provide a great help on the development of the proposed system,
+% Jaime, remember there is no Background need it in this type of paper 
+% Maybe that will be the introduction - MG
+
 Section 3, contains a quick overview of some aspects used by different authors
 in order to tackle this problem, their design and basic functionality, in
 Section 4 the description of the current state of the project is explained, from
 the basis of the development to the diferent menthods that have been used to
-progress on the different sections of the project, in Section 5 we explain the
+progress on the different sections of the project, 
+% Normaly there is no "Future Work" section is put together with Conclusions - MG
+in Section 5 we explain the
 future work of the project, where we are in the development phase and how the
 future implementations are to further improve the project and finally, in
 Section 6 we present our conclusions
@@ -119,7 +131,12 @@ is divided in three parts, the fisrt one gives us an explanation of what
 procedural content generation entails, the second one provides an explanation on
 genetic algorithms and how can they be used to solve optimization problems, and
 finally, the third one provides us with an overview of Open-Ended Evolution and
+% use just one form, I prefer with no first caps open-ended evolution and let's 
+% use an abbreviation OEE - MG 
+
 what it means to have an Open-Ended Evolutionary algorithm.
+% For this conference I think we do not need to define PCG, let's think 
+% every one knows what it is. - MG 
 
 \subsection{Procedural content generation}
 
@@ -133,6 +150,8 @@ to reduce the development cycles, and the productions cost. PCG as six focus
 areas listed below
 
 PCG as six focus areas listed as follows:
+% Jaime, you must add references to EVERY THING READ alsewhere : 
+% We do not proposed this list, please add a reference. - MG   
 
 \begin{itemize}
     \item Level Design: This aspect involves only the design of specific
@@ -171,6 +190,8 @@ they get closer to the best possible solution  to a specific problem.
 \caption{Life cycle of a genetic algorithm.}
 \label{algorithm_model}
 \end{figure}
+% Maybe this is well known, again our implementation is what we need to describe 
+% JJ, what you think?  
 
 The main life cycle of a genetic algorithm shown of figure \ref{algorithm_model}
 is described as follows:
@@ -191,6 +212,13 @@ is described as follows:
     problem
 \end{enumerate}
 
+% This section and the proposed approach should be in the fron lines - MG
+
+% The problem is that we just state what it is, but we do not link it
+% with our work. Why is important? What inpired our work? 
+% There is also Novelty Search - MG
+% Also it sounds like a copy-paste from Wikipedia please check and reference
+% accordingly - MG
 
 \subsection{Open-Ended Evolution}\label{AA}
 Open-ended evolution (OEE) is a variant of genetic evolution algorithm in which
@@ -239,6 +267,12 @@ different locations and angles in order to create structures that can be used as
 building blocks for more complex levels, in order to do this a sequence of
 events needs to be done as follows:
 
+% Pleas explain in more detail this Composites in a section.  
+
+% Please use the name Composite instead of Bundle, composition is well known in
+% object oriented design.
+
+
 \begin{enumerate}
 \item Generate the first generation of the population
 \item Run a Simulation
@@ -255,6 +289,8 @@ angle of the pieces, create a bundle and add it to the pool
 \caption{List of pieces in the angry birds game.}
 \label{piece_list}
 \end{figure}
+
+% Explain a bit about the competition, from the introduction
 
 The rules for the competition specify that a configuration file must be used to
 generate the levels of the game in a limited amount of time, the infornmation on
@@ -275,9 +311,12 @@ modifications that had to be made in order to integrate the configuration files
 for the competition. 
 
 \subsection{Original approach}
-
+% This sentence needs more work -MG
 Since the algorithm has to generate more complex structures the remaining pieces
 of a member of the population have to be used has a starting point, this new
+% we don't use member of the populations, use proposed solution, candidate solution
+% or individual of the population. - MG  
+
 additions to the piece pool are added to the population by the mutation
 operation, the objective in the first phase of the project is to generate
 structures that are capable of maintaining their own balance as shown on figure
@@ -286,12 +325,19 @@ to add new bundles to the pool of options the algorithm will first run a
 simulation with a group of pieces and after it the ones that were not destroyed
 by falling because of gravity will be saved and added to the pool of options.
 
+% New pieces are added by mutation? 
+% Please give more details to all this - MG
+
+
 \begin{figure}[htbp]
 \centerline{\includegraphics[width=80mm]{Images/simulation_bef_aft_example.png}}
 \caption{Structure at beginning and end of a simulation.}
 \label{test_old}
 \end{figure}
+% Here it's explained better, maybe this paragraph should be moved to
+% an earlier point - MG
 
+% Needs a few touches - MG
 In order to add a bundle of pieces as a new component first it has to be
 measured, an imaginary bounding box is defined by calculating the lengths of all
 the pieces, finding the borders of said pieces and find the points that could
