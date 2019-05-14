@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.6)  14 MAY 2019 00:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.6)  14 MAY 2019 00:44
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -683,94 +683,94 @@ Package pdftex.def Info: Images/ga_life_cycle.png  used on input line 174.
 <Images/list_pieces.png, id=15, 720.75987pt x 153.75563pt>
 File: Images/list_pieces.png Graphic file (type png)
 <use Images/list_pieces.png>
-Package pdftex.def Info: Images/list_pieces.png  used on input line 350.
+Package pdftex.def Info: Images/list_pieces.png  used on input line 354.
 (pdftex.def)             Requested size: 227.62204pt x 48.55762pt.
 <Images/simulation_bef_aft_example.png, id=17, 518.9859pt x 235.24127pt>
 File: Images/simulation_bef_aft_example.png Graphic file (type png)
 <use Images/simulation_bef_aft_example.png>
-Package pdftex.def Info: Images/simulation_bef_aft_example.png  used on input line 398.
+Package pdftex.def Info: Images/simulation_bef_aft_example.png  used on input line 402.
 (pdftex.def)             Requested size: 227.62204pt x 103.17264pt.
 <Images/bounding_box_calculation.png, id=18, 748.89182pt x 262.40315pt>
 File: Images/bounding_box_calculation.png Graphic file (type png)
 <use Images/bounding_box_calculation.png>
-Package pdftex.def Info: Images/bounding_box_calculation.png  used on input line 412.
+Package pdftex.def Info: Images/bounding_box_calculation.png  used on input line 416.
 (pdftex.def)             Requested size: 227.62204pt x 79.75456pt.
 <Images/chromosome_chain_example.png, id=19, 743.07141pt x 210.01953pt>
 File: Images/chromosome_chain_example.png Graphic file (type png)
 <use Images/chromosome_chain_example.png>
-Package pdftex.def Info: Images/chromosome_chain_example.png  used on input line 418.
+Package pdftex.def Info: Images/chromosome_chain_example.png  used on input line 422.
 (pdftex.def)             Requested size: 227.62204pt x 64.33305pt.
  [3 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/list_pieces.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/simulation_bef_aft_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/bounding_box_calculation.png>]
 <Images/result_example.png, id=26, 726.5544pt x 294.3798pt>
 File: Images/result_example.png Graphic file (type png)
 <use Images/result_example.png>
-Package pdftex.def Info: Images/result_example.png  used on input line 494.
+Package pdftex.def Info: Images/result_example.png  used on input line 498.
 (pdftex.def)             Requested size: 227.62204pt x 92.22253pt.
 <Images/ruleofthirds_example.png, id=27, 548.7702pt x 387.3672pt>
 File: Images/ruleofthirds_example.png Graphic file (type png)
 <use Images/ruleofthirds_example.png>
-Package pdftex.def Info: Images/ruleofthirds_example.png  used on input line 512.
+Package pdftex.def Info: Images/ruleofthirds_example.png  used on input line 516.
 (pdftex.def)             Requested size: 227.62204pt x 160.67163pt.
 <Images/mask_distribution.png, id=28, 804.1242pt x 179.7114pt>
 File: Images/mask_distribution.png Graphic file (type png)
 <use Images/mask_distribution.png>
-Package pdftex.def Info: Images/mask_distribution.png  used on input line 518.
+Package pdftex.def Info: Images/mask_distribution.png  used on input line 522.
 (pdftex.def)             Requested size: 227.62204pt x 50.87001pt.
  [4 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/chromosome_chain_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/result_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/ruleofthirds_example.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/mask_distribution.png>]
 <Images/chromosome_thirds.png, id=42, 776.0537pt x 372.02074pt>
 File: Images/chromosome_thirds.png Graphic file (type png)
 <use Images/chromosome_thirds.png>
-Package pdftex.def Info: Images/chromosome_thirds.png  used on input line 542.
+Package pdftex.def Info: Images/chromosome_thirds.png  used on input line 546.
 (pdftex.def)             Requested size: 227.62204pt x 109.11507pt.
 <Images/result_example_thirds.png, id=43, 828.43732pt x 267.2535pt>
 File: Images/result_example_thirds.png Graphic file (type png)
 <use Images/result_example_thirds.png>
-Package pdftex.def Info: Images/result_example_thirds.png  used on input line 548.
+Package pdftex.def Info: Images/result_example_thirds.png  used on input line 552.
 (pdftex.def)             Requested size: 227.62204pt x 73.43172pt.
 <Images/chromosome_chain_new_model.png, id=44, 775.2162pt x 154.176pt>
 File: Images/chromosome_chain_new_model.png Graphic file (type png)
 <use Images/chromosome_chain_new_model.png>
-Package pdftex.def Info: Images/chromosome_chain_new_model.png  used on input line 586.
+Package pdftex.def Info: Images/chromosome_chain_new_model.png  used on input line 590.
 (pdftex.def)             Requested size: 227.62204pt x 45.26979pt.
 <Images/new_model.png, id=45, 897.31209pt x 400.15268pt>
 File: Images/new_model.png Graphic file (type png)
 <use Images/new_model.png>
-Package pdftex.def Info: Images/new_model.png  used on input line 592.
+Package pdftex.def Info: Images/new_model.png  used on input line 596.
 (pdftex.def)             Requested size: 227.62204pt x 101.50331pt.
  [5 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/chromosome_thirds.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/result_example_thirds.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/chromosome_chain_new_model.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/new_model.png>]
 <Images/mask_layer.png, id=53, 883.1394pt x 273.6624pt>
 File: Images/mask_layer.png Graphic file (type png)
 <use Images/mask_layer.png>
-Package pdftex.def Info: Images/mask_layer.png  used on input line 621.
+Package pdftex.def Info: Images/mask_layer.png  used on input line 625.
 (pdftex.def)             Requested size: 227.62204pt x 70.53252pt.
 <Images/enemy_layer.png, id=54, 864.3298pt x 271.13376pt>
 File: Images/enemy_layer.png Graphic file (type png)
 <use Images/enemy_layer.png>
-Package pdftex.def Info: Images/enemy_layer.png  used on input line 627.
+Package pdftex.def Info: Images/enemy_layer.png  used on input line 631.
 (pdftex.def)             Requested size: 227.62204pt x 71.40327pt.
 <Images/crossover.png, id=55, 596.59128pt x 513.65054pt>
 File: Images/crossover.png Graphic file (type png)
 <use Images/crossover.png>
-Package pdftex.def Info: Images/crossover.png  used on input line 661.
+Package pdftex.def Info: Images/crossover.png  used on input line 665.
 (pdftex.def)             Requested size: 227.62204pt x 195.98083pt.
  [6 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/mask_layer.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/enemy_layer.png> <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/crossover.png>]
 <Images/Result_n2.png, id=62, 313.9228pt x 115.93312pt>
 File: Images/Result_n2.png Graphic file (type png)
 <use Images/Result_n2.png>
-Package pdftex.def Info: Images/Result_n2.png  used on input line 732.
+Package pdftex.def Info: Images/Result_n2.png  used on input line 736.
 (pdftex.def)             Requested size: 227.62204pt x 84.06085pt.
  [7 <d:/Documents/GitHub Projects/AngryBirdsITT_MSC_Thesis/IEEE_ConferenceOnGames/Images/Result_n2.PNG>]
-Underfull \hbox (badness 1953) in paragraph at lines 785--785
+Underfull \hbox (badness 1953) in paragraph at lines 789--789
 \OT1/ptm/m/it/10 Com-pu-ta-tional In-tel-li-gence and Ap-pli-ca-tions \OT1/ptm/m/n/10 03.02
  []
 
 
-Underfull \hbox (badness 4144) in paragraph at lines 785--785
+Underfull \hbox (badness 4144) in paragraph at lines 789--789
 \OT1/ptm/m/n/10 10 . 1142 / S1469026803000914$. \OT1/ptm/m/sc/10 url\OT1/ptm/m/n/10 : $http : / /
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 785--785
+Underfull \hbox (badness 1466) in paragraph at lines 789--789
 \OT1/ptm/m/n/10 www . worldscienti^^Lc . com / doi / abs / 10 . 1142 /
  []
 
