@@ -129,11 +129,16 @@ is divided in three parts, the fisrt one gives us an explanation of what
 procedural content generation entails, the second one provides an explanation on
 genetic algorithms and how can they be used to solve optimization problems, and
 finally, the third one provides us with an overview of Open-Ended Evolution and
+% use just one form, I prefer with no first caps open-ended evolution and let's 
+% use an abbreviation OEE - MG  
 what it means to have an Open-Ended Evolutionary algorithm.
+
+% For this conference I think we do not need to define PCG, let's think 
+% every one knows what it is. - MG 
 
 \subsection{Procedural content generation}
 
-Procedural content generation (PCG) denotes the way to automatically generate
+Procedural Content Generation (PCG) denotes the way to automatically generate
 content by algorithms instead of generating the same content by manual means
 such as with different personnel.
 
@@ -144,6 +149,8 @@ areas listed below
 
 PCG as six focus areas listed as follows:
 
+% Jaime, you must add references to EVERY THING READ alsewhere : 
+% We do not proposed this list, please add a reference. - MG       
 \begin{itemize}
     \item Level Design: This aspect involves only the design of specific
     sections of a game, primarily those in which the player is able to interact.
@@ -161,7 +168,8 @@ PCG as six focus areas listed as follows:
 \end{itemize}
 
 \subsection{Genetic algorithm}
-Is a method developed by John Holland on 1975 \cite{Holland1975} the genetic
+Is a method developed by John Holland on 1975 \cite{Holland1975} % Yes ! like this - MG
+the genetic
 algorithm (GA) is an optimization and search technique based on the principles
 of genetic and natural selection, it allows a population composed of many
 individuals, which by themselves represent a possible solution to the problem,
@@ -182,6 +190,9 @@ they get closer to the best possible solution  to a specific problem.
 \label{fig}
 \end{figure}
 
+% Maybe this is well known, again our implementation is what we need to describe 
+% JJ, what you think?  
+
 The main life cycle of a genetic algorithm shown of figure 1 is described as
 follows:
 \begin{enumerate}
@@ -201,8 +212,15 @@ follows:
     problem
 \end{enumerate}
 
+% This section and the proposed approach should be in the fron lines - MG
 
-\subsection{Open-Ended Evolution}\label{AA}
+% The problem is that we just state what it is, but we do not link it
+% with our work. Why is important? What inpired our work? 
+% There is also Novelty Search - MG
+% Also it sounds like a copy-paste from Wikipedia please check and reference
+% accordingly - MG
+ 
+\subsection{Open-Ended Evolution}\label{AA} 
 Open-ended evolution (OEE) is a variant of genetic evolution algorithm in which
 the objective differs from the regular genetic algorithm one, in this case the
 final objective is not to reach a final state of the evolution but to continue
