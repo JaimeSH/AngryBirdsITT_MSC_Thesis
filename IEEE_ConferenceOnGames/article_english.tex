@@ -74,7 +74,7 @@ evolutionary computa
 \section{Introduction}
 Procedural content generation is an interesting subject on the entertainment
 industry, primarily in the video game development because of the easines and
-quickness provided to generate content for diferent video game projects [ref] .
+quickness provided to generate content for different video game projects [ref] .
 In this paper an evolutionary content generation system is proposed to generate
 levels for the popular Angry Birds video game
 \cite{RovioEntertainmentCorporation2009}, taking inspiration in concepts of
@@ -86,7 +86,7 @@ angry birds, angry birds is a game developed by Rovio Entrtainment in which the
 objective is to destroy structures placed on the map as well as eliminating
 green pig-like entities in order to obtain the highest score possible, the game
 uses a gravity and collition system that allows the structures to fall and be
-destroyed by means of damage as well as the use of three diferent construction
+destroyed by means of damage as well as the use of three different construction
 materials \textit{ice}, \textit{wood} and \textit{stone} each one with different
 resistances ranging from fragile, normal and sturdy in that order, the game
 mechanic is to use a slingshot to shoot a certain number of birds with different
@@ -102,45 +102,28 @@ created but it has to be possible to complete in some way
 \cite{Stephenson,Stephenson2018}.
 
 % What is the problem?
+Procedural content generation provides a peculir case of study because of the way
+content has to be made for a each particular type of game, in this particular case 
+the restrictions that the game and the competition track have provide an interesting 
+challenge for a evolutionary algorithm because we have to tanke into account the 
+different pieces that can be used, their interactions with one another because of 
+gravity and the possible effects the trajectory of a shot from a player can affect 
+all of this.
+
 % How we solve it? (summary)   
+In order to tackle this case of study we proposed to use a genetic algorithm capable 
+of creating content, more specifically levels for the angry birds video game in which
+the generated levels satisfy the objectives of being \textit{interesting} and 
+\textit{playable}.
+
 % What is learned?
+After concluding this paper we expect to identify the places were a evolutionary 
+algorithm can be used alongside procedural content generation applied to video games
+in order to be able to clarify in which areas a evolutionary algorithm can used 
+to further improve video game development cycles.
 
-In Section 2, a background of the subjects used on this project will be
-presented, this subjects, while not all being used on by different authors on
-their works provide a great help on the development of the proposed system,
-% Jaime, remember there is no Background need it in this type of paper 
-% Maybe that will be the introduction - MG
-
-Section 3, contains a quick overview of some aspects used by different authors
-in order to tackle this problem, their design and basic functionality, in
-Section 4 the description of the current state of the project is explained, from
-the basis of the development to the diferent menthods that have been used to
-progress on the different sections of the project, 
-% Normaly there is no "Future Work" section is put together with Conclusions - MG
-in Section 5 we explain the
-future work of the project, where we are in the development phase and how the
-future implementations are to further improve the project and finally, in
-Section 6 we present our conclusions
- 
-
-\section{Background}
-
-In this Section we provide a quick overview of the literature about the areas
-that provide the basis to the development of the current project, this section
-is divided in three parts, the fisrt one gives us an explanation of what
-procedural content generation entails, the second one provides an explanation on
-genetic algorithms and how can they be used to solve optimization problems, and
-finally, the third one provides us with an overview of Open-Ended Evolution and
-% use just one form, I prefer with no first caps open-ended evolution and let's 
-% use an abbreviation OEE - MG 
-
-what it means to have an Open-Ended Evolutionary algorithm.
-% For this conference I think we do not need to define PCG, let's think 
-% every one knows what it is. - MG 
-
-\subsection{Procedural content generation}
-
-Procedural content generation (PCG) denotes the way to automatically generate
+As mentioned above in this paper we use procedural content generation (PCG) 
+which denotes the way to automatically generate
 content by algorithms instead of generating the same content by manual means
 such as with different personnel.
 
@@ -171,8 +154,8 @@ PCG as six focus areas listed as follows:
     % The references are in this last item of the list JS
 \end{itemize}
 
-\subsection{Genetic algorithm}
-Is a method developed by John Holland on 1975 \cite{Holland1975} the genetic
+Furthermore we use genetic algorithms which is a method developed by 
+John Holland on 1975 \cite{Holland1975} the genetic
 algorithm (GA) is an optimization and search technique based on the principles
 of genetic and natural selection, it allows a population composed of many
 individuals, which by themselves represent a possible solution to the problem,
@@ -181,21 +164,21 @@ to evolve under specific selection rules in order to obtain the maximum fitness.
 In other words a genetic algorithm is a method to solve optimization problems by
 creating a population that will represent a possible solution and repeatedly
 doing genetic operations as selection, crossover and mutation on each member of
-the population in order to generate the members of the population for the next
+the population in order to generate children for the next
 generation that would be closer to the best solution of the problem than their
 parents, the cycles in this method where the operations are made are called
 generations and by moving over this the population “evolves” o in other words,
 they get closer to the best possible solution  to a specific problem.
 
 \begin{figure}[htbp]
-\centerline{\includegraphics[width=90mm]{Images/ga_life_cycle.png}}
-\caption{Life cycle of a genetic algorithm.}
-\label{algorithm_model}
+    \centerline{\includegraphics[width=90mm]{Images/ga_life_cycle.png}}
+    \caption{Life cycle of a genetic algorithm.}
+    \label{algorithm_model}
 \end{figure}
-
+    
 % Maybe this is well known, again our implementation is what we need to describe 
 % JJ, what you think?  
-
+    
 The main life cycle of a genetic algorithm shown of figure \ref{algorithm_model}
 is described as follows:
 \begin{enumerate}
@@ -215,16 +198,8 @@ is described as follows:
     problem
 \end{enumerate}
 
-% This section and the proposed approach should be in the fron lines - MG
-
-% The problem is that we just state what it is, but we do not link it
-% with our work. Why is important? What inpired our work? 
-% There is also Novelty Search - MG
-% Also it sounds like a copy-paste from Wikipedia please check and reference
-% accordingly - MG
-
-\subsection{Open-Ended Evolution}\label{AA}
-Open-ended evolution (OEE) is a variant of genetic evolution algorithm in which
+And finally we use our own interpretation of an Open-ended evolution (OEE) 
+algorithm which is a variant of genetic evolution algorithm where
 the objective differs from the regular genetic algorithm one, in this case the
 final objective is not to reach a final state of the evolution but to continue
 evolving and creating new types of entities more complex on each new generation,
@@ -239,6 +214,64 @@ a stable or quasi-stable state.
 For this project OEE is defined simply has a process of genetic evolution that
 encapsulates a group of similar processes and that is able to increase their
 number by the more complex the entities become.
+
+%In Section 2, a background of the subjects used on this project will be
+%presented, this subjects, while not all being used on by different authors on
+%their works provide a great help on the development of the proposed system,
+% Jaime, remember there is no Background need it in this type of paper 
+% Maybe that will be the introduction - MG
+
+Section 2, contains a quick overview of some aspects used by different authors
+in order to tackle this problem, their design and basic functionality, in
+Section 3 the description of the current state of the project is explained, from
+the basis of the development, modification to the original proposed method as 
+well as different approaches that were taken to solve the problem.
+% to the different methods that have been used to
+%progress on the different sections of the project, 
+% Normaly there is no "Future Work" section is put together with Conclusions - MG
+finally in Section 4 we provide our conclusions about the development of this
+paper as well as improvements that can help to refine the proposed work. 
+
+%we explain the future work of the project, where we are in the development phase and how the
+%future implementations are to further improve the project and finally, in
+%Section 6 we present our conclusions
+ 
+
+
+%\section{Background}
+%
+%In this Section we provide a quick overview of the literature about the areas
+%that provide the basis to the development of the current project, this section
+%is divided in three parts, the fisrt one gives us an explanation of what
+%procedural content generation entails, the second one provides an explanation on
+%genetic algorithms and how can they be used to solve optimization problems, and
+%finally, the third one provides us with an overview of open-ended evolution and
+% use just one form, I prefer with no first caps open-ended evolution and let's 
+% use an abbreviation OEE - MG 
+
+%what it means to have an open-ended evolution algorithm.
+% For this conference I think we do not need to define PCG, let's think 
+% every one knows what it is. - MG 
+
+%\subsection{Procedural content generation}
+
+%Procedural content generation (PCG) 
+
+%\subsection{Genetic algorithm}
+
+
+
+
+% This section and the proposed approach should be in the fron lines - MG
+
+% The problem is that we just state what it is, but we do not link it
+% with our work. Why is important? What inpired our work? 
+% There is also Novelty Search - MG
+% Also it sounds like a copy-paste from Wikipedia please check and reference
+% accordingly - MG
+
+%\subsection{Open-Ended Evolution}\label{AA}
+
 
 \section{Overview of existing work}
 
@@ -297,6 +330,9 @@ events needs to be done as follows:
 % Please use the name Composite instead of Bundle, composition is well known in
 % object oriented design.
 
+%                                                                           /|\
+% Combined a few other things to give a litte more detail to this sections   |
+%                                                                           \|/
 
 \begin{enumerate}
 \item Gnerate composited to add to the pool of options
@@ -323,8 +359,8 @@ to generate levels that are \textit{fun} and \textit{enjoyable} however they
 also have to be challenging but imposible however the rules for the competition 
 specify that a configuration file must be used to
 generate the levels of the game in a limited amount of time, the infornmation on
-the configuration file is first the number of \textbf{\textit{diferent}} levels
-that must be generated, the second value is the diferent materials \textit{not
+the configuration file is first the number of \textbf{\textit{different}} levels
+that must be generated, the second value is the different materials \textit{not
 allowed} to be used, for instance a group of generated levels must not have
 circles which composition material is ice or stone moreover it des not have to
 integrate a triangle piece with ice, stone or wood material so this combinations
@@ -712,7 +748,7 @@ The system as been able to generate levels that fulfill the requirements
     game like questioning if a level was too easy or too dificult to solve, if
     the generated structures look interesting or if the level required them to
     strategize how to use the provided birds to solve the level, the survey must
-    be applied to a equal quantity of people of three diferent game skill
+    be applied to a equal quantity of people of three different game skill
     levels,\textit{"non video game players"}, \textit{"casual video game
     players"} and \textit{"avid video game players"}, this way we can evaluate a
     level or the entire system by knowing if all skill levels did not enjoyed a
