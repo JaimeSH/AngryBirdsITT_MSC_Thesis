@@ -559,6 +559,45 @@ jmerelo@ugr.es}}
     
     \subsection{Evolution of Levels} 
 
+    Once structures are able to stand, there are other aspects we need to take
+    in to account to evaluate their fitness. In this case we propose the use to
+    reward both the \textit{"diversity"} and \textit{"uniqueness"} of a
+    individual defining a fitness function considering:
+    
+    \begin{itemize}
+        \item Hamming distance: a simle explanation for the \textit{Hamming
+        distance} is that it is a calculation applied to a pair of strings where the
+        objective is to find the minimum required number of substitutions required in
+        order to convert a string exactly the same as the other, its formula is
+        shown in equation \ref{hamming_distance}, since the formula itself locates
+        the minimum number of substitutions then we compare the individual
+        with the rest of the population trying to find the maximum number of
+        substitutions required efectively using the formula to give a better fitness
+        to those individuals that are different from the group.
+        \item Shannon entropy: the shannon entropy is used on information theory to
+        calculate the disorder or uncertainty, in this case it will be used to
+        determine if a level is \textit{"boring"} or \textit{"interesting"} based on
+        the amount of entropy calculated according to the pieces used in a level
+        where a low entropy is boring because if a determined level as a lot of
+        repeated pieces then it will look simple, the formula used is shown in
+        equation \ref{shannon_entropy} where the elements calculated are the pieces
+        of a level and their appearance probability against all others.
+    \end{itemize}
+    
+    \begin{equation}
+        \begin{aligned}
+        d = min \left\{ \ d(x,y): x,y \in C, if \: x \neq y, 1 \: else \: 0 \: \right\} \
+        \end{aligned}
+        \label{hamming_distance}
+    \end{equation}
+    
+    \begin{equation}
+        \begin{aligned}
+        S = - \Sigma_i P_i \log P_i
+        \end{aligned}
+        \label{shannon_entropy}
+    \end{equation}
+
     In order to select the parents of the next generation the parents are ordered by
     their fitness. There are two types of selection:
     
@@ -594,7 +633,7 @@ jmerelo@ugr.es}}
     \end{figure}
     
     The mutation operations of the generator work with the pieces layer of an
-    individual, the four types of mutations used are:
+    individual, the four types of mutations are:
     
     \begin{itemize}
         \item Add or remove elements from the piece list
@@ -603,53 +642,15 @@ jmerelo@ugr.es}}
         \item Change the x and y coordinates of a piece
     \end{itemize}
     
-    This mutations do not have to be used all at once on a single individual but
-    depending on the probabilities they can happen all at once, since most of the
-    pieces on a individual are mostly the same type of material then at least the
-    material mutation can occurr on all or most of the individuals to ensure that
-    all levels will not have all the pieces with the same material which could
-    render a level \textit{"boring"} by the fitness function.
+    This mutations do not have to be used all at othe same time on a single
+    individual but depending on the probabilities they can happen all at once,
+    since most of the pieces on a individual are mostly the same type of
+    material then at least the material mutation can occurr on all or most of
+    the individuals to ensure that all levels will not have all the pieces with
+    the same material which could render a level \textit{"boring"} by the
+    fitness function.
     
-    Since this group of mutations further ensures diversity in the populations a
-    different way to evaluate the individuals is needed, by using the previous
-    proposed method as a base a way to evaluate the \textit{"diversity"} and
-    \textit{"uniqueness"} of a individual, for this we first remove the \textit{x}
-    and \textit{y} position as well as the \textit{angle} errors in order to add two
-    new evaluation formulas as follows:
-    
-    \begin{itemize}
-        \item Hamming distance: a simle explanation for the \textit{Hamming
-        distance} is that it is a calculation applied to a pair of strings where the
-        objective is to find the minimum required number of substitutions required in
-        order to convert a string exactly the same as the other, its formula is
-        shown in equation \ref{hamming_distance}, since the formula itself locates
-        the minimum number of substitutions then we compare the individual
-        with the rest of the population trying to find the maximum number of
-        substitutions required efectively using the formula to give a better fitness
-        to those individuals that are different from the group.
-        \item Shannon entropy: the shannon entropy is used on information theory to
-        calculate the disorder or uncertainty, in this case it will be used to
-        determine if a level is \textit{"boring"} or \textit{"interesting"} based on
-        the amount of entropy calculated according to the pieces used in a level
-        where a low entropy is boring because if a determined level as a lot of
-        repeated pieces then it will look simple, the formula used is shown in
-        equation \ref{shannon_entropy} where the elements calculated are the pieces
-        of a level and their appearance probability against all others.
-    \end{itemize}
-    
-    \begin{equation}
-        \begin{aligned}
-        d = min \left\{ \ d(x,y): x,y \in C, if \: x \neq y, 1 \: else \: 0 \: \right\} \
-        \end{aligned}
-        \label{hamming_distance}
-    \end{equation}
-    
-    \begin{equation}
-        \begin{aligned}
-        S = - \Sigma_i P_i \log P_i
-        \end{aligned}
-        \label{shannon_entropy}
-    \end{equation}
+
     
     Finally figure \ref{layer12_combine} and figure \ref{layer123_combine} represent 
     the way all the layers of an individual al combined to create a level after all 
@@ -693,10 +694,11 @@ jmerelo@ugr.es}}
     
     \section{Conclusions and future work}
     
-    The system as been able to generate levels that fulfill the requirements
+     The system has been able to generate levels that fulfill the requirements
      provided by the parameters file, however a way to evaluate that the levels
-     generated are indeed \textit{"fun"} or \textit{"interesting"} is still needed,
-     at this point we have two was to evaluate the results:
+     generated are indeed \textit{"fun"} or \textit{"interesting"} is still
+     needed, at this point we could evaluate the levels by appling an aproach
+     used in previous competitions:
      \begin{itemize}
         \item User survey, in case a survey is used as an evaluation tool then first
         the system has to generate the levels and a group of people must participate
@@ -719,7 +721,7 @@ jmerelo@ugr.es}}
         difficulty of a level just at the middle point between easy and hard
         difficulty levels.
     \end{itemize}
-    
+        
     Other aspects that the system need to improve is in the processing time
     required, since the current way to calculate the fitness and create the next
     generations of a population the system requires the system to execute
