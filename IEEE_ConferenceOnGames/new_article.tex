@@ -44,7 +44,7 @@ jmerelo@ugr.es}}
     structures that may or may not protect the pigs from the player. The focus in this stage
     is the generation of diverse structures that can be played in the game having the
     additional characteristics of being interesting and playable. We propose a 
-    multi-layered search, first contructing composite structures from basic components, to then
+    multi-layered search, first constructing composite structures from basic components, to then
     build more complex structures building from these components, following an open-ended 
     evolution approach; in which the evolution of structures is not guided towards 
     a single objective but rather is free to evolve and generate novelty or diversity. 
@@ -151,13 +151,18 @@ jmerelo@ugr.es}}
     in order to tackle this problem, their design and basic functionality, in
     Section 3 the description of the current state of the project is explained, from
     %% The following sentence is not clear.
-    the basis of the development, modification to the original proposed method as 
-    well as different approaches that were taken to solve the problem.
+    the way the candidate solutions are represented, to the way the mutations are applied 
+    to them, as well as the way we use our fitness fucntion to determine the playability
+    and complexity of the generated levels, 
+    %the basis of the development, modification to the original proposed method as 
+    %well as different approaches that were taken to solve the problem.
     % to the different methods that have been used to
     %progress on the different sections of the project, 
     % Normaly there is no "Future Work" section is put together with Conclusions - MG
     finally in Section 4 we provide our conclusions about the development of this
     paper as well as improvements that can help to refine the proposed work. 
+
+    %Maybe like this? JSH
     
     %we explain the future work of the project, where we are in the development phase and how the
     %future implementations are to further improve the project and finally, in
@@ -219,7 +224,11 @@ jmerelo@ugr.es}}
     of words and letters used to be combined in order to create levels with text on
     them, the participants would play the game and after that they would be asked if
     they liked the layout of the levels. A search based approach has been also used
-    in several works. 
+    in several works. Laura Calle \cite{lauracalle} proposed a method in which the 
+    pieces in the game are arranged in groups using the gravity of the game to 
+    create structures that are later evolved into more complex levels, this method 
+    was used as a base to work with since it used a modified version of the angry 
+    birds game that was able to obtain the data of a level after a simulation.
     %%%
     % TO DO: Laura´s work here 
     %%%
@@ -372,8 +381,8 @@ jmerelo@ugr.es}}
     
     Structures are the next evolutionary layer, at a higher level of composition.
     Structures are compositions of composites. A level can be seen as a collection 
-    of structures and each structure is a pile of composite blocks. This approach 
-    was proposed by \cite{ }. This way of constructing levels has the advantage of
+    of structures and each structure is a pile of composite blocks. This way of 
+    constructing levels has the advantage of
     limiting the search space, to structures that have a better chance to be 
     standing after the simulation ends. There is no warranty that piles of 
     composite blocks will maintain balance, so again we must search for those 
