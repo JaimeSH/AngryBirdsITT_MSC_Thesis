@@ -28,42 +28,39 @@ salinas.jaime1217@gmail.com}
 Tijuana, México \\
 mario@tectijuana.edu.mx}
 \and
-\IEEEauthorblockN{ Given Name Surname} \IEEEauthorblockA{\textit{dept. name of
-organization (of Aff.)} \\
-\textit{name of organization (of Aff.)}\\
-City, Country \\
-email address}}
+\IEEEauthorblockN{ JJ Merelo} \IEEEauthorblockA{\textit{Department of Graduate Studies} \\
+\textit{Universidad de Granada}\\
+Granada, Spain\\
+jmerelo@ugr.es}}
 
 \maketitle
 
 \begin{abstract}
 % We do not say this project, is more like: In this paoer an evolutionary ... 
 % is presented or In this paper we present a .... (in third or first person plural) - MG   
-This project consisted in the generation of an evolutionary computation-based
-system capable to generate and evolve the structures of which one level of the
-Angry Birds game is composed, these structures are evaluated according to the
-stability of the structure as well as for the complexity of said structure.
-% This is not true any more. Also the evaluation of the level is not the most
-% important aspect - MG 
-
-For this a level generation system was designed based on the data obtained from
-the game, said data consist in the number and type of pieces that appear and the
-applied gravity of the game, the individuals of the group are evaluated by a
-simulation of the generated level and then checking how the structures are
-affected by the gravity of the game.  % This is not what the systems does any more
-% It seems like you are describing Laura's work - M 
-
-The evolutionary computation system has the main objective of generating
-structures based on the existent pieces of the game and evolving said pieces by
-combining them in a process that simulates the rules of the Open-Ended Evolution
-algorithm in which the evolution of this compounds is not inclined towards a
-numeric objective rather than to extend the diversity from which the pieces may
-be selected for a level.
+In this paper an evolutionary computation-based system is proposed to generate 
+levels for the Angry Birds video game, the levels themselves are composed of a 
+set of birds that the player can use, a certain amount of pigs that must be destroyed 
+in order to progress to the next level and a given number of pieces that conform 
+structures that may or may not protect the pigs from the player. The focus in this stage
+is the generation of diverse structures that can be played in the game having the
+additional characteristics of being interesting and playable. We propose a 
+multi-layered search, first contructing composite structures from basic components, to then
+build more complex structures building from these components, following an open-ended 
+evolution approach; in which the evolution of structures is not guided towards 
+a single objective but rather is free to evolve and generate novelty or diversity. 
+The objective is then that the proposed levels are evaluated by how complex they become and how 
+different they are from the rest of the group. The experiments conducted show that a evolutionary approach allows the generated levels
+to have a level of uniqueness because on most of the cases the way they are presented on screen
+is a way a normal human would have trouble to create but at the same time are interesting to see.
+% Maybe like this ? JSH
+%The experiments conducted show  
+% We found that in the experiments conducted, levels generated where ...  
 
 % The abstract is not only for stating what whas done, it is also for 
 % telling readers, why they should care, what's novel, how good it is, how you tested.
 % Please get some inspirtation from other abstracts on the same subject,
-% this should be the last section we write. - M   
+% this should be the last section we write. - M  
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -73,159 +70,86 @@ evolutionary computation
 
 \section{Introduction}
 Procedural content generation is an interesting subject on the entertainment
-industry, primarily in the video game development because of the easiness and
-quickness provided to generate content for different video game projects [ref] .
+industry, primarily in video game development because of the savings in 
+time and human resources when generating content for different video game projects \cite{Yannakakis2017,YannakakisContentGeneration}.
 In this paper an evolutionary content generation system is proposed to generate
-levels for the popular Angry Birds video game
-\cite{RovioEntertainmentCorporation2009}, taking inspiration in concepts of
-open-ended evolution.
-
-
-For this project a procedural generation content system is proposed for the game
-angry birds, angry birds is a game developed by Rovio Entertainment in which the
-objective is to destroy structures placed on the map as well as eliminating
+levels for the popular Angry Birds video game,
+taking inspiration in concepts of open-ended evolution. Angry birds is a game 
+developed by Rovio Entertainment in which the objective is to destroy structures
+placed on the map as well as eliminating
 green pig-like entities in order to obtain the highest score possible, the game
 uses a gravity and collition system that allows the structures to fall and be
 destroyed by means of damage as well as the use of three different construction
-materials \textit{ice}, \textit{wood} and \textit{stone} each one with different
-resistances ranging from fragile, normal and sturdy in that order, the game
+materials \textit{ice}, \textit{wood} and \textit{stone} each one with a different
+resistance, ranging from fragile, normal and sturdy in that order. The game
 mechanic is to use a slingshot to shoot a certain number of birds with different
-abilities to destroy the structures and the objectives, it is possible to obtain
-a high score by doing the most destruction as possible with the least birds as
-you can. \cite{RovioEntertainmentCorporation2009}
+abilities, to destroy both the structures and the objectives. A high score 
+is achived by doing the most destruction with the least birds possible 
+\cite{RovioEntertainmentCorporation2009}.
 
-While it is possible to create a evolutionary agent to play the levels and
-obtain the best score the main objective of this project is to generate the
-levels that can be played by naive agents or physical players, the levels
+%While it is possible to create an evolutionary agent to play the levels and
+%obtain the best score 
+The main objective of this project is to generate levels that can be played
+by naïve or inteligent agents as well as physical players. The levels
 themselves need to be complex in the sense that interesting structures can be
-created but it has to be possible to complete in some way
+created, but at the same time, it is possible to complete in some way
 \cite{Stephenson,Stephenson2018}.
 
 % What is the problem?
-Procedural content generation provides a peculir case of study because of the way
-content has to be made for a each particular type of game, in this particular case 
-the restrictions that the game and the competition track have provide an interesting 
-challenge for a evolutionary algorithm because we have to tanke into account the 
-different pieces that can be used, their interactions with one another because of 
-gravity and the possible effects the trajectory of a shot from a player can affect 
-all of this.
-
-% How we solve it? (summary)   
-In order to tackle this case of study we proposed to use a genetic algorithm capable 
-of creating content, more specifically levels for the angry birds video game in which
-the generated levels satisfy the objectives of being \textit{interesting} and 
-\textit{playable}.
+Procedural content generation provides a peculiar case of study because of the
+way
+% Is there a reference? - MG
+content has to be made for a each particular type of game. In this use case we
+have those restrictions dictated by the game, and also those imposed by a
+competition track \cite{Renz}.% Reference the paper of the competition  have
+provide an interesting The challenge for the participating algorithms is to be
+flexible on the pieces that can be used and the runing time of the algorithm, as
+they are determined at runtime. 
+%their interactions with one another because of gravity and the possible effects
+%the trajectory of a shot from a player can affect all of this. How we solve it?
+%(summary)   
+In order to tackle this case study, we proposed the use a genetic algorithm
+capable of creating game levels having the objective of being both
+\textit{interesting} and \textit{playable}.
 
 % What is learned?
-After concluding this paper we expect to identify the places were a evolutionary 
-algorithm can be used alongside procedural content generation applied to video games
-in order to be able to clarify in which areas a evolutionary algorithm can used 
-to further improve video game development cycles.
+In this work we found that an evolutionary algorithm can be used to create 
+this type of content not only because it is able to create levels that are interesting 
+and diverse but because an evolutionary algorithm is capable of creating things a 
+normal human could have trouble imagining of.
 
-As mentioned above in this paper we use procedural content generation (PCG) 
-which denotes the way to automatically generate
-content by algorithms instead of generating the same content by manual means
-such as with different personnel.
+% What is learned?
+%We identify the places were an evolutionary algorithm can be used alongside
+%procedural content generation applied to video games in order to be able to
+%clarify in which areas an evolutionary algorithm can used to further improve
+%video game development cycles.
 
-In the videogame industry many developers use a PCG style software that produces
-raw images and designs used by other personnel to improve it and use it in order
-to reduce the development cycles, and the productions cost. PCG as six focus
-areas listed below:
-% Jaime, you must add references to EVERY THING READ alsewhere : 
-% We do not proposed this list, please add a reference. - MG   
+% En este trabajo se generan estructuras con mayor diversidad y por lo tanto 
+% resultan ser interesantes.
 
-\begin{itemize}
-    \item Level Design: This aspect involves only the design of specific
-    sections of a game, primarily those in which the player is able to interact.
-    \item Audio: This aspect is focused on designing soundtracks that are able
-    to react to a player specific action.
-    \item Visuals: This area is focused on creating or improving visual
-    representations of objects on games, such as giving raw designs of players
-    faces or improving the images of other graphics.
-    \item Narrative: This aspect is focused on the generation of readable and
-    coherent stories or plotlines of games.
-    \item Gameplay: This aspect uses agents to test and evaluate the mechanic on
-    which a game is based by trying to play as a human would in order to improve
-    said mechanics.
-    \item Game Design: This aspect is focused on generating the rulesets and 
-    mechanics of a new game. \cite{Yannakakis2017,Smith2014,shaker2016procedural}
-    % The references are in this last item of the list JS
-\end{itemize}
+We propose a basic Open-Ended Evolution (OEE) algorithm, a variant of genetic
+evolution algorithm where the objective differs from that of a regular genetic
+algorithm,  in this case the final objective is not to reach a final state of
+the evolution (an optimal solution) but to continue evolving and creating new
+types of entities, perhaps more complex on each new generation. Solutuion
+entities have the possibility to evolve not only inside the frame of their type,
+but  they can create entirely new groups \cite{Standish2003}. Taylor et al.
+\cite{Taylor2016,Taylor} defines OEE as a system capable of creating novelty
+beyond a point where nothing changes on the current group of interest rather
+than just converging to a stable or quasi-stable state.For this project, OEE is
+defined simply as a genetic evolution process with different clasess of objects,
+with compositional and taxonomic relationships between them. Objects of each
+class can evolve in parallel or as in this case, independenly of each other. The
+idea is based on the object oriented model, in which complex behavior can be
+model using these principles. The rest of the paper is as follows.
 
-Furthermore we use genetic algorithms which is a method developed by 
-John Holland on 1975 \cite{Holland1975} the genetic
-algorithm (GA) is an optimization and search technique based on the principles
-of genetic and natural selection, it allows a population composed of many
-individuals, which by themselves represent a possible solution to the problem,
-to evolve under specific selection rules in order to obtain the maximum fitness.
-
-In other words a genetic algorithm is a method to solve optimization problems by
-creating a population that will represent a possible solution and repeatedly
-doing genetic operations as selection, crossover and mutation on each member of
-the population in order to generate children for the next
-generation that would be closer to the best solution of the problem, 
-the cycles in this method where the operations are made are called
-generations and by moving over this the population “evolves” or in other words,
-they get closer to the best possible solution  to a specific problem.
-
-\begin{figure}[htbp]
-    \centerline{\includegraphics[width=90mm]{Images/ga_life_cycle.png}}
-    \caption{Life cycle of a genetic algorithm.}
-    \label{algorithm_model}
-\end{figure}
-    
-% Maybe this is well known, again our implementation is what we need to describe 
-% JJ, what you think?  
-    
-The main life cycle of a genetic algorithm shown on figure \ref{algorithm_model}
-is described as follows:
-\begin{enumerate}
-    \item Initialize a random n population of values suitable for the solution.
-    \item Evaluate the fitness of each individual (solution) in the population.
-    \item Check if the stopping criteria has been met.
-    \item If not.
-    \begin{enumerate}
-        \item Introduce new individuals to the population by crossover
-        operations.
-        \item Mutate a random value of the new individuals.
-        \item Select new cross over individuals according to their fitness for
-        the next generation.
-    \end{enumerate}
-    \item Loop from step 2 until an end condition is satisfied.
-    \item Select the best individual of the population as the solution for the
-    problem
-\end{enumerate}
-
-And finally we use our own interpretation of an Open-ended evolution (OEE) 
-algorithm which is a variant of genetic evolution algorithm where
-the objective differs from the regular genetic algorithm one, in this case the
-final objective is not to reach a final state of the evolution but to continue
-evolving and creating new types of entities more complex on each new generation,
-these same entities have the possibility to evolve not only inside the frame of
-their type but create entirely new groups. \cite{Standish2003}
-
-Another explanation provided by T. Taylor et al. \cite{Taylor2016,Taylor}
-defines OEE has a system capable of creating novelty beyond a point where
-nothing changes on the current group of interest rather than just converging to
-a stable or quasi-stable state.
-
-For this project OEE is defined simply has a process of genetic evolution that
-encapsulates a group of similar processes and that is able to increase complexity
- of the original entities.
-
-% I tried to mix the two sections together while expanding the first part of 
-% the introduction JS
-
-
-%In Section 2, a background of the subjects used on this project will be
-%presented, this subjects, while not all being used on by different authors on
-%their works provide a great help on the development of the proposed system,
-% Jaime, remember there is no Background need it in this type of paper 
-% Maybe that will be the introduction - MG
+%% TO DO: This needs to be adjusted to the final version. We need to use
+% \ref for the numbers - MG
 
 Section 2, contains a quick overview of some aspects used by different authors
 in order to tackle this problem, their design and basic functionality, in
 Section 3 the description of the current state of the project is explained, from
+%% The following sentence is not clear.
 the basis of the development, modification to the original proposed method as 
 well as different approaches that were taken to solve the problem.
 % to the different methods that have been used to
@@ -275,27 +199,28 @@ paper as well as improvements that can help to refine the proposed work.
 %\subsection{Open-Ended Evolution}\label{AA}
 
 
-\section{Overview of existing work}
+\section{State of the art}
+\label{SoA}
+In this Section we present PCG works relevant to the Level generation for the
+Angry Birds video game. Renz et al. \cite{Renz, Renz2015TheAB} organized an AI
+competition with the aim of developing intelligent agents that could play new
+Angry Birds levels better than the best human players. The competition was then
+collocated in other AI conferences. In order to train and test these agents,
+more novel and some times difficult levels must be generated. A related
+competition was then proposed by Stephenson et al. \cite{Stephenson} this time
+with the goal of developing a level generator for the game. Several generators
+have been proposed in the following years of competition. M. Kaidan et al.
+\cite{Kaidan2015} propose a model in which the generation of content is
+controlled by the skill of a player while actively playing the game, the moment
+the player finishes a certain level the algorithm obtains the score and
+generates the next level to be played. Y. Jiang et al. \cite{Jiang2017} proposed
+the use of predefined letter style patterns and combined to create a small pool
+of words and letters used to be combined in order to create levels with text on
+them, the participants would play the game and after that they would be asked if
+they liked the layout of the levels. A search based approach has been also used
+in several works, recently a   
 
-In this Section we present some of the different approaches to the procedural
-generation of content for the angry birds video game.
-
-M. Kaidan et al. \cite{Kaidan2015} propose a model in which the generation of
-content is controlled by the skill of a player while actively playing the game,
-the moment the player finishes a certain level the algorithm obtains the score
-and generates the next level to be played.
-
-J. Renz et al. \cite{Renz} created an article in which the angry birds level
-generation contest mechanics of the IEEE Conference on Computational
-Intelligence and Games are based on, it explains some of the solving methods
-proposed by previous competitors.
-
-Y. Jiang et al. \cite{Jiang2017} proposed the use of predefined letter style
-patterns and combined to create a small pool of words and letters used to be combined in
-order to create levels with text on them, the participants would play the game
-and after that they would be asked if they liked the layout of the levels.
-
-\section{Approach}
+\section{Proposed Approach}
 
 In this Section we describe the approaches that were used for this project, first 
 explaining some information of how techniques like OOE were implemented with the paper.
@@ -381,16 +306,21 @@ for the competition.
 
 \subsection{Original approach}
 % This sentence needs more work -MG
-Since the algorithm has to generate more complex structures the remaining pieces
-of a member of the population have to be used has a starting point, this new
+During the original phase of the design of the system, it was decided that the way 
+the composites were going to evolve was by first placing only base pieces on a level 
+then after a simulation the remaining pieces
+of a member of the population were going to be used has a new composite if after a 
+simulation a group was still standing and grouped on a single point, their individual 
+offsets from the center of the group was calculated and then using this information a new 
+composite could be added to the pool of options, this new
 % we don't use member of the populations, use proposed solution, candidate solution
 % or individual of the population. - MG  
-
-additions to the piece pool are added to the population by the mutation
-operation, the objective in the first phase of the project is to generate
-structures that are capable of maintaining their own balance as shown on figure
+additions to the composite pool could then be added to the population by the mutation
+operation when a new member of the population was being created, the objective 
+in this first phase of the project was to generate
+structures that were capable of maintaining their own balance as shown on figure
 \ref{test_old}, since the objective of open-ended evolution for this project is
-to add new composites to the pool of options the algorithm will first run a
+to add new composites to the pool of options, then the algorithm will first run a
 simulation with a group of pieces and after it the ones that were not destroyed
 by falling because of gravity will be saved and added to the pool of options.
 
@@ -404,8 +334,10 @@ by falling because of gravity will be saved and added to the pool of options.
 \label{test_old}
 \end{figure}
 
-The way to represent the elements of a member of the population is by using the
-id of each piece and the new added ones has a pointer to the respective data
+Since there has to be a way to represent the struccture of a level in a a way that
+both the algorithm as well as the game are able to interpret it \cite{togelius2016Representationsforsearch-basedmethods}, 
+then the way to represent the elements of a member of the population in thos work 
+is by using the id of each piece and the new added ones has a pointer to the respective data
 that needs to be obtained, this way and individual can be represented as shown
 on figure \ref{old_chrom} where each chromosome represents a certain item in the
 pool of pieces, the numbers for this elements are assigned in a first come first
@@ -727,6 +659,33 @@ new evaluation formulas as follows:
     \end{aligned}
     \label{shannon_entropy}
 \end{equation}
+
+Finally figure \ref{layer12_combine} and figure \ref{layer123_combine} represent 
+the way all the layers of an individual al combined to create a level after all 
+the selection, combination and mutation operations, first in figure \ref{layer12_combine}
+the composites layer is obtained from an individual, by a background process the 
+width and height of all composites are obtained, then using the mask from the same 
+individual the composites are placed in the order they are in their respective list 
+(left to right in the level) in case a mask is not able to accommodate all the 
+composites the remaining ones are not placed nor taken into account on the evaluation 
+process, in the opposite case that there are not enough composites to fill a mask 
+then the remaining areas are not taken into account as well, then in figure \ref{layer123_combine} 
+the previous combination of layers is evaluated by cheking which placed composites 
+can hold a pig in the center or on the top of it, then the pigs are placed in the 
+same oreder the composites are placed (left to right) in the locations where one 
+is able to be placed.
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=80mm]{Images/layer12_combine.png}}
+    \caption{Combination of composites layer and mask layer.}
+    \label{layer12_combine}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centerline{\includegraphics[width=80mm]{Images/layer123_combine.png}}
+    \caption{Combination of figure \ref{layer12_combine} layers with pig layer.}
+    \label{layer123_combine}
+\end{figure}
 
 Using all this configurations the system is capable of creating levels, some of
 them playable as shown in figure \ref{result_1} however the levels that can be
