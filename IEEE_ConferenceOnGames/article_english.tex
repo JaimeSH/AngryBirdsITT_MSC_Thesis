@@ -96,20 +96,21 @@ created, but at the same time, it is possible to complete in some way
 \cite{Stephenson,Stephenson2018}.
 
 % What is the problem?
-Procedural content generation provides a peculiar case of study because of the way
+Procedural content generation provides a peculiar case of study because of the
+way
 % Is there a reference? - MG
-content has to be made for a each particular type of game. In this use case 
-we have those restrictions dictated by the game, and also 
-those imposed by a competition track \cite{Renz}.% Reference the paper of the competition  have provide an interesting 
-The challenge for the participating algorithms is to be flexible on the  
-pieces that can be used and the runing time of the algorithm, as they are determined at runtime. 
-%their interactions with one another because of 
-%gravity and the possible effects the trajectory of a shot from a player can affect 
-%all of this.
-% How we solve it? (summary)   
-In order to tackle this case study, we proposed the use a genetic algorithm capable 
-of creating game levels having the objective of being both \textit{interesting} and 
-\textit{playable}.
+content has to be made for a each particular type of game. In this use case we
+have those restrictions dictated by the game, and also those imposed by a
+competition track \cite{Renz}.% Reference the paper of the competition  have
+provide an interesting The challenge for the participating algorithms is to be
+flexible on the pieces that can be used and the runing time of the algorithm, as
+they are determined at runtime. 
+%their interactions with one another because of gravity and the possible effects
+%the trajectory of a shot from a player can affect all of this. How we solve it?
+%(summary)   
+In order to tackle this case study, we proposed the use a genetic algorithm
+capable of creating game levels having the objective of being both
+\textit{interesting} and \textit{playable}.
 
 % What is learned?
 In this work we found that an evolutionary algorithm can be used to create 
@@ -126,47 +127,24 @@ normal human could have trouble imagining of.
 % En este trabajo se generan estructuras con mayor diversidad y por lo tanto 
 % resultan ser interesantes.
 
-% Not important - MG
-%As mentioned above in this paper we use procedural content generation (PCG) 
-%which denotes the way to automatically generate
-%content by algorithms instead of generating the same content by manual means
-%such as with different personnel.
+We propose a basic Open-Ended Evolution (OEE) algorithm, a variant of genetic
+evolution algorithm where the objective differs from that of a regular genetic
+algorithm,  in this case the final objective is not to reach a final state of
+the evolution (an optimal solution) but to continue evolving and creating new
+types of entities, perhaps more complex on each new generation. Solutuion
+entities have the possibility to evolve not only inside the frame of their type,
+but  they can create entirely new groups \cite{Standish2003}. Taylor et al.
+\cite{Taylor2016,Taylor} defines OEE as a system capable of creating novelty
+beyond a point where nothing changes on the current group of interest rather
+than just converging to a stable or quasi-stable state.For this project, OEE is
+defined simply as a genetic evolution process with different clasess of objects,
+with compositional and taxonomic relationships between them. Objects of each
+class can evolve in parallel or as in this case, independenly of each other. The
+idea is based on the object oriented model, in which complex behavior can be
+model using these principles. The rest of the paper is as follows.
 
-%In the videogame industry many developers use a PCG style software that produces
-%raw images and designs used by other personnel to improve it and use it in order
-%to reduce the development cycles, and the productions cost. 
-%PCG as various focus areas that resolve around a video game, however in this paper 
-%the main focus is the \textit{Level design} area which as the objective to design 
-%the different areas of a game in which a player can interact with, since in the 
-%angry birds video game a level is represented by a scene then the system will 
-%have to create the entities (birds and pigs) and objects (pieces) in it in order 
-%to create a playable level.
-
-We propose a basic Open-Ended Evolution (OEE) algorithm, a variant of genetic evolution algorithm where
-the objective differs from that of a regular genetic algorithm,  in this case the
-final objective is not to reach a final state of the evolution (an optimal solution) but to continue
-evolving and creating new types of entities, perhaps more complex on each new generation.
-Solutuion entities have the possibility to evolve not only inside the frame of
-their type, but  they can create entirely new groups \cite{Standish2003}. T. Taylor et al. \cite{Taylor2016,Taylor}
-defines OEE as a system capable of creating novelty beyond a point where
-nothing changes on the current group of interest rather than just converging to
-a stable or quasi-stable state.
-
-For this project, OEE is defined simply as a genetic evolution process with
-different clasess of objects, with compositional and taxonomic relationships between them.
-Objects of each class can evolve in parallel or as in this case, independenly of each other.   
-The idea is based on the object oriented model, in which complex behavior can be model 
-using these principles.
-
-% I tried to mix the two sections together while expanding the first part of 
-% the introduction JS
-
-
-%In Section 2, a background of the subjects used on this project will be
-%presented, this subjects, while not all being used on by different authors on
-%their works provide a great help on the development of the proposed system,
-% Jaime, remember there is no Background need it in this type of paper 
-% Maybe that will be the introduction - MG
+%% TO DO: This needs to be adjusted to the final version. We need to use
+% \ref for the numbers - MG
 
 Section 2, contains a quick overview of some aspects used by different authors
 in order to tackle this problem, their design and basic functionality, in
@@ -221,25 +199,26 @@ paper as well as improvements that can help to refine the proposed work.
 %\subsection{Open-Ended Evolution}\label{AA}
 
 
-\section{Overview of existing work}
-
-In this Section we present some of the different approaches to the procedural
-generation of content for the angry birds video game.
-
-M. Kaidan et al. \cite{Kaidan2015} propose a model in which the generation of
-content is controlled by the skill of a player while actively playing the game,
-the moment the player finishes a certain level the algorithm obtains the score
-and generates the next level to be played.
-
-J. Renz et al. \cite{Renz} created an article in which the angry birds level
-generation contest mechanics of the IEEE Conference on Computational
-Intelligence and Games are based on, it explains some of the solving methods
-proposed by previous competitors.
-
-Y. Jiang et al. \cite{Jiang2017} proposed the use of predefined letter style
-patterns and combined to create a small pool of words and letters used to be combined in
-order to create levels with text on them, the participants would play the game
-and after that they would be asked if they liked the layout of the levels.
+\section{State of the art}
+\label{SoA}
+In this Section we present PCG works relevant to the Level generation for the
+Angry Birds video game. Renz et al. \cite{Renz, Renz2015TheAB} organized an AI
+competition with the aim of developing intelligent agents that could play new
+Angry Birds levels better than the best human players. The competition was then
+collocated in other AI conferences. In order to train and test these agents,
+more novel and some times difficult levels must be generated. A related
+competition was then proposed by Stephenson et al. \cite{Stephenson} this time
+with the goal of developing a level generator for the game. Several generators
+have been proposed in the following years of competition. M. Kaidan et al.
+\cite{Kaidan2015} propose a model in which the generation of content is
+controlled by the skill of a player while actively playing the game, the moment
+the player finishes a certain level the algorithm obtains the score and
+generates the next level to be played. Y. Jiang et al. \cite{Jiang2017} proposed
+the use of predefined letter style patterns and combined to create a small pool
+of words and letters used to be combined in order to create levels with text on
+them, the participants would play the game and after that they would be asked if
+they liked the layout of the levels. A search based approach has been also used
+in several works, recently a   
 
 \section{Approach}
 
