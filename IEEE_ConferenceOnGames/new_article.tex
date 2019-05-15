@@ -50,14 +50,6 @@ jmerelo@ugr.es}}
     different they are from the rest of the group. The experiments conducted show that a evolutionary approach allows the generated levels
     to be unique since, on most cases, the way they are presented on screen
     is a way a normal human would have trouble to create but at the same time are interesting to see.
-    % Maybe like this ? JSH
-    %The experiments conducted show  
-    % We found that in the experiments conducted, levels generated where ...  
-    
-    % The abstract is not only for stating what whas done, it is also for 
-    % telling readers, why they should care, what's novel, how good it is, how you tested.
-    % Please get some inspirtation from other abstracts on the same subject,
-    % this should be the last section we write. - M
     % Another revision to English would be good.
     \end{abstract}
     
@@ -68,65 +60,50 @@ jmerelo@ugr.es}}
     
     \section{Introduction}
     Procedural content generation is an interesting subject on the entertainment
-    industry, primarily in video game development because of the savings in 
-    time and human resources when generating content for different video game projects \cite{Yannakakis2017,YannakakisContentGeneration}.
-    In this paper an evolutionary content generation system is proposed to generate
-    levels for the popular Angry Birds video game,
-    taking inspiration in concepts of open-ended evolution. Angry birds is a game 
-    developed by Rovio Entertainment in which the objective is to destroy structures
-    placed on the map as well as eliminating
-    green pig-like entities in order to obtain the highest score possible, the game
-    uses a gravity and collision system that allows the structures to fall and be
-    destroyed by means of damage as well as the use of three different construction
-    materials \textit{ice}, \textit{wood} and \textit{stone} each one with a different
-    resistance, ranging from fragile, normal and sturdy in that order. The game
-    mechanic is to use a slingshot to shoot a certain number of birds with different
-    abilities, to destroy both the structures and the objectives. A high score 
-    is achieved by doing the most destruction with the least birds possible 
+    industry, primarily in video game development because of the savings in time
+    and human resources when generating content for different video game
+    projects \cite{Yannakakis2017,YannakakisContentGeneration}. In this paper an
+    evolutionary content generation system is proposed to generate levels for
+    the popular Angry Birds video game, taking inspiration in concepts of
+    open-ended evolution. Angry birds is a game developed by Rovio Entertainment
+    in which the objective is to destroy structures placed on the map as well as
+    eliminating green pig-like entities in order to obtain the highest score
+    possible, the game uses a gravity and collision system that allows the
+    structures to fall and be destroyed by means of damage as well as the use of
+    three different construction materials \textit{ice}, \textit{wood} and
+    \textit{stone} each one with a different resistance, ranging from fragile,
+    normal and sturdy in that order. The game mechanic is to use a slingshot to
+    shoot a certain number of birds with different abilities, to destroy both
+    the structures and the objectives. A high score is achieved by doing the
+    most destruction with the least birds possible 
     \cite{RovioEntertainmentCorporation2009}.
-    
-    %While it is possible to create an evolutionary agent to play the levels and
-    %obtain the best score 
     The main objective of this project is to generate levels that can be played
     by naïve or intelligent agents as well as physical players. The levels
     themselves need to be complex in the sense that interesting structures can be
     created, but at the same time, it is possible to complete in some way
     \cite{Stephenson,Stephenson2018}.
-    
     % What is the problem?
     Procedural content generation provides a peculiar case of study because of the
-    way
-    % Is there a reference? - MG
+    way % Is there a reference? - MG
     content has to be made for a each particular type of game. In this use case we
     have those restrictions dictated by the game, and also those imposed by a
-    competition track \cite{Renz}.% Reference the paper of the competition  have
+    competition track \cite{Renz}.
     provide an interesting The challenge for the participating algorithms is to be
     flexible on the pieces that can be used and the running time of the algorithm, as
-    they are determined at runtime. 
-    %their interactions with one another because of gravity and the possible effects
-    %the trajectory of a shot from a player can affect all of this. How we solve it?
-    %(summary)   
+    they are determined at runtime.   
     In order to tackle this case study, we proposed the use a genetic algorithm capable 
     of creating game levels having the objective of being both \textit{interesting} and 
     \textit{playable}, the way to test our candidate solutions will be by using a open-source
     software called Science Birds \cite{sciencebirds} which uses the same resources used on the
     original angry birds game.
-    
     % What is learned?
     In this work we found that an evolutionary algorithm can be used to create 
     this type of content not only because it is able to create levels that are interesting 
     and diverse but because an evolutionary algorithm is capable of creating things a 
     normal human could have trouble imagining of.
-    
     % What is learned?
-    %We identify the places were an evolutionary algorithm can be used alongside
-    %procedural content generation applied to video games in order to be able to
-    %clarify in which areas an evolutionary algorithm can used to further improve
-    %video game development cycles.
-    
     % En este trabajo se generan estructuras con mayor diversidad y por lo tanto 
     % resultan ser interesantes.
-    
     We propose a basic Open-Ended Evolution (OEE) algorithm, a variant of genetic
     evolution algorithm where the objective differs from that of a regular genetic
     algorithm,  in this case the final objective is not to reach a final state of
@@ -153,57 +130,9 @@ jmerelo@ugr.es}}
     the way the candidate solutions are represented, to the way the mutations are applied 
     to them, as well as the way we use our fitness function to determine the playability
     and complexity of the generated levels, 
-    %the basis of the development, modification to the original proposed method as 
-    %well as different approaches that were taken to solve the problem.
-    % to the different methods that have been used to
-    %progress on the different sections of the project, 
-    % Normaly there is no "Future Work" section is put together with Conclusions - MG
     finally in Section 4 we provide our conclusions about the development of this
     paper as well as improvements that can help to refine the proposed work. 
 
-    %Maybe like this? JSH
-    
-    %we explain the future work of the project, where we are in the development phase and how the
-    %future implementations are to further improve the project and finally, in
-    %Section 6 we present our conclusions
-     
-    
-    
-    %\section{Background}
-    %
-    %In this Section we provide a quick overview of the literature about the areas
-    %that provide the basis to the development of the current project, this section
-    %is divided in three parts, the fisrt one gives us an explanation of what
-    %procedural content generation entails, the second one provides an explanation on
-    %genetic algorithms and how can they be used to solve optimization problems, and
-    %finally, the third one provides us with an overview of open-ended evolution and
-    % use just one form, I prefer with no first caps open-ended evolution and let's 
-    % use an abbreviation OEE - MG 
-    
-    %what it means to have an open-ended evolution algorithm.
-    % For this conference I think we do not need to define PCG, let's think 
-    % every one knows what it is. - MG 
-    
-    %\subsection{Procedural content generation}
-    
-    %Procedural content generation (PCG) 
-    
-    %\subsection{Genetic algorithm}
-    
-    
-    
-    
-    % This section and the proposed approach should be in the fron lines - MG
-    
-    % The problem is that we just state what it is, but we do not link it
-    % with our work. Why is important? What inpired our work? 
-    % There is also Novelty Search - MG
-    % Also it sounds like a copy-paste from Wikipedia please check and reference
-    % accordingly - MG
-    
-    %\subsection{Open-Ended Evolution}\label{AA}
-    
-    
     \section{State of the art}
     \label{SoA}
     In this Section we present PCG works relevant to the Level generation for the
@@ -274,19 +203,6 @@ jmerelo@ugr.es}}
     or sequences of blocks, this will be done at a higher level in the composite hierarchy.
     
     At this level the composite generator has the following steps:
-    
-    % Pleas explain in more detail this Composites in a section.  
-    % Here it's explained better, maybe this paragraph should be moved to
-    % an earlier point - MG
-    
-    % Needs a few touches - MG
-    % Please use the name Composite instead of Bundle, composition is well known in
-    % object oriented design.
-    
-    %                                                                           /|\
-    % Combined a few other things to give a litte more detail to this sections   |
-    %                                                                           \|/
-    
     \begin{enumerate}
     \item Generate the first generation of the population, consisting of
     randomly generated list of blocks.
@@ -308,9 +224,7 @@ jmerelo@ugr.es}}
     \caption{List of pieces in the angry birds game.}
     \label{piece_list}
     \end{figure}
-    
     % Explain a bit about the competition, from the introduction
-    
     The Angry Birds level generation track is a competition where the objective is 
     to generate levels that are \textit{fun} and \textit{enjoyable} however they 
     also have to be challenging but not impossible. However the rules for the competition 
@@ -326,52 +240,15 @@ jmerelo@ugr.es}}
     \textit{limit} of time that the system has to create the required amount of
     levels.
     
-    %After taking into account this restrictions the structure of our current approach
-    %had to be changed, so this section will be divided in two subsections, the first
-    %will explain the approach that was used and after that the second will explain the
-    %modifications that had to be made in order to integrate the configuration files
-    %for the competition. 
-    
     In our original approach, composites could added to the structure generator
     algorithm at runtime as a mutation of an individual. The structure generator
     is explained in the next section.
-
-    % Lets check this, I think is not needed. 
-    %The objective in this first phase of the project was to
-    %generate structures that were capable of maintaining their own balance as
-    %shown on figure \ref{test_old}, since the objective of open-ended evolution
-    %for this project is to add new composites to the pool of options,
-    
     In our current approach the composite generator is only
     run once at the beginning, as a setup process.
     
 
     \subsection{Structure Evolution}
-    % This sentence needs more work -MG
-
-    %During the original phase of the design of the system, it was decided that the way 
-    %composites were going to evolve was by first placing only base pieces on a level 
-    %then after a simulation the remaining pieces
-    %of a member of the population were going to be used as a new composite if after a 
-    %simulation a group was still standing and grouped on a single point, their individual 
-    %offsets from the center of the group was calculated and then using this information a new 
-    %composite could be added to the pool of options, this new
-    % we don't use member of the populations, use proposed solution, candidate solution
-    % or individual of the population. - MG  
-    %additions to the composite pool could then be added to the population by the mutation
-    %operation when a new member of the population was being created, the objective 
-    %in this first phase of the project was to generate
-    %structures that were capable of maintaining their own balance as shown on figure
-    %\ref{test_old}, since the objective of open-ended evolution for this project is
-    %to add new composites to the pool of options, then the algorithm will first run a
-    %simulation with a group of pieces and after it the ones that were not destroyed
-    %by falling because of gravity will be saved and added to the pool of options.
-    
-    % New pieces are added by mutation? 
-    % Please give more details to all this - MG
-    
-
-    
+   
     \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/simulation_bef_aft_example.png}}
     \caption{Structure at beginning and end of a simulation.}
@@ -456,7 +333,6 @@ jmerelo@ugr.es}}
      order to distribute them in a way that can cover more area and create more
      balanced levels instead of using a tower like distribution as shown on
      figure \ref{results_old}. There is an option in the system to generate in a
-     %           xxxxxxxxxxx This is missing and I have no idea where it is - JJ
      first step a collection of masks, following this rules, but this approach
      has a drawback. Pre-generating masks would not allow the generator to
      \textit{evolve} because the individuals would be limited to a certain
@@ -469,7 +345,12 @@ jmerelo@ugr.es}}
      a parameter. An example of this can be seen in figure \ref{new_chrom} where
      the total of pieces in a individual is 18 and this pieces are distributed
      on all the columns available.
-     
+
+     \begin{figure}[htbp]
+        \centerline{\includegraphics[width=80mm]{Images/result_example.png}}
+        \caption{Result samples of current system.}
+        \label{results_old}
+    \end{figure}
     
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=80mm]{Images/ruleofthirds_example.png}}
@@ -489,26 +370,6 @@ jmerelo@ugr.es}}
         \caption{Results obtained with rule of thirds.}
         \label{rule_of_thirds_result}
     \end{figure}
-    
-    
- 
-    
-   % The competition also requires that a generator follows a certain ruleset this is 
-   % emulated by providing a file to the system to simulate the ruleset provided at the 
-   % competition, this \textit{text file
-   % (parameters.txt)} provides the specifications that must be met in the
-   % competition, the parameters in the file are as follows:
-    
-   % \begin{itemize}
-   %     \item Total required levels.
-   %     \item Restrictions to pieces or piece-material combinations that cannot be
-   %     placed or used in the levels, in this case if the file specifies that a
-   %     \textit{CIRCLE} made out of \textit{ICE} cannot be placed, so the system must be
-   %     able to verify that said combination is not used.
-   %     \item Total number of pigs, this value can be a single value or a range of
-   %     values that represent how many pigs must be placed on a level.
-   %     \item The amount of time in which the system must give an output.
-   % \end{itemize}
     
     \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/chromosome_chain_new_model.png}}
