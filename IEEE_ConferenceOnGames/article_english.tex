@@ -71,9 +71,9 @@ evolutionary computation
 \section{Introduction}
 Procedural content generation is an interesting subject on the entertainment
 industry, primarily in video game development because of the savings in 
-time and human resources when generating content for different video game projects.
+time and human resources when generating content for different video game projects \cite{Yannakakis2017,YannakakisContentGeneration}.
 In this paper an evolutionary content generation system is proposed to generate
-levels for the popular Angry Birds video game \cite{RovioEntertainmentCorporation2009},
+levels for the popular Angry Birds video game,
 taking inspiration in concepts of open-ended evolution. Angry birds is a game 
 developed by Rovio Entertainment in which the objective is to destroy structures
 placed on the map as well as eliminating
@@ -306,16 +306,21 @@ for the competition.
 
 \subsection{Original approach}
 % This sentence needs more work -MG
-Since the algorithm has to generate more complex structures the remaining pieces
-of a member of the population have to be used has a starting point, this new
+During the original phase of the design of the system, it was decided that the way 
+the composites were going to evolve was by first placing only base pieces on a level 
+then after a simulation the remaining pieces
+of a member of the population were going to be used has a new composite if after a 
+simulation a group was still standing and grouped on a single point, their individual 
+offsets from the center of the group was calculated and then using this information a new 
+composite could be added to the pool of options, this new
 % we don't use member of the populations, use proposed solution, candidate solution
 % or individual of the population. - MG  
-
-additions to the piece pool are added to the population by the mutation
-operation, the objective in the first phase of the project is to generate
-structures that are capable of maintaining their own balance as shown on figure
+additions to the composite pool could then be added to the population by the mutation
+operation when a new member of the population was being created, the objective 
+in this first phase of the project was to generate
+structures that were capable of maintaining their own balance as shown on figure
 \ref{test_old}, since the objective of open-ended evolution for this project is
-to add new composites to the pool of options the algorithm will first run a
+to add new composites to the pool of options, then the algorithm will first run a
 simulation with a group of pieces and after it the ones that were not destroyed
 by falling because of gravity will be saved and added to the pool of options.
 
@@ -329,8 +334,10 @@ by falling because of gravity will be saved and added to the pool of options.
 \label{test_old}
 \end{figure}
 
-The way to represent the elements of a member of the population is by using the
-id of each piece and the new added ones has a pointer to the respective data
+Since there has to be a way to represent the struccture of a level in a a way that
+both the algorithm as well as the game are able to interpret it \cite{togelius2016Representationsforsearch-basedmethods}, 
+then the way to represent the elements of a member of the population in thos work 
+is by using the id of each piece and the new added ones has a pointer to the respective data
 that needs to be obtained, this way and individual can be represented as shown
 on figure \ref{old_chrom} where each chromosome represents a certain item in the
 pool of pieces, the numbers for this elements are assigned in a first come first
