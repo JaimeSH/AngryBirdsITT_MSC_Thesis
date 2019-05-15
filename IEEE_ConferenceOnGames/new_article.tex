@@ -232,6 +232,8 @@ jmerelo@ugr.es}}
     different locations and angles in order to create structures that can be used as
     building blocks for more complex structures. 
     
+    \subsection{Composite Generation}
+
     Since there is no way to \textit{add} a new composite to the pool of blocks,
     then a way to combine both is needed, in order to do this first the original
     11 pieces of the game will be converted into composites of a single element.
@@ -261,7 +263,7 @@ jmerelo@ugr.es}}
     more freedom in how basic structures are built. We do not want to form piles
     or sequences of blocks, this will be done at a higher level in the composite hirarchy.
     
-    At his level the composite generator has the following steps, for more details refer to the paper:
+    At this level the composite generator has the following steps:
     
     % Pleas explain in more detail this Composites in a section.  
     % Here it's explained better, maybe this paragraph should be moved to
@@ -276,14 +278,16 @@ jmerelo@ugr.es}}
     %                                                                           \|/
     
     \begin{enumerate}
-    \item Generate the first generation of the population, consisting of randomly generated list of blocks.
+    \item Generate the first generation of the population, consisting of
+    randomly generated list of blocks.
     \item Run a Simulation.
     \item Evaluate each individual of the population.
-    \item If a member of the population has remaining pieces obtain the location and
-    angle of the pieces, assign a fitness.
+    \item If a member of the population has remaining pieces obtain the location
+    and angle of the pieces, assign a fitness.
     \item Do the selection, crossover and mutation operations.
     \item Repeat the cycle.
-    \item From the best individuals select composites. Several algorithms could be proposed for this step, for instance selcting clusters of blocks.
+    \item From the best individuals select composites. Several algorithms could
+    be proposed for this step, for instance selcting clusters of blocks.
     \end{enumerate}
     
     Another option is to just manually generate interesting composites to be used by the algorithm.
@@ -302,7 +306,7 @@ jmerelo@ugr.es}}
     also have to be challenging but not imposible. However the rules for the competition 
     specify that a configuration file must be used to
     generate the levels of the game in a limited amount of time, the information on
-    the configuration file is first the number of \textbf{\textit{different}} levels
+    the configuration file is first the number of \textit{different} levels
     that must be generated, the second value is the different materials \textit{not
     allowed} to be used, for instance a group of generated levels must not have
     circles which composition material is ice or stone, moreover it does not have to
@@ -312,36 +316,51 @@ jmerelo@ugr.es}}
     \textit{limit} of time that the system has to create the required amount of
     levels.
     
-    After taking into account this restrictions the structure of our current approach
-    had to be changed, so this section will be divided in two subsections, the first
-    will explain the approach that was used and after that the second will explain the
-    modifications that had to be made in order to integrate the configuration files
-    for the competition. 
+    %After taking into account this restrictions the structure of our current approach
+    %had to be changed, so this section will be divided in two subsections, the first
+    %will explain the approach that was used and after that the second will explain the
+    %modifications that had to be made in order to integrate the configuration files
+    %for the competition. 
     
-    \subsection{Original approach}
+    In our original approach, composites could added to the structure generator
+    algorithm at runtime as a mutation of an individual. The structure generator
+    is explained in the next section.
+
+    % Lets check this, I think is not needed. 
+    %The objective in this first phase of the project was to
+    %generate structures that were capable of maintaining their own balance as
+    %shown on figure \ref{test_old}, since the objective of open-ended evolution
+    %for this project is to add new composites to the pool of options,
+    
+    In our current approach the composite generator is only
+    run once at the beginning, as a setup process.
+    
+
+    \subsection{Structure Evolution}
     % This sentence needs more work -MG
 
-    During the original phase of the design of the system, it was decided that the way 
-    composites were going to evolve was by first placing only base pieces on a level 
-    then after a simulation the remaining pieces
-    of a member of the population were going to be used as a new composite if after a 
-    simulation a group was still standing and grouped on a single point, their individual 
-    offsets from the center of the group was calculated and then using this information a new 
-    composite could be added to the pool of options, this new
+    %During the original phase of the design of the system, it was decided that the way 
+    %composites were going to evolve was by first placing only base pieces on a level 
+    %then after a simulation the remaining pieces
+    %of a member of the population were going to be used as a new composite if after a 
+    %simulation a group was still standing and grouped on a single point, their individual 
+    %offsets from the center of the group was calculated and then using this information a new 
+    %composite could be added to the pool of options, this new
     % we don't use member of the populations, use proposed solution, candidate solution
     % or individual of the population. - MG  
-    additions to the composite pool could then be added to the population by the mutation
-    operation when a new member of the population was being created, the objective 
-    in this first phase of the project was to generate
-    structures that were capable of maintaining their own balance as shown on figure
-    \ref{test_old}, since the objective of open-ended evolution for this project is
-    to add new composites to the pool of options, then the algorithm will first run a
-    simulation with a group of pieces and after it the ones that were not destroyed
-    by falling because of gravity will be saved and added to the pool of options.
+    %additions to the composite pool could then be added to the population by the mutation
+    %operation when a new member of the population was being created, the objective 
+    %in this first phase of the project was to generate
+    %structures that were capable of maintaining their own balance as shown on figure
+    %\ref{test_old}, since the objective of open-ended evolution for this project is
+    %to add new composites to the pool of options, then the algorithm will first run a
+    %simulation with a group of pieces and after it the ones that were not destroyed
+    %by falling because of gravity will be saved and added to the pool of options.
     
     % New pieces are added by mutation? 
     % Please give more details to all this - MG
     
+
     
     \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/simulation_bef_aft_example.png}}
@@ -349,15 +368,24 @@ jmerelo@ugr.es}}
     \label{test_old}
     \end{figure}
     
-    Since there has to be a way to represent the structure of a level in a a way that
-    both the algorithm as well as the game are able to interpret it \cite{togelius2016Representationsforsearch-basedmethods}, 
-    then the way to represent the elements of a member of the population in thos work 
-    is by using the id of each piece and the new added ones has a pointer to the respective data
-    that needs to be obtained, this way and individual can be represented as shown
-    on figure \ref{old_chrom} where each chromosome represents a certain item in the
-    pool of pieces, the numbers for this elements are assigned in a first come first
-    served basis, the numbers are infinitely incremented and the same pieces can be
-    repeated on each individual of the population.
+    Structures are the next evolutionary layer, at a higher level of composition.
+    Structures are compositions of composites. A level can be seen as a collection 
+    of structures and each structure is a pile of composite blocks. This approach 
+    was proposed by \cite{ }. This way of constructing levels has the advantage of
+    limiting the search space, to structures that have a better chance to be 
+    standing after the simulation ends. There is no warranty that piles of 
+    composite blocks will maintain balance, so again we must search for those 
+    structures.
+
+    Structures are represented in a way similar to Togelius et al.
+    \cite{togelius2016Representationsforsearch-basedmethods}. Each block has
+    an id assigned to it. A structure is then a list of ids, refering to
+    composite blocks, the first 11 are basic composite and generated composites 
+    are assigned a higher number.  This way and individual can be
+    represented as shown on figure \ref{old_chrom} where each chromosome
+    represents a certain item in the list of blocks, the numbers for this
+    elements are assigned in a first come first served basis, the numbers are
+    infinitely incremented and the same blocks can be repeated in a structure.
     
     \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/bounding_box_calculation.png}}
@@ -371,21 +399,27 @@ jmerelo@ugr.es}}
     \label{old_chrom}
     \end{figure}
     
-    Once the pieces have been added and the individuals are ready to be evaluated a
-    simulation on the game environment is scheduled by order in the population, all
-    the individuals have a maximum of ten seconds to maintain balance or reach
-    absolute stability, if absolute stability is reached it means one of two things,
-    first the generated structure is completely stable or second, the tower fell to
-    either side and the pieces were destroyed or stopped moving by gravitational
-    pull, when either of this happens by more than two seconds the simulation ends
-    regardless of time remaining and the next individual is simulated.
-    
+    These structures represent individuals in the evolutionary algorithm. Once
+    an individual is created it is ready to be evaluated in a simulation on the
+    game environment. Using a similar approach as the composite generator, all
+    individuals have a maximum of ten seconds to maintain balance or reach
+    absolute stability, if absolute stability is reached it means one of two
+    things, first the generated structure is completely stable or second, the
+    tower fell to either side and the pieces were destroyed or stopped moving by
+    gravitational pull, when either of this happens by more than two seconds the
+    simulation ends regardless of time remaining and the next individual is
+    simulated.
+
     The evaluation process for this project is still in the development stages,
-    however in order to check that the evolution is working has it should a criteria
-    has been temporarily made as follows, each individual in the population has 100
-    points so before the simulation starts each of them are viable candidates to be
-    an elite member of the population regardless relative height or complexity, then
-    the remaining of the process is separated in three phases has follows.
+    and in our experience is one one of the more difficult components in this
+    kind of systems. In this stage of the evolution, we first need to assign a
+    good fitness to those structures that keep their balance and not fall apart.
+    There are other variables we take in to account, but they will be explained
+    later. In this initial stage, each individual in the population has 100
+    points so before the simulation starts each of them are viable candidates to
+    be an elite member of the population regardless of their relative height or
+    complexity, then the remaining of the process is separated in three phases
+    has follows. This is the same approach used in the composite generator.
     
     First, after each of the individual simulations are over the evaluation process
     takes place, in this phase the resulting level is checked for pieces, each one
@@ -395,7 +429,7 @@ jmerelo@ugr.es}}
     represents a certain percentage of 100\% so the missing pieces are subtracted
     from the total.
     
-    Second, after removing percentage according to the missing pieces an individual
+    Second, after removing a percentage according to the missing pieces an individual
     remaining pieces are checked for their positions in comparison to the original
     ones before the simulation, using the formula 1 each piece within the individual
     is evaluated according to the center point of the piece, if the piece moved more
