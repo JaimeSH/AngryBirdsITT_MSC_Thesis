@@ -35,22 +35,20 @@ jmerelo@ugr.es}}
 
 
 \begin{abstract}
-    % We do not say this project, is more like: In this paoer an evolutionary ... 
-    % is presented or In this paper we present a .... (in third or first person plural) - MG   
-    In this paper an evolutionary computation-based system is proposed to generate 
-    levels for the Angry Birds video game, the levels themselves are composed of a 
+    In this paper we propose an evolutionary computation-based system to generate 
+    levels for the Angry Birds video game. The levels themselves are composed of a 
     set of birds that the player can use, a certain amount of pigs that must be destroyed 
     in order to progress to the next level and a given number of pieces that conform 
-    structures that may or may not protect the pigs from the player. The focus in this stage
+    structures that may or may not protect the pigs from the player. The focus in this stage of the work
     is the generation of diverse structures that can be played in the game having the
     additional characteristics of being interesting and playable. We propose a 
     multi-layered search, first constructing composite structures from basic components, to then
     build more complex structures building from these components, following an open-ended 
-    evolution approach; in which the evolution of structures is not guided towards 
-    a single objective but rather is free to evolve and generate novelty or diversity. 
+    evolution approach in which the evolution of structures is not guided towards 
+    a single objective but is rather free to evolve and generate novelty or diversity. 
     The objective is then that the proposed levels are evaluated by how complex they become and how 
     different they are from the rest of the group. The experiments conducted show that a evolutionary approach allows the generated levels
-    to have a level of uniqueness because on most of the cases the way they are presented on screen
+    to be unique since, on most cases, the way they are presented on screen
     is a way a normal human would have trouble to create but at the same time are interesting to see.
     % Maybe like this ? JSH
     %The experiments conducted show  
@@ -59,11 +57,12 @@ jmerelo@ugr.es}}
     % The abstract is not only for stating what whas done, it is also for 
     % telling readers, why they should care, what's novel, how good it is, how you tested.
     % Please get some inspirtation from other abstracts on the same subject,
-    % this should be the last section we write. - M  
+    % this should be the last section we write. - M
+    % Another revision to English would be good.
     \end{abstract}
     
     \begin{IEEEkeywords}
-    genetic algorithm, procedural generated content, open-ended evolution,
+    Genetic algorithm, procedural generated content, open-ended evolution,
     evolutionary computation
     \end{IEEEkeywords}
     
@@ -77,19 +76,19 @@ jmerelo@ugr.es}}
     developed by Rovio Entertainment in which the objective is to destroy structures
     placed on the map as well as eliminating
     green pig-like entities in order to obtain the highest score possible, the game
-    uses a gravity and collition system that allows the structures to fall and be
+    uses a gravity and collision system that allows the structures to fall and be
     destroyed by means of damage as well as the use of three different construction
     materials \textit{ice}, \textit{wood} and \textit{stone} each one with a different
     resistance, ranging from fragile, normal and sturdy in that order. The game
     mechanic is to use a slingshot to shoot a certain number of birds with different
     abilities, to destroy both the structures and the objectives. A high score 
-    is achived by doing the most destruction with the least birds possible 
+    is achieved by doing the most destruction with the least birds possible 
     \cite{RovioEntertainmentCorporation2009}.
     
     %While it is possible to create an evolutionary agent to play the levels and
     %obtain the best score 
     The main objective of this project is to generate levels that can be played
-    by naïve or inteligent agents as well as physical players. The levels
+    by naïve or intelligent agents as well as physical players. The levels
     themselves need to be complex in the sense that interesting structures can be
     created, but at the same time, it is possible to complete in some way
     \cite{Stephenson,Stephenson2018}.
@@ -102,7 +101,7 @@ jmerelo@ugr.es}}
     have those restrictions dictated by the game, and also those imposed by a
     competition track \cite{Renz}.% Reference the paper of the competition  have
     provide an interesting The challenge for the participating algorithms is to be
-    flexible on the pieces that can be used and the runing time of the algorithm, as
+    flexible on the pieces that can be used and the running time of the algorithm, as
     they are determined at runtime. 
     %their interactions with one another because of gravity and the possible effects
     %the trajectory of a shot from a player can affect all of this. How we solve it?
@@ -132,15 +131,15 @@ jmerelo@ugr.es}}
     evolution algorithm where the objective differs from that of a regular genetic
     algorithm,  in this case the final objective is not to reach a final state of
     the evolution (an optimal solution) but to continue evolving and creating new
-    types of entities, perhaps more complex on each new generation. Solutuion
+    types of entities, perhaps more complex on each new generation. Solution
     entities have the possibility to evolve not only inside the frame of their type,
     but  they can create entirely new groups \cite{Standish2003}. Taylor et al.
     \cite{Taylor2016,Taylor} defines OEE as a system capable of creating novelty
     beyond a point where nothing changes on the current group of interest rather
     than just converging to a stable or quasi-stable state.For this project, OEE is
-    defined simply as a genetic evolution process with different clasess of objects,
+    defined simply as a genetic evolution process with different classes of objects,
     with compositional and taxonomic relationships between them. Objects of each
-    class can evolve in parallel or as in this case, independenly of each other. The
+    class can evolve in parallel or as in this case, independently of each other. The
     idea is based on the object oriented model, in which complex behavior can be
     model using these principles. The rest of the paper is as follows.
     
@@ -152,7 +151,7 @@ jmerelo@ugr.es}}
     Section 3 the description of the current state of the project is explained, from
     %% The following sentence is not clear.
     the way the candidate solutions are represented, to the way the mutations are applied 
-    to them, as well as the way we use our fitness fucntion to determine the playability
+    to them, as well as the way we use our fitness function to determine the playability
     and complexity of the generated levels, 
     %the basis of the development, modification to the original proposed method as 
     %well as different approaches that were taken to solve the problem.
@@ -215,7 +214,7 @@ jmerelo@ugr.es}}
     more novel and some times difficult levels must be generated. A related
     competition was then proposed by Stephenson et al. \cite{Stephenson} this time
     with the goal of developing a level generator for the game. Several generators
-    have been proposed in the following years of competition. M. Kaidan et al.
+    have been proposed in the following years of competition. M. Katina et al.
     \cite{Kaidan2015} propose a model in which the generation of content is
     controlled by the skill of a player while actively playing the game, the moment
     the player finishes a certain level the algorithm obtains the score and
@@ -251,10 +250,10 @@ jmerelo@ugr.es}}
     A composite is defined as a lists of blocks, then a \textit{composite} of
     one element will be created for each piece. Composites are the first layer
     the building blocks for the structures to come. A composite could include
-    different types of blocks, rotaded at a certain angle and compose a basic
+    different types of blocks, rotated at a certain angle and compose a basic
     structure. An ideal composite could support other composites on top with out
     falling apart, but this is not required. A composite is measured using
-    maginary bounding box, defined by calculating the lengths of all the pieces,
+    imaginary bounding box, defined by calculating the lengths of all the pieces,
     finding the borders of said pieces and then finding the points that could
     define a box around all of them, then use this defined box to calculate the
     height and width of the new composite and then calculate from the center
@@ -269,10 +268,10 @@ jmerelo@ugr.es}}
     Good composites can be found using an evolutionary approach proposed earlier 
     by Calle and Merelo, where basic structures are generated by searching a space
     of falling blocks and selecting those that remain standing. This algorithm is 
-    not capable of creating complex strucures, but it can generate very novel basic
+    not capable of creating complex structures, but it can generate very novel basic
     structures. We can see that the evolution at this level can benefit from having
     more freedom in how basic structures are built. We do not want to form piles
-    or sequences of blocks, this will be done at a higher level in the composite hirarchy.
+    or sequences of blocks, this will be done at a higher level in the composite hierarchy.
     
     At this level the composite generator has the following steps:
     
@@ -298,7 +297,7 @@ jmerelo@ugr.es}}
     \item Do the selection, crossover and mutation operations.
     \item Repeat the cycle.
     \item From the best individuals select composites. Several algorithms could
-    be proposed for this step, for instance selcting clusters of blocks.
+    be proposed for this step, for instance selecting clusters of blocks.
     \end{enumerate}
     
     Another option is to just manually generate interesting composites to be used by the algorithm.
@@ -314,7 +313,7 @@ jmerelo@ugr.es}}
     
     The Angry Birds level generation track is a competition where the objective is 
     to generate levels that are \textit{fun} and \textit{enjoyable} however they 
-    also have to be challenging but not imposible. However the rules for the competition 
+    also have to be challenging but not impossible. However the rules for the competition 
     specify that a configuration file must be used to
     generate the levels of the game in a limited amount of time, the information on
     the configuration file is first the number of \textit{different} levels
@@ -390,7 +389,7 @@ jmerelo@ugr.es}}
 
     Structures are represented in a way similar to Togelius et al.
     \cite{togelius2016Representationsforsearch-basedmethods}. Each block has
-    an id assigned to it. A structure is then a list of ids, refering to
+    an id assigned to it. A structure is then a list of ids, referring to
     composite blocks, the first 11 are basic composite and generated composites 
     are assigned a higher number.  This way and individual can be
     represented as shown on figure \ref{old_chrom} where each chromosome
@@ -438,18 +437,18 @@ jmerelo@ugr.es}}
     initial quantity of pieces that were originally put in before the simulation,
     each block represents a certain percentage of 100\% so the missing pieces 
     are subtracted from the total. In this moment, each block is counted as if 
-    it was not a member of a composite, this is becuse after the simulation there is
+    it was not a member of a composite, this is because after the simulation there is
     only data about each individual block.
 
     \subsection{Structure Positioning}
 
      The positioning of structures in the map is important in order to generate
-     levels that are fun and aesthetic. For this we need a method to indcate the
+     levels that are fun and aesthetic. For this we need a method to indicate the
      positioning of each structure. We propose the use of a mask where the
-     positioning of each pile and the number of blocks it contains is specefied.
+     positioning of each pile and the number of blocks it contains is specified.
      Again these masks could be manually created, for instance using the rule of
      thirds \cite{DarrenRowse} which is a guideline used while creating images,
-     the purpose is to create aesthetical pleasant images where the focus point
+     the purpose is to create aesthetic pleasant images where the focus point
      or the most important area is at the center of the image as shown on figure
      \ref{rule_of_thirds}, using this rule different distribution groups or
      masks are created has shown on figure \ref{rule_of_thirds_masks} in order
@@ -457,14 +456,14 @@ jmerelo@ugr.es}}
      order to distribute them in a way that can cover more area and create more
      balanced levels instead of using a tower like distribution as shown on
      figure \ref{results_old}. There is an option in the system to generate in a
-     first step a collection of masks, following this rules, but this qpproach
+     first step a collection of masks, following this rules, but this approach
      has a drawback. Pre-generating masks would not allow the generator to
      \textit{evolve} because the individuals would be limited to a certain
      number of possibles combinations which will in turn prevent diversity in
      the population, so in order to prevent this we proposed an approach that
      allows the individuals to generate a mask in which a number of columns is
      defined by default but the amount of pieces in each one is random, however
-     the total amount of assigned blockes in all columns must be the same as the
+     the total amount of assigned blocks in all columns must be the same as the
      total pieces allowed in each individual. The number of maximum blocks is as
      a parameter. An example of this can be seen in figure \ref{new_chrom} where
      the total of pieces in a individual is 18 and this pieces are distributed
@@ -522,15 +521,15 @@ jmerelo@ugr.es}}
     \label{new_model}
     \end{figure}
     
-    A diagram showng the main components and data flow of the proposed system
+    A diagram shows the main components and data flow of the proposed system
     is shown in Figure \ref{new_model} in which the parameter file of the competition 
-    is integrated as an input. The layers of the system is exaplained next:
+    is integrated as an input. The layers of the system is explained next:
     
     \begin{itemize}
         \item Composite Generator:  This layer represents the composite blocks
         assigned to a particular individual as list of integer numbers, where
         each number represents a reference to a composite object including the
-        ones generated by the OOE algorithm, the representetion of this is was
+        ones generated by the OEE algorithm, the representation of this is was
         shown in figure \ref{old_chrom}.
         \item Structure layer: Individuals are represented by a list of seven
         integers, representing a mask in which integers assigned in each column
@@ -546,14 +545,14 @@ jmerelo@ugr.es}}
     
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=80mm]{Images/mask_layer.png}}
-        \caption{Mask array with column and fenotype representation.}
+        \caption{Mask array with column and phenotype representation.}
         \label{mask_layer}
     \end{figure}
     
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=80mm]{Images/enemy_layer.png}}
         \caption{Amount of pigs in a level, their location relative to the mask layer
-         (green) and fenotype representation.}
+         (green) and phenotype representation.}
         \label{enemy_layer}
     \end{figure}
     
@@ -565,16 +564,16 @@ jmerelo@ugr.es}}
     individual defining a fitness function considering:
     
     \begin{itemize}
-        \item Hamming distance: a simle explanation for the \textit{Hamming
+        \item Hamming distance: a simple explanation for the \textit{Hamming
         distance} is that it is a calculation applied to a pair of strings where the
         objective is to find the minimum required number of substitutions required in
         order to convert a string exactly the same as the other, its formula is
         shown in equation \ref{hamming_distance}, since the formula itself locates
         the minimum number of substitutions then we compare the individual
         with the rest of the population trying to find the maximum number of
-        substitutions required efectively using the formula to give a better fitness
+        substitutions required effectively using the formula to give a better fitness
         to those individuals that are different from the group.
-        \item Shannon entropy: the shannon entropy is used on information theory to
+        \item Shannon entropy: the Shannon entropy is used on information theory to
         calculate the disorder or uncertainty, in this case it will be used to
         determine if a level is \textit{"boring"} or \textit{"interesting"} based on
         the amount of entropy calculated according to the pieces used in a level
@@ -604,7 +603,7 @@ jmerelo@ugr.es}}
     \begin{itemize}
     % This needs more work.    
         \item Tournament selection: in order to select the parent by this method the
-        system checks the amount of crossovers assigned, then calculates the ammount
+        system checks the amount of crossovers assigned, then calculates the amount
         of parent required to compete in pairs, then by doing a descendent selection
         the slots for the tournament are filled and the winners are calculated in
         each group.
@@ -619,16 +618,16 @@ jmerelo@ugr.es}}
     point crossover and double point crossover, however this crossover operation is
     not only applied to the piece array of an individual, but it is also applied to
     the mask of said individual, this way the mask can ensure that some pieces of
-    some childs in the population are now placed in the level, this can bring the
+    some children in the population are now placed in the level, this can bring the
     possibility that a mask that uses less pieces that it normally as can obtain a
     better fitness than one that uses all of them. An example of this two crossover
     types can be seen in figure \ref{crossover} in which the mask of an individual
-    is combined with another and the resulting mask for the childs have different
+    is combined with another and the resulting mask for the children have different
     amount of pieces to be placed.
     
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=80mm]{Images/crossover.png}}
-        \caption{Single point crossover(up) and double point crossover(bottom) aplied to an individual mask.}
+        \caption{Single point crossover(up) and double point crossover(bottom) applied to an individual mask.}
         \label{crossover}
     \end{figure}
     
@@ -642,10 +641,10 @@ jmerelo@ugr.es}}
         \item Change the x and y coordinates of a piece
     \end{itemize}
     
-    This mutations do not have to be used all at othe same time on a single
+    This mutations do not have to be used all at the same time on a single
     individual but depending on the probabilities they can happen all at once,
     since most of the pieces on a individual are mostly the same type of
-    material then at least the material mutation can occurr on all or most of
+    material then at least the material mutation can occur on all or most of
     the individuals to ensure that all levels will not have all the pieces with
     the same material which could render a level \textit{"boring"} by the
     fitness function.
@@ -662,9 +661,9 @@ jmerelo@ugr.es}}
     composites the remaining ones are not placed nor taken into account on the evaluation 
     process, in the opposite case that there are not enough composites to fill a mask 
     then the remaining areas are not taken into account as well, then in figure \ref{layer123_combine} 
-    the previous combination of layers is evaluated by cheking which placed composites 
+    the previous combination of layers is evaluated by checking which placed composites 
     can hold a pig in the center or on the top of it, then the pigs are placed in the 
-    same oreder the composites are placed (left to right) in the locations where one 
+    same order the composites are placed (left to right) in the locations where one 
     is able to be placed.
     
     \begin{figure}[htbp]
@@ -697,14 +696,14 @@ jmerelo@ugr.es}}
      The system has been able to generate levels that fulfill the requirements
      provided by the parameters file, however a way to evaluate that the levels
      generated are indeed \textit{"fun"} or \textit{"interesting"} is still
-     needed, at this point we could evaluate the levels by appling an aproach
+     needed, at this point we could evaluate the levels by applying an approach
      used in previous competitions:
      \begin{itemize}
         \item User survey, in case a survey is used as an evaluation tool then first
         the system has to generate the levels and a group of people must participate
         by playing the levels and answering a set of questions afterwards, the
         questions themselves must try to capture the feeling of a person towards the
-        game like questioning if a level was too easy or too dificult to solve, if
+        game like questioning if a level was too easy or too difficult to solve, if
         the generated structures look interesting or if the level required them to
         strategize how to use the provided birds to solve the level, the survey must
         be applied to a equal quantity of people of three different game skill
@@ -715,9 +714,9 @@ jmerelo@ugr.es}}
         \item By using a naive agent, if a naive agent is used to play the levels we
         can obtain data of how the agent solves the levels placed before them, and
         the way to evaluate if the level is or not \textit{"interesting"} will be by
-        checking how easily the aggent is able to solve a level, the point here is
+        checking how easily the agent is able to solve a level, the point here is
         to have a level that cannot be solved by a single movement but to have one
-        that a human player has to think a while to solve tryingto place the
+        that a human player has to think a while to solve trying to place the
         difficulty of a level just at the middle point between easy and hard
         difficulty levels.
     \end{itemize}
@@ -736,7 +735,7 @@ jmerelo@ugr.es}}
     however as seen in our figures the current state of this system is still in development 
     phase, and some modifications must be applied in order to optimize some aspects of it, 
     by using a different way of generating individual we were able to reduce the process 
-    time requierd on a full system execution however we require to search for a way to 
+    time required on a full system execution however we require to search for a way to 
     avoid using the software to evaluate the individuals, this way we expect to reduce 
     drastically the time required to process the data of the levels. 
     
@@ -744,7 +743,7 @@ jmerelo@ugr.es}}
     because the current evaluation method allows us to generate playable levels,
     this levels are far from ideal in the way that they only use a certain range of
     items present in the game therefore reducing the potential of a level, we expect
-    to make the current fitness function work the most eficient that it can but
+    to make the current fitness function work the most efficient that it can but
     another possible solution is found a good combination of formulas to generate
     the fitness function.
 
