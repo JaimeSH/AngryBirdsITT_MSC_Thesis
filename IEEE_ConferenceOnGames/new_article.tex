@@ -430,109 +430,50 @@ jmerelo@ugr.es}}
     each block represents a certain percentage of 100\% so the missing pieces 
     are subtracted from the total. In this moment, each block is counted as if 
     it was not a member of a composite, this is becuse after the simulation there is
-    only data about each individual block.  
-    
-    %Second, after removing a percentage according to the missing pieces an individual
-    %remaining pieces are checked for their positions in comparison to the original
-    %ones before the simulation, using the formula 1 each piece within the individual
-    %is evaluated according to the center point of the piece, if the piece moved more
-    %than a certain threshold half the percentage for one piece is removed from the
-    %remaining percentage, after this using formula 2 the position of the piece
-    %is further checked, this time by the difference in angle from the original one,
-    %in case the difference of angles is more than a certain threshold half a piece
-    %value is further removed from the total.
-    
-    %\begin{equation}
-    %    \begin{aligned}
-    %    error_{xy} = \left\{ \,
-    %        \begin{IEEEeqnarraybox}[][c]{l?s}
-    %            \IEEEstrut
-    %            0.1 & if $ 0.08 > d $, \\
-    %            \frac{100}{lenght\_pieces} * 0.5 & if $ 0.08 < d $.
-    %            \IEEEstrut
-    %        \end{IEEEeqnarraybox}
-    %    \right. \\
-    %    where: d=\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}    
-    %    \end{aligned}
-    %    \label{error_xy}
-    %\end{equation}
-    
-   % \begin{equation}
-   %     \begin{aligned}
-   %     error_{r} = \left\{ \,
-   %         \begin{IEEEeqnarraybox}[][c]{l?s}
-   %             \IEEEstrut
-   %             0 & if $ -5 \le r \le 5 $, \\
-   %             \frac{100}{lenght\_pieces} * 0.5 & if $ r < 5 \: or \: r > 5 $.
-   %             \IEEEstrut
-   %         \end{IEEEeqnarraybox}
-   %     \right. \\
-   %     where: r= |rotation_0| - |rotation_f|   
-   %     \end{aligned}
-   %     \label{error_angle}
-   % \end{equation}
-    
-  % Finally, the total height of the remaining group of pieces is calculated by
-  %  combining the bonding boxes of all pieces, then the individuals are ordered by
-  %  the obtained percentage and then further ordered by the total height, this way
-  %  the most balanced ones will have the best probability to be selected together
-  %  for a crossover operation to create the next generation.
-    
- %   \begin{figure}[htbp]
- %   \centerline{\includegraphics[width=80mm]{Images/result_example.png}}
- %   \caption{Result samples of current system.}
- %   \label{results_old}
- %   \end{figure}
-    
- %   Since there is a need to create complex structures than can cover a great
- %   section of the play map, a method to evaluate the distribution is needed, for
- %   this instance we propose using the rule of thirds \cite{DarrenRowse} which is a
- %   guideline used while creating images, the purpose is to create
- %   aesthetical pleasant images where the focus point or the most important area is
- %   at the center of the image as shown on figure \ref{rule_of_thirds}, using this
- %   rule different distribution groups or masks are created has shown on figure
- %   \ref{rule_of_thirds_masks} in order to use them before the simulation of an
- %   individual by placing the pieces in order to distribute them in a way that can cover
- %   more area and create more balanced levels instead of using a tower like
- %   distribution as shown on figure \ref{results_old}.
-    
- %   \begin{figure}[htbp]
- %       \centerline{\includegraphics[width=80mm]{Images/ruleofthirds_example.png}}
- %       \caption{Rule of thirds example.}
- %       \label{rule_of_thirds}
- %   \end{figure}
-    
- %   \begin{figure}[htbp]
- %       \centerline{\includegraphics[width=80mm]{Images/mask_distribution.png}}
- %       \caption{Masks created using the rule of thirds.}
- %       \label{rule_of_thirds_masks}
- %   \end{figure}
-    
-    Using this same distribution a new evaluation will be added in which according
-    to how much of the area is filled a score will be given and this score will be
-    used as a new sorting value at the moment of selecting individuals for the
-    crossover operation, since as shown on figure \ref{rule_of_thirds_masks} there
-    is a possibility that a huge mask is given to an individual it can be possible
-    that the amount of pieces will not be able to cover the full area given, so in
-    order to prevent this kind of problem we also proposed to give each mask a
-    value that refers to the minimum amount of pieces and height required to fill
-    the most of the mask, then check the amount of pieces and height before
-    simulation for a single individual and then randomize which mask of the ones
-    that can be used will be assigned to that individual, this way the results shown
-    on figure \ref{rule_of_thirds_result} are obtained, this however gave us a new
-    problem because as shown in the figure and on figure \ref{rule_of_thirds_applied} as well, the were
-    instances in which a certain combination of pieces could be to big for the area
-    and this pieces resulted in a level that had structural flaws from the beginning
-    which cold provoke the entire structure and immeadiately nearby others to fall
-    at the beginning of the simulation however this allowed us to realize that predefined 
-    composites could provide problems to the generated structures therefore this approach 
-    was not the best for this problem.
+    only data about each individual block.
+
+    \subsection{Structure Positioning}
+
+     The positioning of structures in the map is important in order to generate
+     levels that are fun and aesthetic. For this we need a method to indcate the
+     positioning of each structure. We propose the use of a mask where the
+     positioning of each pile and the number of blocks it contains is specefied.
+     Again these masks could be manually created, for instance using the rule of
+     thirds \cite{DarrenRowse} which is a guideline used while creating images,
+     the purpose is to create aesthetical pleasant images where the focus point
+     or the most important area is at the center of the image as shown on figure
+     \ref{rule_of_thirds}, using this rule different distribution groups or
+     masks are created has shown on figure \ref{rule_of_thirds_masks} in order
+     to use them before the simulation of an individual by placing the pieces in
+     order to distribute them in a way that can cover more area and create more
+     balanced levels instead of using a tower like distribution as shown on
+     figure \ref{results_old}. There is an option in the system to generate in a
+     first step a collection of masks, following this rules, but this qpproach
+     has a drawback. Pre-generating masks would not allow the generator to
+     \textit{evolve} because the individuals would be limited to a certain
+     number of possibles combinations which will in turn prevent diversity in
+     the population, so in order to prevent this we proposed an approach that
+     allows the individuals to generate a mask in which a number of columns is
+     defined by default but the amount of pieces in each one is random, however
+     the total amount of assigned blockes in all columns must be the same as the
+     total pieces allowed in each individual. The number of maximum blocks is as
+     a parameter. An example of this can be seen in figure \ref{new_chrom} where
+     the total of pieces in a individual is 18 and this pieces are distributed
+     on all the columns available.
+     
     
     \begin{figure}[htbp]
-        \centerline{\includegraphics[width=80mm]{Images/chromosome_thirds.png}}
-        \caption{Rule of thirds applied to an individual.}
-        \label{rule_of_thirds_applied}
+        \centerline{\includegraphics[width=80mm]{Images/ruleofthirds_example.png}}
+        \caption{Rule of thirds example.}
+        \label{rule_of_thirds}
     \end{figure}
+    
+    \begin{figure}[htbp]
+        \centerline{\includegraphics[width=80mm]{Images/mask_distribution.png}}
+        \caption{Masks created using the rule of thirds.}
+        \label{rule_of_thirds_masks}
+    \end{figure}
+    
     
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=80mm]{Images/result_example_thirds.png}}
@@ -540,38 +481,25 @@ jmerelo@ugr.es}}
         \label{rule_of_thirds_result}
     \end{figure}
     
-    \subsection{New approach}
     
-    The first differece that the new approach has is that the masks that are assigned
-    to each individual are no longer pre-generated ones, this is because we decided
-    that pre-generating them would not allow the generator to \textit{evolve}
-    because the individuals would be limited to a certain number of possibles
-    combinations which will in turn prevent diversity in the population, so in order
-    to prevent this the modification to this section allows the individuals to
-    generate a mask in which a number of columns is defines by default but the
-    amount of pieces in each one is random, however the total of assigned pieces in
-    all columns must be the same as the total pieces allowed in each individual
-    which is a number assigned before beginning the system, an example of this
-    can be seen in figure \ref{new_chrom} where the total of pieces in a individual
-    is 18 and this pieces are distributed on all the columns available. This is
-    further explained in this section.
+ 
     
-    The competition also requires that a generator follows a certain ruleset this is 
-    emulated by providing a file to the system to simulate the ruleset provided at the 
-    competition, this \textit{text file
-    (parameters.txt)} provides the specifications that must be met in the
-    competition, the parameters in the file are as follows:
+   % The competition also requires that a generator follows a certain ruleset this is 
+   % emulated by providing a file to the system to simulate the ruleset provided at the 
+   % competition, this \textit{text file
+   % (parameters.txt)} provides the specifications that must be met in the
+   % competition, the parameters in the file are as follows:
     
-    \begin{itemize}
-        \item Total required levels.
-        \item Restrictions to pieces or piece-material combinations that cannot be
-        placed or used in the levels, in this case if the file specifies that a
-        \textit{CIRCLE} made out of \textit{ICE} cannot be placed, so the system must be
-        able to verify that said combination is not used.
-        \item Total number of pigs, this value can be a single value or a range of
-        values that represent how many pigs must be placed on a level.
-        \item The amount of time in which the system must give an output.
-    \end{itemize}
+   % \begin{itemize}
+   %     \item Total required levels.
+   %     \item Restrictions to pieces or piece-material combinations that cannot be
+   %     placed or used in the levels, in this case if the file specifies that a
+   %     \textit{CIRCLE} made out of \textit{ICE} cannot be placed, so the system must be
+   %     able to verify that said combination is not used.
+   %     \item Total number of pigs, this value can be a single value or a range of
+   %     values that represent how many pigs must be placed on a level.
+   %     \item The amount of time in which the system must give an output.
+   % \end{itemize}
     
     \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/chromosome_chain_new_model.png}}
@@ -585,27 +513,26 @@ jmerelo@ugr.es}}
     \label{new_model}
     \end{figure}
     
-    Using this as a base a new system diagram is proposed as shown of figure
-    \ref{new_model} in which the file with parameters is integrated with the input
-    data  the system requires, the way the individuals of the population are further
-    presresented and the way the simulation phase is taken, the method to
-    representate the individuals is proposed by dividing the individual on three
-    layers represented as follows:
+    A diagram showng the main components and data flow of the proposed system
+    is shown in Figure \ref{new_model} in which the parameter file of the competition 
+    is integrated as an input. The layers of the system is exaplained next:
     
     \begin{itemize}
-        \item Element layer: also known as pieces layer, this layer represents the
-        elements assigned to a particular individual by an array of numbers from 0
-        to infinite, where each number represents a reference to the class of a piece
-        in the selection pool including the ones generated by the OOE algorithm, the
-        representetion of this is was shown in figure \ref{old_chrom}.
-        \item  Mask layer: this layer is represented by a 7 digit array in which the
-        value assigned in each column represents the amount of pieces from the
-        element layer that will be assigned to said column, a representation of this
-        is shown on figure \ref{mask_layer}.
-        \item Enemy layer: also known as pig layer, this layer is represented by two
-        elements a single numeric value representing the total amount of pigs
-        assigned to the level and an array of locations for the placement of this
-        same pigs, a representation of it is shown on figure \ref{enemy_layer}. 
+        \item Composite Generator:  This layer represents the composite blocks
+        assigned to a particular individual as list of integer numbers, where
+        each number represents a reference to a composite object including the
+        ones generated by the OOE algorithm, the representetion of this is was
+        shown in figure \ref{old_chrom}.
+        \item Structure layer: Individuals are represented by a list of seven
+        integers, representing a mask in which integers assigned in each column
+        represents the amount of composite blocks from the element layer that
+        will be assigned to said column, a representation of this is shown on
+        figure \ref{mask_layer}.
+        \item Enemy layer: also known as pig layer, this layer is represented by
+        two elements a single numeric value representing the total amount of
+        pigs assigned to the level and an array of locations for the placement
+        of this same pigs, a representation of it is shown on figure
+        \ref{enemy_layer}. 
     \end{itemize}
     
     \begin{figure}[htbp]
@@ -616,15 +543,18 @@ jmerelo@ugr.es}}
     
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=80mm]{Images/enemy_layer.png}}
-        \caption{Amount of pigs in a level, their location relative to the mask layer (green) and fenotype representation.}
+        \caption{Amount of pigs in a level, their location relative to the mask layer
+         (green) and fenotype representation.}
         \label{enemy_layer}
     \end{figure}
     
+    \subsection{Evolution of Levels} 
+
     In order to select the parents of the next generation the parents are ordered by
-    their fitness, then the system can choose between 2 options for the selection,
-    tournament selection or roulette selection:
+    their fitness. There are two types of selection:
     
     \begin{itemize}
+    % This needs more work.    
         \item Tournament selection: in order to select the parent by this method the
         system checks the amount of crossovers assigned, then calculates the ammount
         of parent required to compete in pairs, then by doing a descendent selection
