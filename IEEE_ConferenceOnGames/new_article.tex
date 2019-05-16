@@ -34,22 +34,22 @@ jmerelo@ugr.es}}
 
 
 \begin{abstract}
-In this paper, we propose an evolutionary algorithm that follows an
-open-ended evolution approach to generate levels for the Angry Birds video
-game. The levels themselves are composed of a set of birds that the player
-can use, a certain amount of pigs that they must destroy, and a given number
+In this paper, we propose an evolutionary algorithm that follows an open-ended
+evolution approach to generate levels for the Angry Birds video game. The levels
+themselves are composed of a set of birds that the player can throw with a
+slingshot, a certain amount of pigs that they must destroy, and a given number
 of pieces that conform structures that may or may not protect the pigs from
-birds. The current goal is the generation of diverse structures playable in
-the game, having the additional characteristics of being fun and enjoyable.
-We propose a multi-layered search, first constructing composite structures
-from basic blocks, to then build more complex structures building from these
-composites, following an open-ended evolution approach in which the
-evolution of structures is not guided towards a single objective but is
-rather free to evolve and generate novelty or diversity. The fitness
-function we use to evaluate the proposed levels considers how complex they
-have become and how different they are from the rest of the group. The
-experiments conducted show that an evolutionary approach allows the
-generated levels to be novel and interesting to play.
+birds thrown at them. The current goal is the generation of diverse structures
+that are playable in the game, having the additional characteristics of being
+fun and enjoyable. We propose a multi-layered search, first constructing
+composite structures from basic blocks, to then build more complex structures
+building from these composites. We follow an open-ended evolution approach in
+which the evolution of structures is not guided towards a single objective but
+is rather free to evolve and generate novelty or diversity. The fitness function
+we use to evaluate the proposed levels considers how complex levels have become
+and how different they are from the rest of the population. The experiments
+conducted show that an evolutionary approach allows the generation of levels
+that are novel and interesting to play.
 % Another revision to English would be good.
 % Done - Mario
 \end{abstract}
@@ -158,14 +158,11 @@ structures. The resulting structures continue evolving into more complex
 levels. That work is the basis of our current proposal, and since we are
 using a modified version of the Angry Birds game, that can obtain data of a
 level after a simulation.
-    %%%
-    % TO DO: Laura´s work here 
-    %%%
     
     \section{Proposed Method}
     \label{prop_method}  
-    % Is this explanation undertandable ? JSH
-    In this Section, we describe the approach used in this work, explaining
+
+In this Section, we describe the approach used in this work, explaining
 first, the restrictions of the game, then giving a quick overview of how we
 create new composites to be used by the algorithm, then we define how candidate
 solutions are to be represented by the algorithm. We then describe our method to
@@ -232,22 +229,23 @@ explained earlier, is an optional procedural generation of composites.
 \caption{List of blocks in the angry birds game.}
 \label{piece_list}
 \end{figure}
-    % Explain a bit about the competition, from the introduction
-The Angry Birds level generation track is a competition where the objective
-is to generate levels that are \textit{fun} and \textit{enjoyable}; they also have to be challenging but not impossible. The rules for the
-competition specify that a configuration file must be used to generate the
-levels of the game in a limited amount of time. The file contains several
-restrictions; namely:\begin{itemize}
+
+The Angry Birds level generation track is a competition where the objective is
+to generate levels that are \textit{fun} and \textit{enjoyable}; they also have
+to be challenging but not impossible. The rules for the competition specify that
+a configuration file must be used to generate the levels of the game in a
+limited amount of time. The file contains several restrictions;
+namely:\begin{itemize}
 \item   The number of \textit{different}
 levels that must be generated. 
 \item The materials that are \textit{not allowed}.
 
-For instance, a group of generated levels must not have spheres composed of  is ice or stone. Moreover, a banned material can
-not integrate others. 
-\item The third configuration value is the \textit{number of
-pigs} that we must place in a level. 
-\item Finally, the \textit{limit} of time
-that the system has to generate the required amount of levels.
+For instance, a group of generated levels must not have spheres composed of  is
+ice or stone. Moreover, a banned material can not integrate others. 
+\item The third configuration value is the \textit{number of pigs} that we must
+place in a level. 
+\item Finally, the \textit{limit} of time that the system has to generate the
+required amount of levels.
 \end{itemize}
 
 We will present next a system for evolving structures that respects those restrictions.
@@ -260,24 +258,26 @@ We will present next a system for evolving structures that respects those restri
     \label{test_old}
     \end{figure}
     %
-    Structures are the next evolutionary layer, at a higher level of composition.
-    Structures are compositions of composites. A level can be seen as a collection 
-    of structures and each structure is a pile of composite blocks. This way of 
-    constructing levels has the advantage of
-    limiting the search space to structures that have a better chance to be 
-    standing after the simulation ends. There is no warranty that piles of 
-    composite blocks will keep the balance, so again we must search for those 
-    structures.
+Structures are the next evolutionary layer, at a higher level of composition.
+Structures are compositions of composites. A level can be seen as a collection 
+of structures and each structure is a pile of composite blocks. This way of 
+constructing levels has the advantage of
+limiting the search space to structures that have a better chance to be 
+standing after the simulation ends. There is no warranty that piles of 
+composite blocks will keep the balance, so again we must search for those 
+structures.
 
-    Structures are represented in a way similar to Togelius et al.
-    \cite{togelius2016Representationsforsearch-basedmethods}. Each block has
-    an ID assigned to it. A structure is created from a list of IDs, every one of them referring to
-    composite blocks; the first 11 are basic composites, while generated composites 
-    are assigned a higher number.  This way and individual can be
-    represented as shown on figure \ref{old_chrom} where each chromosome
-    represents a certain item in the list of blocks, the numbers for these
-    elements are assigned in a first come first served basis; they can be infinitely incremented. The same blocks can be repeated in a structure.
+Structures are represented in a way similar to Togelius et al.
+\cite{togelius2016Representationsforsearch-basedmethods}. We can model a
+structure as a collection of composites, each one selected from a pool of
+currently available composites. Initially, the pool contains only the 11
+original blocks represented as single-element composites. As new composites are
+automatically (or manually) generated from the original blocks, we insert them
+to the pool and assign each one an ID. We can model the chromosome of a
+structure, as shown in Figure \ref{old_chrom} where each gen is an ID from a
+composite in the pool. A chromosome can include the same ID multiple times.
     % I don't understand this too well, maybe rephrasing would clarify - JJ
+    % Done - Mario
     
     \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/bounding_box_calculation.png}}
@@ -294,6 +294,8 @@ We will present next a system for evolving structures that respects those restri
     These structures represent individuals in the evolutionary algorithm. Once
     an individual is created it is ready to be evaluated in a simulation on the
     game environment. %In Laura's work, we tried to avoid this because it took a long time. Is there any procedure to check constraints and not evaluate them? - JJ
+    % I will comment that we could work on that. At the moment each one is evaluated. - M 
+
     Using a similar approach as the composite generator, all
     individuals have a maximum of ten seconds to maintain balance or reach
     absolute stability. If that happens  it means one of two
@@ -310,7 +312,9 @@ We will present next a system for evolving structures that respects those restri
     There are other variables we take in to account, but they will be explained
     later. In this initial stage, each individual in the population has 100
     points so before the simulation starts each of them are viable candidates to
-    be an elite % Elite? - JJ
+    be an Elite % Elite? - JJ
+    % But I think the problem remains, there is no difference even if they all have
+    % zero points. But randomess in the selection coyuld do that. - Mario
     member of the population regardless of their relative height or
     complexity.
     
@@ -322,6 +326,7 @@ We will present next a system for evolving structures that respects those restri
     are subtracted from the total. In this moment, each block is counted as if 
     it was not a member of a composite, this is because after the simulation there is
     only data about each individual block. % What is a composite? The fitness is only the number of remaining blocks? Even if they are in the floor?
+    
 
     \subsection{Structure Positioning}
 
