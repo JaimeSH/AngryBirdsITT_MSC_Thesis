@@ -83,7 +83,7 @@ than just converging to a stable or quasi-stable state. For this project,
 OEE is defined simply as a genetic algorithm with different classes of
 objects, with compositional and taxonomic relationships between them.
 Objects in a class can evolve in parallel or as in this case, independently
-of each other. The object-oriented model follows this principles to model
+of each other. The object-oriented model follows these principles to model
 complex behavior and structure \cite{levesque1986knowledge}. 
 
 The case study for this paper is to follow the rules of a level generation
@@ -277,6 +277,7 @@ We will present next a system for evolving structures that respects those restri
     represented as shown on figure \ref{old_chrom} where each chromosome
     represents a certain item in the list of blocks, the numbers for these
     elements are assigned in a first come first served basis; they can be infinitely incremented. The same blocks can be repeated in a structure.
+    % I don't understand this too well, maybe rephrasing would clarify - JJ
     
     \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/bounding_box_calculation.png}}
@@ -292,9 +293,10 @@ We will present next a system for evolving structures that respects those restri
     
     These structures represent individuals in the evolutionary algorithm. Once
     an individual is created it is ready to be evaluated in a simulation on the
-    game environment. Using a similar approach as the composite generator, all
+    game environment. %In Laura's work, we tried to avoid this because it took a long time. Is there any procedure to check constraints and not evaluate them? - JJ
+    Using a similar approach as the composite generator, all
     individuals have a maximum of ten seconds to maintain balance or reach
-    absolute stability, if absolute stability is reached it means one of two
+    absolute stability. If that happens  it means one of two
     things, first the generated structure is completely stable or second, the
     tower fell to either side and the pieces were destroyed or stopped moving by
     gravitational pull, when either of this happens by more than two seconds the
@@ -308,23 +310,23 @@ We will present next a system for evolving structures that respects those restri
     There are other variables we take in to account, but they will be explained
     later. In this initial stage, each individual in the population has 100
     points so before the simulation starts each of them are viable candidates to
-    be an elite member of the population regardless of their relative height or
+    be an elite % Elite? - JJ
+    member of the population regardless of their relative height or
     complexity.
     
     First, after each of the individual simulations are over the evaluation process
     takes place, in this phase the resulting level is checked for those blocks that
-    survived, that is they where not destroyed by falling. Each one
-    of them is counted and then the resulting number is compared to that of the
-    initial quantity of pieces that were originally put in before the simulation,
-    each block represents a certain percentage of 100\% so the missing pieces 
+    survived, that is,  not destroyed by falling. Every one
+    of them is counted and then the resulting number is compared to the
+    initial quantity of pieces  before the simulation. Each block represents a certain percentage of 100\% so the missing pieces 
     are subtracted from the total. In this moment, each block is counted as if 
     it was not a member of a composite, this is because after the simulation there is
-    only data about each individual block.
+    only data about each individual block. % What is a composite? The fitness is only the number of remaining blocks? Even if they are in the floor?
 
     \subsection{Structure Positioning}
 
      The positioning of structures in the map is important in order to generate
-     levels that are fun and aesthetic. For this we need a method to indicate the
+     levels that are fun and aesthetically pleasing. For this we need a method to indicate the
      positioning of each structure. We propose the use of a mask where the
      positioning of each pile and the number of blocks it contains is specified.
      Again these masks could be manually created, for instance using the rule of
@@ -337,8 +339,8 @@ We will present next a system for evolving structures that respects those restri
      order to distribute them in a way that can cover more area and create more
      balanced levels instead of using a tower like distribution as shown on
      figure \ref{results_old}. There is an option in the system to generate in a
-     %           xxxxxxxxxxx This is missing and I have no idea where it is - JJ
-     first step a collection of masks, following this rules, but this approach
+     first step a collection of masks, following these rules, but this approach
+     % in many cases this is used instead of these. Please check that - JJ
      has a drawback. Pre-generating masks would not allow the generator to
      \textit{evolve} because the individuals would be limited to a certain
      number of possibles combinations which will in turn prevent diversity in
@@ -346,9 +348,9 @@ We will present next a system for evolving structures that respects those restri
      allows the individuals to generate a mask in which a number of columns is
      defined by default but the amount of pieces in each one is random, however
      the total amount of assigned blocks in all columns must be the same as the
-     total pieces allowed in each individual. The number of maximum blocks is as
+     total pieces allowed in each individual. The number of maximum blocks is
      a parameter. An example of this can be seen in figure \ref{new_chrom} where
-     the total of pieces in a individual is 18 and this pieces are distributed
+     the total of pieces in a individual is 18 and these pieces are distributed
      on all the columns available.
 
      \begin{figure}[htbp]
@@ -406,7 +408,7 @@ We will present next a system for evolving structures that respects those restri
         \item Enemy layer: also known as pig layer, this layer is represented by
         two elements a single numeric value representing the total amount of
         pigs assigned to the level and an array of locations for the placement
-        of this same pigs, a representation of it is shown on figure
+        of these same pigs, a representation of it is shown on figure
         \ref{enemy_layer}. 
     \end{itemize}
     
@@ -487,7 +489,7 @@ We will present next a system for evolving structures that respects those restri
     the mask of said individual, this way the mask can ensure that some pieces of
     some children in the population are now placed in the level, this can bring the
     possibility that a mask that uses less pieces that it normally as can obtain a
-    better fitness than one that uses all of them. An example of this two crossover
+    better fitness than one that uses all of them. An example of these two crossover
     types can be seen in figure \ref{crossover} in which the mask of an individual
     is combined with another and the resulting mask for the children have different
     amount of pieces to be placed.
@@ -508,7 +510,7 @@ We will present next a system for evolving structures that respects those restri
         \item Change the x and y coordinates of a piece
     \end{itemize}
     
-    This mutations do not have to be used all at the same time on a single
+    These mutation operators do not have to be used all at the same time on a single
     individual but depending on the probabilities they can happen all at once,
     since most of the pieces on a individual are mostly the same type of
     material then at least the material mutation can occur on all or most of
@@ -545,11 +547,11 @@ We will present next a system for evolving structures that respects those restri
         \label{layer123_combine}
     \end{figure}
     
-    Using all this configurations the system is capable of creating levels, some of
+    Using all these configurations the system is capable of creating levels, some of
     them playable as shown in figure \ref{result_1} however the levels that can be
     generated are far from optimized to be played on, this is an issue that must be
     changed in future instances but the generator itself is able to be used as a
-    base for a more complex one, and as shown in the future work section this issues
+    base for a more complex one, and as shown in the future work section these issues
     can be solved by different means.
     
     \begin{figure*}[htbp]
@@ -609,7 +611,7 @@ We will present next a system for evolving structures that respects those restri
     
     Finally a different method to evaluate the individuals must be created, this is
     because the current evaluation method allows us to generate playable levels,
-    this levels are far from ideal in the way that they only use a certain range of
+    these levels are far from ideal in the way that they only use a certain range of
     items present in the game therefore reducing the potential of a level, we expect
     to make the current fitness function work the most efficient that it can but
     another possible solution is found a good combination of formulas to generate
