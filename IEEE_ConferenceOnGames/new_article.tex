@@ -593,29 +593,34 @@ We will present next a system for evolving structures that respects those restri
         
     Other aspects that the system need to improve is in the processing time
     required, since the current way to calculate the fitness and create the next
-    generations of a population the system requires the system to execute
-    simulations of the levels on every generation that passes therefore increasing
-    the time it takes to complete an entire cycle of execution, so in order to
+    generations of a population requires the system to execute
+    simulations of the levels on every generation that passes, therefore increasing
+    the time it takes to complete an entire cycle of execution. In order to
     change this we require to create a way to evaluate a level using only the
     information of the pieces, locations and pigs locations and using this data to
     predict the way a level will behave when placed in a real simulation environment
-    therefore drastically reducing execution times.
+    therefore drastically reducing execution times. %You can also take into account restrictions without simulation, as we do in our paper, or use a Physics engine - JJ
 
-    We were able to fulfill our objective of generating levels that could be played, 
-    however as seen in our figures the current state of this system is still in development 
-    phase, and some modifications must be applied in order to optimize some aspects of it, 
+    We were able to fulfill our objective of generating levels that could be played;
+    however, as seen in our figures, the current state of this system is still in the development 
+    phase, and some modifications must be applied in order to optimize some aspects of it. For instance  
     by using a different way of generating individual we were able to reduce the process 
-    time required on a full system execution however we require to search for a way to 
+    time required on a full system execution; however we need to search for a way to 
     avoid using the software to evaluate the individuals, this way we expect to reduce 
-    drastically the time required to process the data of the levels. 
+    drastically the time required to process the data of the levels.  % Cite our paper, where we do exactly that - JJ
     
-    Finally a different method to evaluate the individuals must be created, this is
-    because the current evaluation method allows us to generate playable levels,
+    Finally a different method to evaluate the individuals must be created. Since the current evaluation method allows us to generate playable levels,  
     these levels are far from ideal in the way that they only use a certain range of
     items present in the game therefore reducing the potential of a level, we expect
     to make the current fitness function work the most efficient that it can but
     another possible solution is found a good combination of formulas to generate
     the fitness function.
+
+\section*{Acknowledgments}
+
+This work has been supported in part by: Ministerio espa\~{n}ol de
+Econom\'{\i}a y Competitividad under project TIN2017-85727-C4-2-P (UGR-DeepBio).
+
 
 \bibliographystyle{IEEEtran}
 \bibliography{References/article_references.bib}
