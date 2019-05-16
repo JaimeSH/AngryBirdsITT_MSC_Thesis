@@ -83,7 +83,7 @@ than just converging to a stable or quasi-stable state. For this project,
 OEE is defined simply as a genetic algorithm with different classes of
 objects, with compositional and taxonomic relationships between them.
 Objects in a class can evolve in parallel or as in this case, independently
-of each other. The object-oriented model follows this principles to model
+of each other. The object-oriented model follows these principles to model
 complex behavior and structure \cite{levesque1986knowledge}. 
 
 The case study for this paper is to follow the rules of a level generation
@@ -234,44 +234,50 @@ explained earlier, is an optional procedural generation of composites.
 \end{figure}
     % Explain a bit about the competition, from the introduction
 The Angry Birds level generation track is a competition where the objective
-is to generate levels that are \textit{fun} and \textit{enjoyable}. However,
-they also have to be challenging but not impossible. The rules for the
+is to generate levels that are \textit{fun} and \textit{enjoyable}; they also have to be challenging but not impossible. The rules for the
 competition specify that a configuration file must be used to generate the
 levels of the game in a limited amount of time. The file contains several
-restrictions; we explain each one next. The number of \textit{different}
-levels that must be generated. The materials that are \textit{not allowed}.
-For instance, a group of generated levels must not have circles which
-composition material is ice or stone. Moreover, a material with a veto,  can
-not integrate others. The third configuration value is the \textit{number of
-pigs} that we must place in a level. Finally, the \textit{limit} of time
+restrictions; namely:\begin{itemize}
+\item   The number of \textit{different}
+levels that must be generated. 
+\item The materials that are \textit{not allowed}.
+
+For instance, a group of generated levels must not have spheres composed of  is ice or stone. Moreover, a banned material can
+not integrate others. 
+\item The third configuration value is the \textit{number of
+pigs} that we must place in a level. 
+\item Finally, the \textit{limit} of time
 that the system has to generate the required amount of levels.
-    
-    \subsection{Structure Evolution}
+\end{itemize}
+
+We will present next a system for evolving structures that respects those restrictions.
+
+\subsection{Structure Evolution}
    
     \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/simulation_bef_aft_example.png}}
-    \caption{Structure at beginning and end of a simulation.}
+    \caption{Structure at the beginning and end of a simulation.}
     \label{test_old}
     \end{figure}
-    
+    %
     Structures are the next evolutionary layer, at a higher level of composition.
     Structures are compositions of composites. A level can be seen as a collection 
     of structures and each structure is a pile of composite blocks. This way of 
     constructing levels has the advantage of
-    limiting the search space, to structures that have a better chance to be 
+    limiting the search space to structures that have a better chance to be 
     standing after the simulation ends. There is no warranty that piles of 
-    composite blocks will maintain balance, so again we must search for those 
+    composite blocks will keep the balance, so again we must search for those 
     structures.
 
     Structures are represented in a way similar to Togelius et al.
     \cite{togelius2016Representationsforsearch-basedmethods}. Each block has
-    an id assigned to it. A structure is then a list of ids, referring to
-    composite blocks, the first 11 are basic composite and generated composites 
+    an ID assigned to it. A structure is created from a list of IDs, every one of them referring to
+    composite blocks; the first 11 are basic composites, while generated composites 
     are assigned a higher number.  This way and individual can be
     represented as shown on figure \ref{old_chrom} where each chromosome
-    represents a certain item in the list of blocks, the numbers for this
-    elements are assigned in a first come first served basis, the numbers are
-    infinitely incremented and the same blocks can be repeated in a structure.
+    represents a certain item in the list of blocks, the numbers for these
+    elements are assigned in a first come first served basis; they can be infinitely incremented. The same blocks can be repeated in a structure.
+    % I don't understand this too well, maybe rephrasing would clarify - JJ
     
     \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/bounding_box_calculation.png}}
@@ -287,9 +293,10 @@ that the system has to generate the required amount of levels.
     
     These structures represent individuals in the evolutionary algorithm. Once
     an individual is created it is ready to be evaluated in a simulation on the
-    game environment. Using a similar approach as the composite generator, all
+    game environment. %In Laura's work, we tried to avoid this because it took a long time. Is there any procedure to check constraints and not evaluate them? - JJ
+    Using a similar approach as the composite generator, all
     individuals have a maximum of ten seconds to maintain balance or reach
-    absolute stability, if absolute stability is reached it means one of two
+    absolute stability. If that happens  it means one of two
     things, first the generated structure is completely stable or second, the
     tower fell to either side and the pieces were destroyed or stopped moving by
     gravitational pull, when either of this happens by more than two seconds the
@@ -303,23 +310,23 @@ that the system has to generate the required amount of levels.
     There are other variables we take in to account, but they will be explained
     later. In this initial stage, each individual in the population has 100
     points so before the simulation starts each of them are viable candidates to
-    be an elite member of the population regardless of their relative height or
+    be an elite % Elite? - JJ
+    member of the population regardless of their relative height or
     complexity.
     
     First, after each of the individual simulations are over the evaluation process
     takes place, in this phase the resulting level is checked for those blocks that
-    survived, that is they where not destroyed by falling. Each one
-    of them is counted and then the resulting number is compared to that of the
-    initial quantity of pieces that were originally put in before the simulation,
-    each block represents a certain percentage of 100\% so the missing pieces 
+    survived, that is,  not destroyed by falling. Every one
+    of them is counted and then the resulting number is compared to the
+    initial quantity of pieces  before the simulation. Each block represents a certain percentage of 100\% so the missing pieces 
     are subtracted from the total. In this moment, each block is counted as if 
     it was not a member of a composite, this is because after the simulation there is
-    only data about each individual block.
+    only data about each individual block. % What is a composite? The fitness is only the number of remaining blocks? Even if they are in the floor?
 
     \subsection{Structure Positioning}
 
      The positioning of structures in the map is important in order to generate
-     levels that are fun and aesthetic. For this we need a method to indicate the
+     levels that are fun and aesthetically pleasing. For this we need a method to indicate the
      positioning of each structure. We propose the use of a mask where the
      positioning of each pile and the number of blocks it contains is specified.
      Again these masks could be manually created, for instance using the rule of
@@ -332,7 +339,8 @@ that the system has to generate the required amount of levels.
      order to distribute them in a way that can cover more area and create more
      balanced levels instead of using a tower like distribution as shown on
      figure \ref{results_old}. There is an option in the system to generate in a
-     first step a collection of masks, following this rules, but this approach
+     first step a collection of masks, following these rules, but this approach
+     % in many cases this is used instead of these. Please check that - JJ
      has a drawback. Pre-generating masks would not allow the generator to
      \textit{evolve} because the individuals would be limited to a certain
      number of possibles combinations which will in turn prevent diversity in
@@ -340,9 +348,9 @@ that the system has to generate the required amount of levels.
      allows the individuals to generate a mask in which a number of columns is
      defined by default but the amount of pieces in each one is random, however
      the total amount of assigned blocks in all columns must be the same as the
-     total pieces allowed in each individual. The number of maximum blocks is as
+     total pieces allowed in each individual. The number of maximum blocks is
      a parameter. An example of this can be seen in figure \ref{new_chrom} where
-     the total of pieces in a individual is 18 and this pieces are distributed
+     the total of pieces in a individual is 18 and these pieces are distributed
      on all the columns available.
 
      \begin{figure}[htbp]
@@ -350,37 +358,37 @@ that the system has to generate the required amount of levels.
         \caption{Result samples of current system.}
         \label{results_old}
     \end{figure}
-    
+    %
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=80mm]{Images/ruleofthirds_example.png}}
         \caption{Rule of thirds example.}
         \label{rule_of_thirds}
     \end{figure}
-    
+    %
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=80mm]{Images/mask_distribution.png}}
         \caption{Masks created using the rule of thirds.}
         \label{rule_of_thirds_masks}
     \end{figure}
-    
-    
+    %
+    %
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=80mm]{Images/result_example_thirds.png}}
         \caption{Results obtained with rule of thirds.}
         \label{rule_of_thirds_result}
     \end{figure}
-    
+    %
     \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/chromosome_chain_new_model.png}}
     \caption{New chromosome chain.}
     \label{new_chrom}
     \end{figure}
-    
-    \begin{figure}[htbp]
-    \centerline{\includegraphics[width=80mm]{Images/new_model_v2.png}}
+    %
+    \begin{figure*}[htbp]
+    \centerline{\includegraphics[width=160mm]{Images/new_model_v2.png}}
     \caption{New system diagram based on the parameter file and the new chromosome representation.}
     \label{new_model}
-    \end{figure}
+    \end{figure*}
     
     A diagram shows the main components and data flow of the proposed system
     is shown in Figure \ref{new_model} in which the parameter file of the competition 
@@ -400,7 +408,7 @@ that the system has to generate the required amount of levels.
         \item Enemy layer: also known as pig layer, this layer is represented by
         two elements a single numeric value representing the total amount of
         pigs assigned to the level and an array of locations for the placement
-        of this same pigs, a representation of it is shown on figure
+        of these same pigs, a representation of it is shown on figure
         \ref{enemy_layer}. 
     \end{itemize}
     
@@ -481,7 +489,7 @@ that the system has to generate the required amount of levels.
     the mask of said individual, this way the mask can ensure that some pieces of
     some children in the population are now placed in the level, this can bring the
     possibility that a mask that uses less pieces that it normally as can obtain a
-    better fitness than one that uses all of them. An example of this two crossover
+    better fitness than one that uses all of them. An example of these two crossover
     types can be seen in figure \ref{crossover} in which the mask of an individual
     is combined with another and the resulting mask for the children have different
     amount of pieces to be placed.
@@ -502,7 +510,7 @@ that the system has to generate the required amount of levels.
         \item Change the x and y coordinates of a piece
     \end{itemize}
     
-    This mutations do not have to be used all at the same time on a single
+    These mutation operators do not have to be used all at the same time on a single
     individual but depending on the probabilities they can happen all at once,
     since most of the pieces on a individual are mostly the same type of
     material then at least the material mutation can occur on all or most of
@@ -539,18 +547,18 @@ that the system has to generate the required amount of levels.
         \label{layer123_combine}
     \end{figure}
     
-    Using all this configurations the system is capable of creating levels, some of
+    Using all these configurations the system is capable of creating levels, some of
     them playable as shown in figure \ref{result_1} however the levels that can be
     generated are far from optimized to be played on, this is an issue that must be
     changed in future instances but the generator itself is able to be used as a
-    base for a more complex one, and as shown in the future work section this issues
+    base for a more complex one, and as shown in the future work section these issues
     can be solved by different means.
     
-    \begin{figure}[htbp]
-        \centerline{\includegraphics[width=80mm]{Images/Result_n2.png}}
+    \begin{figure*}[htbp]
+        \centerline{\includegraphics[width=160mm]{Images/Result_n2.png}}
         \caption{Example of resulting level with current system.}
         \label{result_1}
-    \end{figure}
+    \end{figure*}
     
     \section{Conclusions and future work}
     \label{conclusion}
@@ -585,29 +593,34 @@ that the system has to generate the required amount of levels.
         
     Other aspects that the system need to improve is in the processing time
     required, since the current way to calculate the fitness and create the next
-    generations of a population the system requires the system to execute
-    simulations of the levels on every generation that passes therefore increasing
-    the time it takes to complete an entire cycle of execution, so in order to
+    generations of a population requires the system to execute
+    simulations of the levels on every generation that passes, therefore increasing
+    the time it takes to complete an entire cycle of execution. In order to
     change this we require to create a way to evaluate a level using only the
     information of the pieces, locations and pigs locations and using this data to
     predict the way a level will behave when placed in a real simulation environment
-    therefore drastically reducing execution times.
+    therefore drastically reducing execution times. %You can also take into account restrictions without simulation, as we do in our paper, or use a Physics engine - JJ
 
-    We were able to fulfill our objective of generating levels that could be played, 
-    however as seen in our figures the current state of this system is still in development 
-    phase, and some modifications must be applied in order to optimize some aspects of it, 
+    We were able to fulfill our objective of generating levels that could be played;
+    however, as seen in our figures, the current state of this system is still in the development 
+    phase, and some modifications must be applied in order to optimize some aspects of it. For instance  
     by using a different way of generating individual we were able to reduce the process 
-    time required on a full system execution however we require to search for a way to 
+    time required on a full system execution; however we need to search for a way to 
     avoid using the software to evaluate the individuals, this way we expect to reduce 
-    drastically the time required to process the data of the levels. 
+    drastically the time required to process the data of the levels.  % Cite our paper, where we do exactly that - JJ
     
-    Finally a different method to evaluate the individuals must be created, this is
-    because the current evaluation method allows us to generate playable levels,
-    this levels are far from ideal in the way that they only use a certain range of
+    Finally a different method to evaluate the individuals must be created. Since the current evaluation method allows us to generate playable levels,  
+    these levels are far from ideal in the way that they only use a certain range of
     items present in the game therefore reducing the potential of a level, we expect
     to make the current fitness function work the most efficient that it can but
     another possible solution is found a good combination of formulas to generate
     the fitness function.
+
+\section*{Acknowledgments}
+
+This work has been supported in part by: Ministerio espa\~{n}ol de
+Econom\'{\i}a y Competitividad under project TIN2017-85727-C4-2-P (UGR-DeepBio).
+
 
 \bibliographystyle{IEEEtran}
 \bibliography{References/article_references.bib}
