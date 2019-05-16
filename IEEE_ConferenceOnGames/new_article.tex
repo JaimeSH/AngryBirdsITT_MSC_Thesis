@@ -292,10 +292,14 @@ composite in the pool. A chromosome can include the same ID multiple times.
     \end{figure}
     
     These structures represent individuals in the evolutionary algorithm. Once
-    an individual is created it is ready to be evaluated in a simulation on the
-    game environment. %In Laura's work, we tried to avoid this because it took a long time. Is there any procedure to check constraints and not evaluate them? - JJ
-    % I will comment that we could work on that. At the moment each one is evaluated. - M 
-
+    we create an individual, it is ready to be evaluated in a simulation on the
+    game environment.  It is important to note that this is the most
+    time-consuming task of the process. We could benefit from using alternative
+    techniques like the one proposed by Calle et al. \cite{lauracalle}, where
+    only those individuals that meet certain restrictions are candidates for a
+    run in the simulator.
+    %In Laura's work, we tried to avoid this because it took a long time. Is there any procedure to check constraints and not evaluate them? - JJ
+    % Added a comment about this  - M 
     Using a similar approach as the composite generator, all
     individuals have a maximum of ten seconds to maintain balance or reach
     absolute stability. If that happens  it means one of two
@@ -310,23 +314,32 @@ composite in the pool. A chromosome can include the same ID multiple times.
     kind of systems. In this stage of the evolution, we first need to assign a
     good fitness to those structures that keep their balance and not fall apart.
     There are other variables we take in to account, but they will be explained
-    later. In this initial stage, each individual in the population has 100
-    points so before the simulation starts each of them are viable candidates to
-    be an Elite % Elite? - JJ
+    later. 
+    % I commented the paragraph below because IMHO the reasoning is not right - Mario 
+    %In this initial stage, each individual in the population has 100
+    %points so before the simulation starts each of them are viable candidates to
+    %be an Elite % Elite? - JJ
+    
     % But I think the problem remains, there is no difference even if they all have
     % zero points. But randomess in the selection coyuld do that. - Mario
-    member of the population regardless of their relative height or
-    complexity.
     
-    First, after each of the individual simulations are over the evaluation process
-    takes place, in this phase the resulting level is checked for those blocks that
-    survived, that is,  not destroyed by falling. Every one
-    of them is counted and then the resulting number is compared to the
-    initial quantity of pieces  before the simulation. Each block represents a certain percentage of 100\% so the missing pieces 
-    are subtracted from the total. In this moment, each block is counted as if 
-    it was not a member of a composite, this is because after the simulation there is
-    only data about each individual block. % What is a composite? The fitness is only the number of remaining blocks? Even if they are in the floor?
+    %member of the population regardless of their relative height or
+    %complexity.
     
+    First, after all of the individual simulations are over the evaluation
+    process takes place, in this phase the resulting levels are checked for those
+    blocks that survived, that is,  they were not destroyed by falling. Every one of them
+    is counted and then the resulting number is compared to the initial quantity
+    of pieces found before the simulation started. Each block represents a certain percentage
+    of 100\% so the missing pieces are subtracted from the total. In this
+    moment, each block is counted as if it was not a member of a composite, this
+    is because after the simulation there is only data about each individual block. 
+    % What is a composite? There is a whole section devoted to explaining just that :) - Mario 
+    % The fitness is only the number of remaining blocks? Even if they are in the floor? 
+    % Yes, they some time form nice structures. We used to take height into account, but is not 
+    % that important.  - Mario 
+    % Will comment on it, after checking with Jaime if I'm right. 
+
 
     \subsection{Structure Positioning}
 
@@ -598,28 +611,31 @@ composite in the pool. A chromosome can include the same ID multiple times.
         
     Other aspects that the system need to improve is in the processing time
     required, since the current way to calculate the fitness and create the next
-    generations of a population requires the system to execute
-    simulations of the levels on every generation that passes, therefore increasing
+    generations of a population requires the execution of many 
+    simulations on every generation, therefore increasing
     the time it takes to complete an entire cycle of execution. In order to
     change this we require to create a way to evaluate a level using only the
     information of the pieces, locations and pigs locations and using this data to
     predict the way a level will behave when placed in a real simulation environment
-    therefore drastically reducing execution times. %You can also take into account restrictions without simulation, as we do in our paper, or use a Physics engine - JJ
+    therefore drastically reducing execution times. We could take into account restrictions 
+    needed to run a simulation, as it is done by Calle et al. \cite{lauracalle}, 
+    or use a Physics engine that is optimiezed for this task.
 
     We were able to fulfill our objective of generating levels that could be played;
     however, as seen in our figures, the current state of this system is still in the development 
     phase, and some modifications must be applied in order to optimize some aspects of it. For instance  
     by using a different way of generating individual we were able to reduce the process 
-    time required on a full system execution; however we need to search for a way to 
-    avoid using the software to evaluate the individuals, this way we expect to reduce 
-    drastically the time required to process the data of the levels.  % Cite our paper, where we do exactly that - JJ
+    time required on a full system execution; however we still need to work on this problem as
+    we mention before.  % Cite our paper, where we do exactly that - JJ 
+                        % Done - Mario 
     
-    Finally a different method to evaluate the individuals must be created. Since the current evaluation method allows us to generate playable levels,  
-    these levels are far from ideal in the way that they only use a certain range of
-    items present in the game therefore reducing the potential of a level, we expect
-    to make the current fitness function work the most efficient that it can but
-    another possible solution is found a good combination of formulas to generate
-    the fitness function.
+    Finally a different method to evaluate the individuals must be created.
+    Since the current evaluation method allows us to generate playable levels,
+    these levels are far from ideal in the way that they only use a certain
+    range of items present in the game therefore reducing the potential of a
+    level, we expect to make the current fitness function work the most
+    efficient that it can but another possible solution is found a good
+    combination of formulas to generate the fitness function.
 
 \section*{Acknowledgments}
 
