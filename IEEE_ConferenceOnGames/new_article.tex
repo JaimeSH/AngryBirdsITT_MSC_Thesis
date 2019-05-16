@@ -34,25 +34,24 @@ jmerelo@ugr.es}}
 
 
 \begin{abstract}
-In this paper we propose an evolutionary computation-based system to generate
-levels for the Angry Birds video game. The levels themselves are composed of a
-set of birds that the player can use, a certain amount of pigs that must be
-destroyed in order to progress to the next level and a given number of pieces
-that conform structures that may or may not protect the pigs from the player.
-The focus in this stage of the work is the generation of diverse structures that
-can be played in the game having the additional characteristics of being
-interesting and playable. We propose a multi-layered search, first constructing
-composite structures from basic components, to then build more complex
-structures building from these components, following an open-ended evolution
-approach in which the evolution of structures is not guided towards a single
-objective but is rather free to evolve and generate novelty or diversity. The
-objective is then that the proposed levels are evaluated by how complex they
-become and how different they are from the rest of the group. The experiments
-conducted show that a evolutionary approach allows the generated levels to be
-unique since, on most cases, the way they are presented on screen is a way a
-normal human would have trouble to create but at the same time are interesting
-to see.
+In this paper, we propose an evolutionary algorithm that follows an
+open-ended evolution approach to generate levels for the Angry Birds video
+game. The levels themselves are composed of a set of birds that the player
+can use, a certain amount of pigs that they must destroy, and a given number
+of pieces that conform structures that may or may not protect the pigs from
+birds. The current goal is the generation of diverse structures playable in
+the game, having the additional characteristics of being fun and enjoyable.
+We propose a multi-layered search, first constructing composite structures
+from basic blocks, to then build more complex structures building from these
+composites, following an open-ended evolution approach in which the
+evolution of structures is not guided towards a single objective but is
+rather free to evolve and generate novelty or diversity. The fitness
+function we use to evaluate the proposed levels considers how complex they
+have become and how different they are from the rest of the group. The
+experiments conducted show that an evolutionary approach allows the
+generated levels to be novel and interesting to play.
 % Another revision to English would be good.
+% Done - Mario
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -164,97 +163,89 @@ level after a simulation.
     %%%
     
     \section{Proposed Method}
-    \label{prop_method}
-    
+    \label{prop_method}  
     % Is this explanation undertandable ? JSH
-    In this section we describe the approach used in this work, explaining first,
-    the restrictions of the game, then giving a quick overview of how we create new 
-    composites to be used by the algorithm, then explaining how the candidate solutions 
-    are represented and how this are modified and evolved by the algorithm, and finally 
-    we present our method to evaluate the candidate solutions.
+    In this Section, we describe the approach used in this work, explaining
+first, the restrictions of the game, then giving a quick overview of how we
+create new composites to be used by the algorithm, then we define how candidate
+solutions are to be represented by the algorithm. We then describe our method to
+evaluate candidate solutions. Finally, we present details of the evolutionary
+algorithm. 
 
-    The game contains a total of 11 block shapes as shown in Figure \ref{piece_list}.
-    These basic blocks cannot be modified, it is not possible to add more or modify the existing ones,
-    with this in mind the purpose is to create composites of these blocks in
-    different locations and angles in order to create structures that can be used as
-    building blocks for more complex structures. 
+The game contains a total of 11 block shapes, shown in Figure
+\ref{piece_list}. These basic blocks cannot be modified, and we can not add
+more. With this in mind, we propose to create additional elements by creating
+composites of these blocks. Atomic blocks can be positioned in different
+locations and at certain angles, inside the composite. The resulting composites
+are themselves the new building blocks of more complex structures. 
     
-    \subsection{Composite Generation}
+\subsection{Composite Generation}
 
-    Since there is no way to \textit{add} a new composite to the pool of blocks,
-    then a way to combine both is needed, in order to do this first the original
-    11 pieces of the game will be converted into composites of a single element.
-    A composite is defined as a lists of blocks, then a \textit{composite} of
-    one element will be created for each piece. Composites are the first layer
-    the building blocks for the structures to come. A composite could include
-    different types of blocks, rotated at a certain angle and compose a basic
-    structure. An ideal composite could support other composites on top with out
-    falling apart, but this is not required. A composite is measured using
-    imaginary bounding box, defined by calculating the lengths of all the pieces,
-    finding the borders of said pieces and then finding the points that could
-    define a box around all of them, then use this defined box to calculate the
-    height and width of the new composite and then calculate from the center
-    point of said box the offsets from the center of the group to the center of
-    each respective piece as shown on figure \ref{bounding_boc_calc}, this
-    information is needed in order to add it as a new composite so it can be
-    used to place the pieces in their respective new positions when the files
-    needed for the simulation are being created. This is similar to creating a
-    group of elements in a drawing application.
+Since there is no way to \textit{add} a new composite to the pool of blocks, we
+first need a way to combine them. To do this, first, the original 11 blocks of
+the game need to be converted into composites of a single element.  We define a
+composite as a list of blocks; then  \textit{composite} with a single block,
+will be created for each original block. Composites are the first layer, the
+building blocks for the structures to come. A composite could include different
+types of blocks, rotated at a certain angle and compose a basic structure. An
+ideal composite could support other composites on top without falling apart, but
+this is not required. A composite is measured using an imaginary bounding box,
+defined by calculating the lengths of all the pieces, finding the borders of
+said pieces and then finding the points to define a box around all of them. We
+then use this defined box to calculate the height and width of the new
+composite. Then we derive from the center point of the said box, the offsets for
+each block in the composite, as shown in figure \ref{bounding_boc_calc}. We need
+this information to treat each composite as if it was a single block; this will
+enable the placements of the composites in their respective new position when we
+create the files needed for the simulation. This process is similar to creating
+a group of elements in a drawing application.
 
     %% 
-    Good composites can be found using an evolutionary approach proposed earlier 
-    by Calle and Merelo, where basic structures are generated by searching a space
-    of falling blocks and selecting those that remain standing. This algorithm is 
-    not capable of creating complex structures, but it can generate very novel basic
-    structures. We can see that the evolution at this level can benefit from having
-    more freedom in how basic structures are built. We do not want to form piles
-    or sequences of blocks, this will be done at a higher level in the composite hierarchy.
+Suitable composites can be found using an evolutionary approach proposed
+earlier by Calle and Merelo, where basic structures are generated by freely
+searching a space of falling blocks and selecting those that remain
+standing. This algorithm is not capable of creating complex structures, but
+it can produce original basic structures. We can see that evolution at this
+level can benefit from having more freedom when building basic structures.
+At this time, we do not want to form piles or sequences of blocks, this will
+be done later, at a higher level in the composite hierarchy.    
+At this level the composite generator has the following steps:
+\begin{enumerate}
+\item Generate the first generation of the population, consisting of
+randomly generated list of blocks.
+\item Run a Simulation.
+\item Evaluate each individual of the population.
+\item If a member of the population has remaining pieces obtain the location
+and angle of the pieces, assign a fitness.
+\item Do the selection, crossover and mutation operations.
+\item Repeat the cycle.
+\item From the best individuals select composites. Several algorithms could
+be proposed for this step, for instance selecting clusters of blocks.
+\end{enumerate}
     
-    At this level the composite generator has the following steps:
-    \begin{enumerate}
-    \item Generate the first generation of the population, consisting of
-    randomly generated list of blocks.
-    \item Run a Simulation.
-    \item Evaluate each individual of the population.
-    \item If a member of the population has remaining pieces obtain the location
-    and angle of the pieces, assign a fitness.
-    \item Do the selection, crossover and mutation operations.
-    \item Repeat the cycle.
-    \item From the best individuals select composites. Several algorithms could
-    be proposed for this step, for instance selecting clusters of blocks.
-    \end{enumerate}
-    
-    Another option is to just manually generate interesting composites to be used by the algorithm.
-    We could say that the previous approach is an option for a procedural generation of composites.
+Another valid option is to generate interesting composites manually.  The
+algorithm can later use the composites. We could say that the approach we
+explained earlier, is an optional procedural generation of composites.
 
-    \begin{figure}[htbp]
-    \centerline{\includegraphics[width=80mm]{Images/list_pieces.png}}
-    \caption{List of pieces in the angry birds game.}
-    \label{piece_list}
-    \end{figure}
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=80mm]{Images/list_pieces.png}}
+\caption{List of blocks in the angry birds game.}
+\label{piece_list}
+\end{figure}
     % Explain a bit about the competition, from the introduction
-    The Angry Birds level generation track is a competition where the objective is 
-    to generate levels that are \textit{fun} and \textit{enjoyable} however they 
-    also have to be challenging but not impossible. However the rules for the competition 
-    specify that a configuration file must be used to
-    generate the levels of the game in a limited amount of time, the information on
-    the configuration file is first the number of \textit{different} levels
-    that must be generated, the second value is the different materials \textit{not
-    allowed} to be used, for instance a group of generated levels must not have
-    circles which composition material is ice or stone, moreover it does not have to
-    integrate a triangle piece with ice, stone or wood material so this combinations
-    must be removed from the pool of options, the third configuration value is the
-    \textit{number of pigs} that must be placed in a level, and finally the
-    \textit{limit} of time that the system has to create the required amount of
-    levels.
+The Angry Birds level generation track is a competition where the objective
+is to generate levels that are \textit{fun} and \textit{enjoyable}. However,
+they also have to be challenging but not impossible. The rules for the
+competition specify that a configuration file must be used to generate the
+levels of the game in a limited amount of time. The file contains several
+restrictions; we explain each one next. The number of \textit{different}
+levels that must be generated. The materials that are \textit{not allowed}.
+For instance, a group of generated levels must not have circles which
+composition material is ice or stone. Moreover, a material with a veto,  can
+not integrate others. The third configuration value is the \textit{number of
+pigs} that we must place in a level. Finally, the \textit{limit} of time
+that the system has to generate the required amount of levels.
     
-    In our original approach, composites could added to the structure generator
-    algorithm at runtime as a mutation of an individual. The structure generator
-    is explained in the next section.
-    In our current approach the composite generator is only
-    run once at the beginning, as a setup process.
-    
-
     \subsection{Structure Evolution}
    
     \begin{figure}[htbp]
