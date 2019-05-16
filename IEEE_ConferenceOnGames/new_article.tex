@@ -34,102 +34,104 @@ jmerelo@ugr.es}}
 
 
 \begin{abstract}
-    In this paper we propose an evolutionary computation-based system to generate 
-    levels for the Angry Birds video game. The levels themselves are composed of a 
-    set of birds that the player can use, a certain amount of pigs that must be destroyed 
-    in order to progress to the next level and a given number of pieces that conform 
-    structures that may or may not protect the pigs from the player. The focus in this stage of the work
-    is the generation of diverse structures that can be played in the game having the
-    additional characteristics of being interesting and playable. We propose a 
-    multi-layered search, first constructing composite structures from basic components, to then
-    build more complex structures building from these components, following an open-ended 
-    evolution approach in which the evolution of structures is not guided towards 
-    a single objective but is rather free to evolve and generate novelty or diversity. 
-    The objective is then that the proposed levels are evaluated by how complex they become and how 
-    different they are from the rest of the group. The experiments conducted show that a evolutionary approach allows the generated levels
-    to be unique since, on most cases, the way they are presented on screen
-    is a way a normal human would have trouble to create but at the same time are interesting to see.
-    % Another revision to English would be good.
-    \end{abstract}
+In this paper we propose an evolutionary computation-based system to generate
+levels for the Angry Birds video game. The levels themselves are composed of a
+set of birds that the player can use, a certain amount of pigs that must be
+destroyed in order to progress to the next level and a given number of pieces
+that conform structures that may or may not protect the pigs from the player.
+The focus in this stage of the work is the generation of diverse structures that
+can be played in the game having the additional characteristics of being
+interesting and playable. We propose a multi-layered search, first constructing
+composite structures from basic components, to then build more complex
+structures building from these components, following an open-ended evolution
+approach in which the evolution of structures is not guided towards a single
+objective but is rather free to evolve and generate novelty or diversity. The
+objective is then that the proposed levels are evaluated by how complex they
+become and how different they are from the rest of the group. The experiments
+conducted show that a evolutionary approach allows the generated levels to be
+unique since, on most cases, the way they are presented on screen is a way a
+normal human would have trouble to create but at the same time are interesting
+to see.
+% Another revision to English would be good.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Genetic algorithm, procedural generated content, open-ended evolution,
+evolutionary computation
+\end{IEEEkeywords}
     
-    \begin{IEEEkeywords}
-    Genetic algorithm, procedural generated content, open-ended evolution,
-    evolutionary computation
-    \end{IEEEkeywords}
-    
-    \section{Introduction}
-    Procedural content generation is an interesting subject on the entertainment
-    industry, primarily in video game development because of the savings in time
-    and human resources when generating content for different video game
-    projects \cite{Yannakakis2017,YannakakisContentGeneration}. In this paper an
-    evolutionary content generation system is proposed to generate levels for
-    the popular Angry Birds video game, taking inspiration in concepts of
-    open-ended evolution. Angry birds is a game developed by Rovio Entertainment
-    in which the objective is to destroy structures placed on the map as well as
-    eliminating green pig-like entities in order to obtain the highest score
-    possible, the game uses a gravity and collision system that allows the
-    structures to fall and be destroyed by means of damage as well as the use of
-    three different construction materials \textit{ice}, \textit{wood} and
-    \textit{stone} each one with a different resistance, ranging from fragile,
-    normal and sturdy in that order. The game mechanic is to use a slingshot to
-    shoot a certain number of birds with different abilities, to destroy both
-    the structures and the objectives. A high score is achieved by doing the
-    most destruction with the least birds possible 
-    \cite{RovioEntertainmentCorporation2009}.
-    The main objective of this project is to generate levels that can be played
-    by naïve or intelligent agents as well as physical players. The levels
-    themselves need to be complex in the sense that interesting structures can be
-    created, but at the same time, it is possible to complete in some way
-    \cite{Stephenson,Stephenson2018}.
-    % What is the problem?
-    Procedural content generation provides a peculiar case of study because of the
-    way % Is there a reference? - MG
-    content has to be made for a each particular type of game. In this use case we
-    have those restrictions dictated by the game, and also those imposed by a
-    competition track \cite{Renz}.
-    provide an interesting The challenge for the participating algorithms is to be
-    flexible on the pieces that can be used and the running time of the algorithm, as
-    they are determined at runtime.   
-    In order to tackle this case study, we proposed the use a genetic algorithm capable 
-    of creating game levels having the objective of being both \textit{interesting} and 
-    \textit{playable}, the way to test our candidate solutions will be by using a open-source
-    software called Science Birds \cite{sciencebirds} which uses the same resources used on the
-    original angry birds game.
-    % What is learned?
-    In this work we found that an evolutionary algorithm can be used to create 
-    this type of content not only because it is able to create levels that are interesting 
-    and diverse but because an evolutionary algorithm is capable of creating things a 
-    normal human could have trouble imagining of.
-    % What is learned?
-    % En este trabajo se generan estructuras con mayor diversidad y por lo tanto 
-    % resultan ser interesantes.
-    We propose a basic Open-Ended Evolution (OEE) algorithm, a variant of genetic
-    evolution algorithm where the objective differs from that of a regular genetic
-    algorithm,  in this case the final objective is not to reach a final state of
-    the evolution (an optimal solution) but to continue evolving and creating new
-    types of entities, perhaps more complex on each new generation. Solution
-    entities have the possibility to evolve not only inside the frame of their type,
-    but  they can create entirely new groups \cite{Standish2003}. Taylor et al.
-    \cite{Taylor2016,Taylor} defines OEE as a system capable of creating novelty
-    beyond a point where nothing changes on the current group of interest rather
-    than just converging to a stable or quasi-stable state.For this project, OEE is
-    defined simply as a genetic evolution process with different classes of objects,
-    with compositional and taxonomic relationships between them. Objects of each
-    class can evolve in parallel or as in this case, independently of each other. The
-    idea is based on the object oriented model, in which complex behavior can be
-    model using these principles. The rest of the paper is as follows.
-    
-    %% TO DO: This needs to be adjusted to the final version. We need to use
-    % \ref for the numbers - MG
-    
-    Section \ref{SoA}, contains a quick overview of some aspects used by different authors
-    in order to tackle this problem, their design and basic functionality, in
-    Section \ref{prop_method} the description of the current state of the project is explained, how
-    %% The following sentence is not clear.  % Maybe this modofocation is more understandable ? JSH
-    the candidate solutions are represented and the way we defined our fitness 
-    function to determine the playability and complexity of the generated levels, 
-    finally in Section \ref{conclusion} we provide our conclusions about the development of this
-    paper as well as improvements that can help to refine the proposed work. 
+\section{Introduction}
+The video game industry is always looking for content creators to satisfy
+the demand for high-quality content. Current development teams include game
+designers,  artists, animators,  writers, level designers, among others.
+Procedural Content Generation (PCG) is often applied to generate many
+aspects of the game, from maps, levels or characters, to narrative and game
+design. PCG techniques can lower the cost in both time and human resources
+when generating content for different video game projects, without
+compromising qualitiy \cite{Yannakakis2017,YannakakisContentGeneration}. In
+this paper, we introduce an evolutionary content generation system, to
+generate fun and exciting levels for the popular Angry Birds video game. We
+follow an Open-Ended Evolution (OEE) approach.  OOE is a type of genetic
+evolution algorithm with a different objective. In this case, the goal is
+not to reach a final state of in the evolution, for instance, to reach an
+optimal solution in a search space. An OEE aims to continue evolving and
+creating new types of entities, perhaps more complex or novel on each new
+generation. Entities evolve not only inside the frame of their species, but
+they can also create entirely new species \cite{Standish2003}. Taylor et al.
+\cite{Taylor2016, Taylor} define OEE as a system capable of creating novelty
+beyond a point where nothing changes on the current group of interest rather
+than just converging to a stable or quasi-stable state. For this project,
+OEE is defined simply as a genetic algorithm with different classes of
+objects, with compositional and taxonomic relationships between them.
+Objects in a class can evolve in parallel or as in this case, independently
+of each other. The object-oriented model follows this principles to model
+complex behavior and structure \cite{levesque1986knowledge}. 
+
+The case study for this paper is to follow the rules of a level generation
+competition for the Angry Birds video game developed by Rovio Entertainment.
+We briefly explain the game.  The objective is to destroy structures placed
+on a map as well as eliminating green pig-like characters. In order to
+obtain the highest score possible, the game uses a gravity and collision
+system that allows the structures to fall and be destroyed by means of
+damage. The structures have  three different construction materials
+\textit{ice}, \textit{wood} and \textit{stone}, each one with a different
+resistance, ranging from fragile, normal and sturdy in that order. The game
+mechanic is to use a slingshot to shoot a certain number of birds with
+different abilities, to destroy both the structures and the objectives. A
+high score is achieved by causing the most destruction throwing the least
+birds possible \cite{RovioEntertainmentCorporation2009}. The main objective
+of this work is to generate levels that can be played by naïve or
+intelligent agents as well as human players. The levels themselves need to
+be complex in the sense that interesting structures can be created, but at
+the same time, remaining possible to complete in some way \cite{Stephenson,
+Stephenson2018}.
+% What is the problem?
+
+One peculiarity of PCG is the richness of problems and domains in which it can
+be applied.  This is because each type of game dictates different restrictions
+and mechanics. In this case, we have additional restrictions, dictated by the
+competition track \cite{Renz}. This case study provides an interesting challenge
+for the participating algorithms. The proposed PCG algorithm has to be flexible
+on the pieces it can use, and also consider the running time, as both are
+determined at runtime. The aim is to develop a software capable of creating game
+levels having the objective of being both \textit{interesting} and
+\textit{playable}. Candidate solutions, in this case, Levels of the game, will
+be evaluated by using the open-source software Science Birds \cite{sciencebirds}
+which uses the same resources used on the original angry birds game. Using this
+software for the evaluation is an additional restriction because we are limited
+to the data collected during the simulation.  
+% What is learned?
+In this work, we found that an evolutionary algorithm can be used to create this
+type of content, because it is not only able to create levels that are
+interesting and diverse but also capable of producing levels an average human
+could have trouble imagining. The rest of the paper is as follows. Section
+\ref{SoA}, contains a quick overview of some aspects used by different authors
+to tackle this problem, their design, and basic functionality. In Section
+\ref{prop_method} we describe our current proposal.  How we modeled the
+candidate solutions and the way we defined our fitness function to determine the
+playability and complexity of the generated levels. Finally, in Section
+\ref{conclusion}, we provide our conclusions as well as improvements that can
+help to refine the proposed work. 
 
     \section{State of the art}
     \label{SoA}
