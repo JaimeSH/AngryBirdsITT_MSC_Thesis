@@ -133,30 +133,32 @@ playability and complexity of the generated levels. Finally, in Section
 \ref{conclusion}, we provide our conclusions as well as improvements that can
 help to refine the proposed work. 
 
-    \section{State of the art}
-    \label{SoA}
-    In this Section we present PCG works relevant to the Level generation for the
-    Angry Birds video game. Renz et al. \cite{Renz, Renz2015TheAB} organized an AI
-    competition with the aim of developing intelligent agents that could play new
-    Angry Birds levels better than the best human players. The competition was then
-    collocated in other AI conferences. In order to train and test these agents,
-    more novel and some times difficult levels must be generated. A related
-    competition was then proposed by Stephenson et al. \cite{Stephenson} this time
-    with the goal of developing a level generator for the game. Several generators
-    have been proposed in the following years of competition. M. Katina et al.
-    \cite{Kaidan2015} propose a model in which the generation of content is
-    controlled by the skill of a player while actively playing the game, the moment
-    the player finishes a certain level the algorithm obtains the score and
-    generates the next level to be played. Y. Jiang et al. \cite{Jiang2017} proposed
-    the use of predefined letter style patterns and combined to create a small pool
-    of words and letters used to be combined in order to create levels with text on
-    them, the participants would play the game and after that they would be asked if
-    they liked the layout of the levels. A search based approach has been also used
-    in several works. Laura Calle \cite{lauracalle} proposed a method in which the 
-    pieces in the game are arranged in groups using the gravity of the game to 
-    create structures that are later evolved into more complex levels, this method 
-    was used as a base to work with since it used a modified version of the angry 
-    birds game that was able to obtain the data of a level after a simulation.
+\section{State of the art}
+\label{SoA}
+In this Section, we present PCG works relevant to the level generation for
+the Angry Birds video game. Renz et al. \cite{Renz, Renz2015TheAB} organized
+an AI competition to develop intelligent agents that could play new  Angry
+Birds levels better than the best human players. The competition was then
+collocated in other AI conferences. To better train and test agents, more
+novel and some times, challenging levels must be generated. Stephenson et
+al. proposed a related competition this time with the goal of developing a
+level generator for the game. Researchers have proposed several generators
+in the following years of competition. M. Katina et al.  \cite{Kaidan2015}
+propose a model in which the algorithm controls the generation of content by
+using the skill of a player, while she is actively playing the game. The
+moment the player finishes a certain level, the algorithm obtains the score
+and generates the next level to play. Y. Jiang et al. \cite{Jiang2017}
+proposed the use of predefined letter patterns and combined them to create a
+small pool of words and letters used to create levels with text on them.
+Users would play the game, and after that,   asked them if they liked the
+layout of the Levels.  Several researchers follow a search-based approach.
+Calle et al. \cite{lauracalle} propose a free-search method to generate
+levels.  For this, lists of blocks are placed in the game by the algorithm,
+and those maintaining their positions against gravity are selected to build
+structures. The resulting structures continue evolving into more complex
+levels. That work is the basis of our current proposal, and since we are
+using a modified version of the Angry Birds game, that can obtain data of a
+level after a simulation.
     %%%
     % TO DO: Laura´s work here 
     %%%
