@@ -234,44 +234,49 @@ explained earlier, is an optional procedural generation of composites.
 \end{figure}
     % Explain a bit about the competition, from the introduction
 The Angry Birds level generation track is a competition where the objective
-is to generate levels that are \textit{fun} and \textit{enjoyable}. However,
-they also have to be challenging but not impossible. The rules for the
+is to generate levels that are \textit{fun} and \textit{enjoyable}; they also have to be challenging but not impossible. The rules for the
 competition specify that a configuration file must be used to generate the
 levels of the game in a limited amount of time. The file contains several
-restrictions; we explain each one next. The number of \textit{different}
-levels that must be generated. The materials that are \textit{not allowed}.
-For instance, a group of generated levels must not have circles which
-composition material is ice or stone. Moreover, a material with a veto,  can
-not integrate others. The third configuration value is the \textit{number of
-pigs} that we must place in a level. Finally, the \textit{limit} of time
+restrictions; namely:\begin{itemize}
+\item   The number of \textit{different}
+levels that must be generated. 
+\item The materials that are \textit{not allowed}.
+
+For instance, a group of generated levels must not have spheres composed of  is ice or stone. Moreover, a banned material can
+not integrate others. 
+\item The third configuration value is the \textit{number of
+pigs} that we must place in a level. 
+\item Finally, the \textit{limit} of time
 that the system has to generate the required amount of levels.
-    
-    \subsection{Structure Evolution}
+\end{itemize}
+
+We will present next a system for evolving structures that respects those restrictions.
+
+\subsection{Structure Evolution}
    
     \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/simulation_bef_aft_example.png}}
-    \caption{Structure at beginning and end of a simulation.}
+    \caption{Structure at the beginning and end of a simulation.}
     \label{test_old}
     \end{figure}
-    
+    %
     Structures are the next evolutionary layer, at a higher level of composition.
     Structures are compositions of composites. A level can be seen as a collection 
     of structures and each structure is a pile of composite blocks. This way of 
     constructing levels has the advantage of
-    limiting the search space, to structures that have a better chance to be 
+    limiting the search space to structures that have a better chance to be 
     standing after the simulation ends. There is no warranty that piles of 
-    composite blocks will maintain balance, so again we must search for those 
+    composite blocks will keep the balance, so again we must search for those 
     structures.
 
     Structures are represented in a way similar to Togelius et al.
     \cite{togelius2016Representationsforsearch-basedmethods}. Each block has
-    an id assigned to it. A structure is then a list of ids, referring to
-    composite blocks, the first 11 are basic composite and generated composites 
+    an ID assigned to it. A structure is created from a list of IDs, every one of them referring to
+    composite blocks; the first 11 are basic composites, while generated composites 
     are assigned a higher number.  This way and individual can be
     represented as shown on figure \ref{old_chrom} where each chromosome
-    represents a certain item in the list of blocks, the numbers for this
-    elements are assigned in a first come first served basis, the numbers are
-    infinitely incremented and the same blocks can be repeated in a structure.
+    represents a certain item in the list of blocks, the numbers for these
+    elements are assigned in a first come first served basis; they can be infinitely incremented. The same blocks can be repeated in a structure.
     
     \begin{figure}[htbp]
     \centerline{\includegraphics[width=80mm]{Images/bounding_box_calculation.png}}
