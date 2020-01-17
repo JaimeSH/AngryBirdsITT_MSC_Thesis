@@ -158,12 +158,17 @@ levels. That work is the basis of our current proposal, and since we are
 using a modified version of the Angry Birds game, that can obtain data of a
 level after a simulation. This model was later sped up using a specific Physics library, which allowed a deeper exploration of the search space \cite{DBLP:conf/ijcci/CalleGVG19}. However, the main problem with this approach, which was open-ended in the sense that it was almost impossible to define an optimum, was that it was also free-form and structures obtained were not really all that interesting, although they were very diverse and quite solid.
 
+The objective of generating levels need not be pure gameplay or enjoyment. Angry Birds have been also used for trying to promote mental well-being, the point of it being that the game can be used as a vehicle for art therapy \cite{fang2019angrybirdslike}. Instead of using a search-based approach, levels are generated from sketches drawn by the patient using a method called Real Pixel Image Level Generator; the main objective is to get the players to smile. This interesting approach of using some external input to generate levels could be adapted or integrated easily into search-based approaches; at the same time, it is a way of exploring how to elicit different response from game players.
+
 % This reference is not terribly relevant
 PCG methods are also used in different contexts: Y. Jiang et al. \cite{Jiang2017}
 proposed the use of predefined letter patterns and combined them to create a
 small pool of words and letters used to create levels with text on them.
 Users would play the game, and after that,   asked them if they liked the
-layout of the Levels.
+layout of the Levels. This interactive approach could, in principle, be also apprached in the generation of Angry Birds levels.
+
+In our case, interaction is not required or used; our main intention is to generate interesting and aesthetically pleasing levels. The methodology to achieve this is explained below.
+
 % ----------------------------------------
     \section{Proposed Method}
     \label{prop_method}  
