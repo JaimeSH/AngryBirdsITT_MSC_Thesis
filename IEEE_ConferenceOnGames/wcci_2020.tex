@@ -134,14 +134,15 @@ playability and complexity of the generated levels. Finally, in Section
 help to refine the proposed work. 
 
 \section{State of the art}
-\label{SoA}
-In this Section, we present PCG works relevant to the level generation for
-the Angry Birds video game. Renz et al. \cite{Renz, Renz2015TheAB} organized
+\label{SoA} 
+
+The organization by Renz et al. \cite{Renz, Renz2015TheAB}  of an 
 an AI competition to develop intelligent agents that could play new  Angry
-Birds levels better than the best human players. The competition was then
-collocated in other AI conferences. To better train and test agents, more
+Birds levels better than the best human players was a very interesting boost to this area, and also boosted in general PCG by offering a challenge in different levels: from the physical, structural level, to the game play and aesthetic one.
+
+To better train and test agents, more
 novel and some times, challenging levels must be generated. Stephenson et
-al. proposed a related competition this time with the goal of developing a
+al. proposed a related competition \cite{Stephenson2018} this time with the goal of developing a
 level generator for the game. Researchers have proposed several generators
 in the following years of competition. M. Katina et al.  \cite{Kaidan2015}
 propose a model in which the algorithm controls the generation of content by
@@ -158,7 +159,7 @@ and those maintaining their positions against gravity are selected to build
 structures. The resulting structures continue evolving into more complex
 levels. That work is the basis of our current proposal, and since we are
 using a modified version of the Angry Birds game, that can obtain data of a
-level after a simulation.
+level after a simulation. This model was later sped up using a specific Physics library, which allowed a deeper exploration of the search space \cite{DBLP:conf/ijcci/CalleGVG19}. However, the main problem with this approach, which was open-ended in the sense that it was almost impossible to define an optimum, was that it was also free-form and structures obtained were not really all that interesting, although they were very diverse and quite solid.
     
     \section{Proposed Method}
     \label{prop_method}  
