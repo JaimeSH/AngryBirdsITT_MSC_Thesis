@@ -144,23 +144,27 @@ To better train and test agents, more
 novel and some times, challenging levels must be generated. Stephenson et
 al. proposed a related competition \cite{Stephenson2018} this time with the goal of developing a
 level generator for the game. Researchers have proposed several generators
-in the following years of competition. M. Katina et al.  \cite{Kaidan2015}
-propose a model in which the algorithm controls the generation of content by
-using the skill of a player, while she is actively playing the game. The
+in the following years of competition. M. Katina et al. In Kaidan's model \cite{Kaidan2015}, the algorithm controls the generation of content by
+using the skill of a player, while she is actively playing the game; The
 moment the player finishes a certain level, the algorithm obtains the score
-and generates the next level to play. Y. Jiang et al. \cite{Jiang2017}
-proposed the use of predefined letter patterns and combined them to create a
-small pool of words and letters used to create levels with text on them.
-Users would play the game, and after that,   asked them if they liked the
-layout of the Levels.  Several researchers follow a search-based approach.
+and generates the next level to play. The model proposed by Stephenson and Renz \cite{DBLP:journals/corr/abs-1902-02518} also adapts itself to the level of difficult that's needed.
+
+Several researchers follow a search-based approach.
 Calle et al. \cite{lauracalle} propose a free-search method to generate
-levels.  For this, lists of blocks are placed in the game by the algorithm,
+levels for Angry Birds.  For this, lists of blocks are placed in the game by the algorithm,
 and those maintaining their positions against gravity are selected to build
 structures. The resulting structures continue evolving into more complex
 levels. That work is the basis of our current proposal, and since we are
 using a modified version of the Angry Birds game, that can obtain data of a
 level after a simulation. This model was later sped up using a specific Physics library, which allowed a deeper exploration of the search space \cite{DBLP:conf/ijcci/CalleGVG19}. However, the main problem with this approach, which was open-ended in the sense that it was almost impossible to define an optimum, was that it was also free-form and structures obtained were not really all that interesting, although they were very diverse and quite solid.
-    
+
+% This reference is not terribly relevant
+PCG methods are also used in different contexts: Y. Jiang et al. \cite{Jiang2017}
+proposed the use of predefined letter patterns and combined them to create a
+small pool of words and letters used to create levels with text on them.
+Users would play the game, and after that,   asked them if they liked the
+layout of the Levels.
+% ----------------------------------------
     \section{Proposed Method}
     \label{prop_method}  
 
