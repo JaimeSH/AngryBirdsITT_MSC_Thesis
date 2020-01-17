@@ -50,32 +50,31 @@ we use to evaluate the proposed levels considers how complex levels have become
 and how different they are from the rest of the population. The experiments
 conducted show that an evolutionary approach allows the generation of levels
 that are novel and interesting to play.
-% Another revision to English would be good.
-% Done - Mario
 \end{abstract}
 
 \begin{IEEEkeywords}
 Genetic algorithm, procedural generated content, open-ended evolution,
-evolutionary computation
+evolutionary computation, games.
 \end{IEEEkeywords}
     
 \section{Introduction}
-The video game industry is always looking for content creators to satisfy
-the demand for high-quality content. Current development teams include game
-designers,  artists, animators,  writers, level designers, among others.
+
+The video game industry is always looking for content creators in order to satisfy
+the demand for high-quality, and diverse, content. Current development teams include game 
+designers,  artists, animators,  writers, and level designers, among others.
 Procedural Content Generation (PCG) is often applied to generate many
-aspects of the game, from maps, levels or characters, to narrative and game
+aspects of the game, from maps, levels or characters, to narrative and overall
 design. PCG techniques can lower the cost in both time and human resources
 when generating content for different video game projects, without
 compromising quality \cite{Yannakakis2017,YannakakisContentGeneration}. In
-this paper, we introduce an evolutionary content generation system, to
-generate fun and exciting levels for the popular Angry Birds video game. We
-follow an Open-Ended Evolution (OEE) approach.  OOE is a type of genetic
-evolution algorithm with a different objective. In this case, the goal is
-not to reach a final state of in the evolution, for instance, to reach an
-optimal solution in a search space. An OEE aims to continue evolving and
+this paper, we introduce an evolutionary content generation system that is able to 
+generate fun and exciting levels for the popular Angry Birds video game \cite{RovioEntertainmentCorporation2009}.
+
+
+We are goint to follow an Open-Ended Evolution (OEE) approach.  OEE is a type of genetic evolution algorithm in which the goal is
+not so much to reach a final, possible optimal, state of in the evolution, for instance but to continue evolving and
 creating new types of entities, perhaps more complex or novel on each new
-generation. Entities evolve not only inside the frame of their species, but
+generation. Entities evolve not only inside the context of their species, but
 they can also create entirely new species \cite{Standish2003}. Taylor et al.
 \cite{Taylor2016, Taylor} define OEE as a system capable of creating novelty
 beyond a point where nothing changes on the current group of interest rather
@@ -84,17 +83,18 @@ OEE is defined simply as a genetic algorithm with different classes of
 objects, with compositional and taxonomic relationships between them.
 Objects in a class can evolve in parallel or as in this case, independently
 of each other. The object-oriented model follows these principles to model
-complex behavior and structure \cite{levesque1986knowledge}. 
+complex behavior and structure \cite{levesque1986knowledge}. % Maybe specify what you mean by "classes" in this context - JJ
 
 The case study for this paper is to follow the rules of a level generation
 competition for the Angry Birds video game developed by Rovio Entertainment.
-We briefly explain the game.  The objective is to destroy structures placed
+We briefly explain the game. % Already mentioned above. Maybe it would be better to move this paragraph to where you mention it for the first time - JJ
+The objective is to destroy structures placed
 on a map as well as eliminating green pig-like characters. In order to
 obtain the highest score possible, the game uses a gravity and collision
 system that allows the structures to fall and be destroyed by means of
 damage. The structures have  three different construction materials
 \textit{ice}, \textit{wood} and \textit{stone}, each one with a different
-resistance, ranging from fragile, normal and sturdy in that order. The game
+resistance: fragile, normal or sturdy. The game
 mechanic is to use a slingshot to shoot a certain number of birds with
 different abilities, to destroy both the structures and the objectives. A
 high score is achieved by causing the most destruction throwing the least
@@ -104,12 +104,13 @@ intelligent agents as well as human players. The levels themselves need to
 be complex in the sense that interesting structures can be created, but at
 the same time, remaining possible to complete in some way \cite{Stephenson,
 Stephenson2018}.
-% What is the problem?
+% What is the problem? Please formulate this with more precision - JJ
 
 One peculiarity of PCG is the richness of problems and domains in which it can
 be applied.  This is because each type of game dictates different restrictions
 and mechanics. In this case, we have additional restrictions, dictated by the
-competition track \cite{Renz}. This case study provides an interesting challenge
+competition track \cite{Renz}. % make some mention to why this is important - JJ
+This case study provides an interesting challenge
 for the participating algorithms. The proposed PCG algorithm has to be flexible
 on the pieces it can use, and also consider the running time, as both are
 determined at runtime. The aim is to develop a software capable of creating game
