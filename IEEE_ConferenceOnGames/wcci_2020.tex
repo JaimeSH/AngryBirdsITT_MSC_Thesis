@@ -50,32 +50,31 @@ we use to evaluate the proposed levels considers how complex levels have become
 and how different they are from the rest of the population. The experiments
 conducted show that an evolutionary approach allows the generation of levels
 that are novel and interesting to play.
-% Another revision to English would be good.
-% Done - Mario
 \end{abstract}
 
 \begin{IEEEkeywords}
 Genetic algorithm, procedural generated content, open-ended evolution,
-evolutionary computation
+evolutionary computation, games.
 \end{IEEEkeywords}
     
 \section{Introduction}
-The video game industry is always looking for content creators to satisfy
-the demand for high-quality content. Current development teams include game
-designers,  artists, animators,  writers, level designers, among others.
+
+The video game industry is always looking for content creators in order to satisfy
+the demand for high-quality, and diverse, content. Current development teams include game 
+designers,  artists, animators,  writers, and level designers, among others.
 Procedural Content Generation (PCG) is often applied to generate many
-aspects of the game, from maps, levels or characters, to narrative and game
+aspects of the game, from maps, levels or characters, to narrative and overall
 design. PCG techniques can lower the cost in both time and human resources
 when generating content for different video game projects, without
 compromising quality \cite{Yannakakis2017,YannakakisContentGeneration}. In
-this paper, we introduce an evolutionary content generation system, to
-generate fun and exciting levels for the popular Angry Birds video game. We
-follow an Open-Ended Evolution (OEE) approach.  OOE is a type of genetic
-evolution algorithm with a different objective. In this case, the goal is
-not to reach a final state of in the evolution, for instance, to reach an
-optimal solution in a search space. An OEE aims to continue evolving and
+this paper, we introduce an evolutionary content generation system that is able to 
+generate fun and exciting levels for the popular Angry Birds video game \cite{RovioEntertainmentCorporation2009}.
+
+
+We are goint to follow an Open-Ended Evolution (OEE) approach.  OEE is a type of genetic evolution algorithm in which the goal is
+not so much to reach a final, possible optimal, state of in the evolution, for instance but to continue evolving and
 creating new types of entities, perhaps more complex or novel on each new
-generation. Entities evolve not only inside the frame of their species, but
+generation. Entities evolve not only inside the context of their species, but
 they can also create entirely new species \cite{Standish2003}. Taylor et al.
 \cite{Taylor2016, Taylor} define OEE as a system capable of creating novelty
 beyond a point where nothing changes on the current group of interest rather
@@ -84,17 +83,18 @@ OEE is defined simply as a genetic algorithm with different classes of
 objects, with compositional and taxonomic relationships between them.
 Objects in a class can evolve in parallel or as in this case, independently
 of each other. The object-oriented model follows these principles to model
-complex behavior and structure \cite{levesque1986knowledge}. 
+complex behavior and structure \cite{levesque1986knowledge}. % Maybe specify what you mean by "classes" in this context - JJ
 
 The case study for this paper is to follow the rules of a level generation
 competition for the Angry Birds video game developed by Rovio Entertainment.
-We briefly explain the game.  The objective is to destroy structures placed
+We briefly explain the game. % Already mentioned above. Maybe it would be better to move this paragraph to where you mention it for the first time - JJ
+The objective is to destroy structures placed
 on a map as well as eliminating green pig-like characters. In order to
 obtain the highest score possible, the game uses a gravity and collision
 system that allows the structures to fall and be destroyed by means of
 damage. The structures have  three different construction materials
 \textit{ice}, \textit{wood} and \textit{stone}, each one with a different
-resistance, ranging from fragile, normal and sturdy in that order. The game
+resistance: fragile, normal or sturdy. The game
 mechanic is to use a slingshot to shoot a certain number of birds with
 different abilities, to destroy both the structures and the objectives. A
 high score is achieved by causing the most destruction throwing the least
@@ -104,12 +104,13 @@ intelligent agents as well as human players. The levels themselves need to
 be complex in the sense that interesting structures can be created, but at
 the same time, remaining possible to complete in some way \cite{Stephenson,
 Stephenson2018}.
-% What is the problem?
+% What is the problem? Please formulate this with more precision - JJ
 
 One peculiarity of PCG is the richness of problems and domains in which it can
 be applied.  This is because each type of game dictates different restrictions
 and mechanics. In this case, we have additional restrictions, dictated by the
-competition track \cite{Renz}. This case study provides an interesting challenge
+competition track \cite{Renz}. % make some mention to why this is important - JJ
+This case study provides an interesting challenge
 for the participating algorithms. The proposed PCG algorithm has to be flexible
 on the pieces it can use, and also consider the running time, as both are
 determined at runtime. The aim is to develop a software capable of creating game
@@ -133,32 +134,44 @@ playability and complexity of the generated levels. Finally, in Section
 help to refine the proposed work. 
 
 \section{State of the art}
-\label{SoA}
-In this Section, we present PCG works relevant to the level generation for
-the Angry Birds video game. Renz et al. \cite{Renz, Renz2015TheAB} organized
+\label{SoA} 
+
+The organization by Renz et al. \cite{Renz, Renz2015TheAB}  of an 
 an AI competition to develop intelligent agents that could play new  Angry
-Birds levels better than the best human players. The competition was then
-collocated in other AI conferences. To better train and test agents, more
+Birds levels better than the best human players was a very interesting boost to this area, and also boosted in general PCG by offering a challenge in different levels: from the physical, structural level, to the game play and aesthetic one.
+
+To better train and test agents, more
 novel and some times, challenging levels must be generated. Stephenson et
-al. proposed a related competition this time with the goal of developing a
+al. proposed a related competition \cite{Stephenson2018} this time with the goal of developing a
 level generator for the game. Researchers have proposed several generators
-in the following years of competition. M. Katina et al.  \cite{Kaidan2015}
-propose a model in which the algorithm controls the generation of content by
-using the skill of a player, while she is actively playing the game. The
+in the following years of competition. M. Katina et al. In Kaidan's model \cite{Kaidan2015}, the algorithm controls the generation of content by
+using the skill of a player, while she is actively playing the game; The
 moment the player finishes a certain level, the algorithm obtains the score
-and generates the next level to play. Y. Jiang et al. \cite{Jiang2017}
-proposed the use of predefined letter patterns and combined them to create a
-small pool of words and letters used to create levels with text on them.
-Users would play the game, and after that,   asked them if they liked the
-layout of the Levels.  Several researchers follow a search-based approach.
+and generates the next level to play. The model proposed by Stephenson and Renz \cite{DBLP:journals/corr/abs-1902-02518} also adapts itself to the level of difficult that's needed. Initial papers \cite{8080448} contained search-based PCGs that established certain patterns in the structure, and assigned blocks to them, looking to optimize overall stability, but also creating a complex fitness function that included several {\em colored} scores that considered how pigs were protected, for instance. 
+
+Several researchers follow a search-based approach.
 Calle et al. \cite{lauracalle} propose a free-search method to generate
-levels.  For this, lists of blocks are placed in the game by the algorithm,
+levels for Angry Birds.  For this, lists of blocks are placed in the game by the algorithm,
 and those maintaining their positions against gravity are selected to build
 structures. The resulting structures continue evolving into more complex
 levels. That work is the basis of our current proposal, and since we are
 using a modified version of the Angry Birds game, that can obtain data of a
-level after a simulation.
-    
+level after a simulation. This model was later sped up using a specific Physics library, which allowed a deeper exploration of the search space \cite{DBLP:conf/ijcci/CalleGVG19}. However, the main problem with this approach, which was open-ended in the sense that it was almost impossible to define an optimum, was that it was also free-form and structures obtained were not really all that interesting, although they were very diverse and quite solid.
+
+The objective of generating levels need not be pure gameplay or enjoyment. Angry Birds have been also used for trying to promote mental well-being, the point of it being that the game can be used as a vehicle for art therapy \cite{fang2019angrybirdslike}. Instead of using a search-based approach, levels are generated from sketches drawn by the patient using a method called Real Pixel Image Level Generator; the main objective is to get the players to smile. This interesting approach of using some external input to generate levels could be adapted or integrated easily into search-based approaches; at the same time, it is a way of exploring how to elicit different response from game players.
+
+It is also interesting how some authors take into account the dynamics of Angry Birds gameplay, where the {\em domino effect} makes a big structure tumble over: Abdullah et al. \cite{Abdullah2019} talk about ``Rube Goldberg machines''. This specific pattern (structures that can be destroyed with a single strike) makes them interesting, and also since they are designed from a series of pre-defined structures, stability is guaranteed. This approach is similar to other which use pre-defined patterns (such as a set of towers) to guarantee stability: Ferreira and Toledo \cite{ferreira2014search} use such approach, with predefined groups of elements stacked always in the same way to guarantee that stability. The authors proposed also Tanager \cite{8082517} which again uses different stacks to structure the level and the blocks used in it, but it also encodes empty stacks (which translate to gaps). This methodology gives much more variability. At the same time, the authors proposed new ways of evaluating the levels, including interacting with actual users. 
+
+% This reference is not terribly relevant
+PCG methods are also used in different contexts: Y. Jiang et al. \cite{Jiang2017}
+proposed the use of predefined letter patterns and combined them to create a
+small pool of words and letters used to create levels with text on them.
+Users would play the game, and after that,   asked them if they liked the
+layout of the Levels. This interactive approach could, in principle, be also apprached in the generation of Angry Birds levels.
+
+In our case, interaction is not required or used; our main intention is to generate interesting and aesthetically pleasing levels. The methodology to achieve this is explained below.
+
+% ----------------------------------------
     \section{Proposed Method}
     \label{prop_method}  
 
@@ -298,8 +311,6 @@ composite in the pool. A chromosome can include the same ID multiple times.
     techniques like the one proposed by Calle et al. \cite{lauracalle}, where
     only those individuals that meet certain restrictions are candidates for a
     run in the simulator.
-    %In Laura's work, we tried to avoid this because it took a long time. Is there any procedure to check constraints and not evaluate them? - JJ
-    % Added a comment about this  - M 
     Using a similar approach as the composite generator, all
     individuals have a maximum of ten seconds to maintain balance or reach
     absolute stability. If that happens  it means one of two
@@ -577,9 +588,30 @@ composite in the pool. A chromosome can include the same ID multiple times.
         \caption{Example of resulting level with current system.}
         \label{result_1}
     \end{figure*}
+
+    % There are no numerical results. Something should be published about them, for instance
+    % - Fitness of the best individual, as well as some measures
+    % - Time it took to reach those levels
     
     \section{Conclusions and future work}
     \label{conclusion}
+
+    % As indicated by one reviewer, there are no conclusions, just future work. A couple of paragraphs with conclusions should be added
+    
+        We were able to fulfill our objective of generating levels that could be played;
+    however, as seen in our figures, the current state of this system is still in the development 
+    phase, and some modifications must be applied in order to optimize some aspects of it. For instance  
+    by using a different way of generating individual we were able to reduce the process 
+    time required on a full system execution; however we still need to work on this problem as
+    we mention before. 
+    
+    Finally a different method to evaluate the individuals must be created.
+    Since the current evaluation method allows us to generate playable levels,
+    these levels are far from ideal in the way that they only use a certain
+    range of items present in the game therefore reducing the potential of a
+    level, we expect to make the current fitness function work the most
+    efficient that it can but another possible solution is found a good
+    combination of formulas to generate the fitness function.
     
      The system has been able to generate levels that fulfill the requirements
      provided by the parameters file, however a way to evaluate that the levels
@@ -621,21 +653,7 @@ composite in the pool. A chromosome can include the same ID multiple times.
     needed to run a simulation, as it is done by Calle et al. \cite{lauracalle}, 
     or use a Physics engine that is optimized for this task.
 
-    We were able to fulfill our objective of generating levels that could be played;
-    however, as seen in our figures, the current state of this system is still in the development 
-    phase, and some modifications must be applied in order to optimize some aspects of it. For instance  
-    by using a different way of generating individual we were able to reduce the process 
-    time required on a full system execution; however we still need to work on this problem as
-    we mention before.  % Cite our paper, where we do exactly that - JJ 
-                        % Done - Mario 
-    
-    Finally a different method to evaluate the individuals must be created.
-    Since the current evaluation method allows us to generate playable levels,
-    these levels are far from ideal in the way that they only use a certain
-    range of items present in the game therefore reducing the potential of a
-    level, we expect to make the current fitness function work the most
-    efficient that it can but another possible solution is found a good
-    combination of formulas to generate the fitness function.
+
 
 \section*{Acknowledgments}
 
